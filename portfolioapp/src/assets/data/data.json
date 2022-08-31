@@ -50,6 +50,100 @@
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
       }
   ],
+  "educacion": [
+    {
+      "establecimiento":"Argentina Programa",
+      "web":"www.argentinaprograma.inti.gob.ar",
+      "logo":"./assets/estudio/logo-argentinaprograma.svg",
+      "carrera":"Desarrollador Web Full Stack Jr con Angular",
+      "periodo_desde":"99/9999",
+      "periodo_hasta":"99/9999",
+      "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+  },
+  {
+    "establecimiento":"Instituto Municipal de Tecnología",
+    "web":"www.imt.lacosta.gob.ar",
+    "logo":"./assets/estudio/logo-imt.svg",
+    "carrera":"Desarrollador Web Full Stack Jr con React",
+    "periodo_desde":"99/9999",
+    "periodo_hasta":"99/9999",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+  },
+  {
+    "establecimiento":"Oracle Alura",
+    "web":"www.aluracursos.com",
+    "logo":"./assets/estudio/logo-oracle.svg",
+    "carrera":"Curso realizado",
+    "periodo_desde":"99/9999",
+    "periodo_hasta":"99/9999",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+  },
+  {
+    "establecimiento":"Universidad Atlantida Argentina",
+    "web":"www.atlantida.edu.ar",
+    "logo":"./assets/estudio/logo-uaa.svg",
+    "carrera":"Curso realizado",
+    "periodo_desde":"99/9999",
+    "periodo_hasta":"99/9999",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+  },
+  {
+    "establecimiento":"Instituto Republica Argentina",
+    "web":"www.irabernal.edu.ar",
+    "logo":"./assets/estudio/logo-ira.svg",
+    "carrera":"Perito Mercantil",
+    "periodo_desde":"99/9999",
+    "periodo_hasta":"99/9999",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+  }
+  ],
+  "habilidades":[
+    {
+    "habilidad": "HTML",
+    "porcentaje": "90",
+    "color":"#483C32"
+    },
+    {
+      "habilidad": "CSS",
+      "porcentaje": "70",
+      "color":"#008000"
+    },
+    {
+      "habilidad": "JS",
+      "porcentaje": "55",
+      "color":"#ff00ff"
+    },
+    {
+      "habilidad": "ANGULAR",
+      "porcentaje": "85",
+      "color":"#008BE8"
+    },
+    {
+      "habilidad": "REACT",
+      "porcentaje": "55",
+      "color":"#800000"
+    },
+    {
+      "habilidad": "PYTHON",
+      "porcentaje": "35",
+      "color":"#ff0000"
+    },
+    {
+      "habilidad": "PHP",
+      "porcentaje": "45",
+      "color":"#000000"
+    },   
+    {
+      "habilidad": "MYSQL",
+      "porcentaje": "80",
+      "color":"#2B547E"
+    },
+    {
+      "habilidad": "API-REST",
+      "porcentaje": "65",
+      "color":"#045F5F"
+    }
+  ],
   "proyectos": [
     {
         "nombre": "Ahorcado App",
