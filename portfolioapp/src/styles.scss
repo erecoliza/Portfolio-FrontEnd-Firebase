@@ -1,0 +1,172 @@
+body {
+    margin: 0rem;  
+    padding: 0rem;
+    border:0rem;
+    background-color: aliceblue;
+  }
+  
+  .navbar.navbar-expand-lg.bg-primary {
+    background-color:teal !important;
+  }
+  
+  i.fa-brands, i.fa-solid  {
+    color: white;
+  }
+  
+  i.fa-solid.fa-envelope, i.fa-brands.fa-whatsapp{
+    color: rgb(12, 99, 128);
+  }
+  
+  i.fa-brands:hover, i.fa-solid:hover  {
+    color: lightblue;
+  }
+  
+  .list-group-item {
+    --bs-list-group-bg: transparent;
+  } 
+  
+  .container-fluid {  
+    padding: 0rem;
+    border-radius: 0.5rem;  
+    border: 1px solid rgb(149, 175, 233);
+  }
+  
+  .titulo {
+    text-align: left; 
+    padding-left: 2rem;
+  }
+  .responsive {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #logo {
+    width: 5vw;
+    height: 5vw;
+  }
+  
+  .avatar {  
+    padding-top: 0.2rem;  
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+  }
+  
+  .avatarito {  
+    margin-left: 10vw;  
+    vertical-align: middle;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+  }
+  
+  .row {  
+    padding:0px; 
+    margin: 0px;
+  }
+  
+  .card {
+    padding:0px;
+    margin: 5px;
+    background-color:#B8E5FF;   
+  }
+  
+  .row-experiencia {
+    padding:0px;
+    padding-top:10px;
+    background-color:#B8E5FF; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(149, 175, 233);  
+  }
+  
+  .img-thumbnail {
+    border-color: darkgray;
+  }
+  
+  #Header {
+    background-color: rgba(223, 244, 255, 1);
+    height: 4rem;
+  }
+  
+  #AcercaDe {
+    background-color: rgba(223, 244, 255, 1);  
+    border-style: ridge;
+  }
+  
+  #Experiencia {
+    background-color: rgba(223, 244, 255, 1);
+  }
+  
+  #Educacion {
+    background-color: rgba(223, 244, 255, 1);  
+  }
+  
+  #Habilidades {
+    background-color: rgba(223, 244, 255, 1);  
+  }
+  .figure-caption {
+    font-size: medium;
+    font-weight: 500;
+    color:#321135;
+  }
+  
+  #Proyectos {
+    background-color: rgba(223, 244, 255, 1);
+    height: 7rem;
+  }
+  
+  
+  
+  /* From uiverse.io by @alexroumi */
+  #pills-experiencia-tab,
+  #pills-educacion-tab,
+  #pills-habilidades-tab,
+  #pills-proyectos-tab {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   #pills-experiencia-tab::before,
+   #pills-educacion-tab::before,
+   #pills-habilidades-tab::before,
+   #pills-proyectos-tab::before  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: teal;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px teal;
+    box-shadow: 4px 8px 19px -3px teal;
+    transition: all 250ms
+   }
+   
+   #pills-experiencia-tab:hover,
+   #pills-educacion-tab:hover,
+   #pills-habilidades-tab:hover,
+   #pills-proyectos-tab:hover {
+    color: #e8e8e8;
+   }
+   
+   #pills-experiencia-tab:hover::before,
+   #pills-educacion-tab:hover::before,
+   #pills-habilidades-tab:hover::before,
+   #pills-proyectos-tab:hover::before {
+    width: 100%;
+   }
+  

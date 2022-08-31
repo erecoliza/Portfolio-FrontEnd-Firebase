@@ -1,0 +1,35 @@
+<div class="container-fluid">        
+    <ul class="nav nav-pills justify-content-around" id="menu" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-experiencia-tab" data-bs-toggle="pill" data-bs-target="#pills-experiencia" type="button" role="tab" aria-controls="pills-experiencia
+        " aria-selected="true">Experiencia Laboral</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-educacion-tab" data-bs-toggle="pill" data-bs-target="#pills-educacion" type="button" role="tab" aria-controls="pills-educacion" aria-selected="true">Educación</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link show active" id="pills-habilidades-tab" data-bs-toggle="pill" data-bs-target="#pills-habilidades" type="button" role="tab" aria-controls="pills-habilidades" aria-selected="true">Habilidades</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-proyectos-tab" data-bs-toggle="pill" data-bs-target="#pills-proyectos" type="button" role="tab" aria-controls="pills-proyectos" aria-selected="true">Proyectos</button>
+      </li>   
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <!-- EXPERIENCIA -->
+      <div class="container-fluid text-center tab-pane fade" id="pills-experiencia" role="tabpanel" aria-labelledby="pills-experiencia-tab" tabindex="0" >
+        <app-experiencia></app-experiencia>
+      </div>
+      <!-- EDUCACIÓN --> 
+      <div class="container-fluid text-center tab-pane fade" id="pills-educacion" role="tabpanel" aria-labelledby="pills-educacion-tab" tabindex="0">    
+        <app-educacion></app-educacion>
+      </div>
+      <!-- HABILIDADES -->  
+      <div class="container-fluid text-center tab-pane fade show active" id="pills-habilidades" role="tabpanel" aria-labelledby="pills-habilidades-tab" tabindex="0">   
+        <app-habilidades></app-habilidades>
+      </div>
+      <!-- PROYECTOS -->  
+      <div class="container-fluid text-center tab-pane fade" id="pills-proyectos" role="tabpanel" aria-labelledby="pills-proyectos-tab" tabindex="0">    
+        <app-proyectos></app-proyectos>
+      </div>
+    </div>
+  </div>

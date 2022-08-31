@@ -1,0 +1,70 @@
+{
+  "nombre": "Eduardo A. Recoliza",
+  "imagen": "./assets/img_avatar.jpg",
+  "posicion": "Desarrollador Web Full Stack Jr",
+  "acercade": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aliquam nam eum, minima natus est enim veniam quidem consectetur tenetur numquam ut rem beatae velit voluptatem consequuntur, earum animi facilis. Aliquid totam est provident tempora dignissimos odio labore molestiae omnis in quidem obcaecati expedita sapiente ipsa rem quas sint, ut maiores. Omnis nisi, dolore, quae, rerum magni error est similique tempora pariatur optio ut mollitia labore! Quo, blanditiis. Quibusdam alias veniam consectetur cumque laborum quod cupiditate porro atque doloremque dolore labore natus nemo soluta velit minus, ratione nihil rerum suscipit,",
+  "experiencia": [
+    {
+      "empresa": "Municipalidad de la Costa",
+      "logo": "./assets/experiencia/logo-lacosta.svg",
+      "web": "www.lacosta.gob.ar",
+      "puesto": "puesto",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    },
+    {
+        "empresa": "Universidad Atlantida Argentina",
+        "logo": "./assets/experiencia/logo-uaa.svg",
+        "web": "www.atlantidad.edu.ar",
+        "puesto": "puesto",
+        "periodo_desde": "99/9999",
+        "periodo_hasta": "99/9999",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+      },
+      {
+        "empresa": "Facultad Latinoamericana de Ciencias Sociales",
+        "logo": "./assets/experiencia/logo-flacso.svg",
+        "web": "www.flacso.org.ar",
+        "puesto": "puesto",
+        "periodo_desde": "99/9999",
+        "periodo_hasta": "99/9999",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+      },
+      {
+        "empresa": "K&Dat Sistemas",
+        "logo": "./assets/experiencia/logo-kydat.svg",
+        "web": "www.kydat.com.ar",
+        "puesto": "puesto",
+        "periodo_desde": "99/9999",
+        "periodo_hasta": "99/9999",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+      },
+      {
+        "empresa": "Columbia S.A. de Seguros",
+        "logo": "./assets/experiencia/logo-columbia.svg",
+        "web": "www.lacosta.gob.ar",
+        "puesto": "puesto",
+        "periodo_desde": "99/9999",
+        "periodo_hasta": "99/9999",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+      }
+  ],
+  "proyectos": [
+    {
+        "nombre": "Ahorcado App",
+        "web": "www.ahorcado.app.com",
+        "fecha": "99/9999",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+        
+    },
+    {
+        "nombre": "Peluqueria App",
+        "web": "www.paraiso_de_amor.com",
+        "fecha": "99/9999",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+        
+    }
+  ]
+
+}

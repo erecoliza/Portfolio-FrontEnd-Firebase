@@ -1,0 +1,26 @@
+<div class="row"> 
+    <h3 class="titulo">Proyectos</h3>
+  </div>     
+  <div *ngFor="let proyecto of proyectosList" class="row row-experiencia">      
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>{{proyecto.nombre}}</h4>
+        </div>
+        <div class="card-body" style="text-align: justify; " >                
+          <p>                
+            Fecha: 
+            <strong> {{proyecto.fecha}} </strong>
+          </p>                
+          <p>                
+            Descripción: 
+            <strong> {{proyecto.descripcion}} </strong>
+          </p>                
+        </div>
+        <div class="card-footer">
+          <a href="#" class="card-link">{{proyecto.web}}</a>
+        </div>
+      </div>                                 
+    </div>
+  </div>    
+  
