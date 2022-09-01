@@ -11,7 +11,8 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { HttpClientModule } from "@angular/common/http"
+import { HttpClientModule } from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HttpClientModule } from "@angular/common/http"
     ExperienciaComponent,
     EducacionComponent,
     HabilidadesComponent,
-    ProyectosComponent
+    ProyectosComponent    
   ],
   imports: [
     BrowserModule,
