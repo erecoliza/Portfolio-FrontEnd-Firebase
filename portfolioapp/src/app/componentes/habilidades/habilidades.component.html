@@ -1,3 +1,6 @@
+
+<!-- https://www.npmjs.com/package/ng-circle-progress -->
+
 <div class="row">
   <div class="col-lg-12 align-self-center align-items-center">
     <h3 class="titulo">Habilidades</h3>
@@ -6,19 +9,18 @@
 <div class="row align-self-center align-items-center row-experiencia">
   <div *ngFor="let habilidad of habilidadList; index as i " class="col">
     <figure class="figure">
-      <input class="dial" type="text" value={{habilidad.porcentaje}}
-        data-width="25" data-thickness=".32"
-        data-fgColor="#000000" data-bgColor="#EEEEEE"
-        data-cursor=false data-displayInput=true
-        data-readOnly=true width="50" height="50">
+      <circle-progress [percent]="habilidad.porcentaje" 
+        [radius]="50" 
+        [outerStrokeWidth]="10" 
+        [innerStrokeWidth]="5"
+        [outerStrokeColor]="habilidad.color" 
+        [innerStrokeColor]="'#EEEEEE'" 
+        [animation]="true" 
+        [responsive]="false" 
+        [showSubtitle]="false"
+        [animationDuration]="300">{{habilidad.habilidad}}</circle-progress>
       <figcaption class="figure-caption">{{habilidad.habilidad}}</figcaption>
     </figure>
   </div>
-  <div class="col">
-    <input type="text" value=40 class="dial"
-      data-thickness=".32"
-      data-fgColor="#000000" data-bgColor="#EEEEEE"
-      data-cursor=false data-displayInput=true
-      data-readOnly=true width="50" height="50">
-  </div>
+
 </div>

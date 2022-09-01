@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({

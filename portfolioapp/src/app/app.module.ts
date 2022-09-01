@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// Import ng-circle-progress
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
@@ -25,11 +27,22 @@ import { HttpClientModule } from "@angular/common/http";
     ExperienciaComponent,
     EducacionComponent,
     HabilidadesComponent,
-    ProyectosComponent    
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    // Specify ng-circle-progress as an import
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300
+    })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
