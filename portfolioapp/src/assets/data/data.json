@@ -16,7 +16,7 @@
     {
         "empresa": "Universidad Atlantida Argentina",
         "logo": "./assets/experiencia/logo-uaa.svg",
-        "web": "www.atlantidad.edu.ar",
+        "web": "www.atlantida.edu.ar",
         "puesto": "puesto",
         "periodo_desde": "99/9999",
         "periodo_hasta": "99/9999",
@@ -43,7 +43,7 @@
       {
         "empresa": "Columbia S.A. de Seguros",
         "logo": "./assets/experiencia/logo-columbia.svg",
-        "web": "www.lacosta.gob.ar",
+        "web": "www.columbia-seguros.com.ar",
         "puesto": "puesto",
         "periodo_desde": "99/9999",
         "periodo_hasta": "99/9999",
@@ -53,7 +53,7 @@
   "educacion": [
     {
       "establecimiento":"Argentina Programa",
-      "web":"www.argentinaprograma.inti.gob.ar",
+      "web":"argentinaprograma.inti.gob.ar",
       "logo":"./assets/estudio/logo-argentinaprograma.svg",
       "carrera":"Desarrollador Web Full Stack Jr con Angular",
       "periodo_desde":"99/9999",
@@ -105,7 +105,7 @@
     },
     {
       "habilidad": "CSS",
-      "porcentaje": "70",
+      "porcentaje": "80",
       "color":"#008000"
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "habilidad": "API-REST",
-      "porcentaje": "65",
+      "porcentaje": "70",
       "color":"#045F5F"
     }
   ],
