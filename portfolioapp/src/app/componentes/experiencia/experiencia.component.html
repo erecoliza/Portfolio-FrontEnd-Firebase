@@ -1,40 +1,48 @@
-<!-- EXPERIENCIA -->  
-    <div class="row">
-      <div class="col-lg-12">
-        <h3 class="titulo">Experiencia Laboral</h3>
+<!-- EXPERIENCIA -->
+<div class="row">
+  <div class="col-lg-12">
+    <h3 class="titulo">Experiencia Laboral</h3>
+  </div>
+  <div *ngFor="let experiencia of experienciaList" class="row row-experiencia">
+    <div class="col-lg-2 align-self-center align-items-center" style="padding:1px; ">
+
+      <div [ngSwitch]="experiencia.web">
+        <div *ngSwitchCase="''">
+          <img [src]="experiencia.logo" alt="Avatar" class="img-fluid" draggable="false"/> <!-- img-thumbnail -->
+        </div>
+        <div *ngSwitchDefault>
+          <a href="http://{{experiencia.web}}" target="_blank" rel="noopener noreferrer" draggable="false" class="link-primary">
+            <img [src]="experiencia.logo" alt="Avatar" class="img-fluid" draggable="false"/> <!-- img-thumbnail -->
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-10">
+      <div class="card">
+        <div class="card-header">
+          <h4>{{experiencia.empresa}}</h4>
+        </div>
+        <div class="card-body" style="text-align: justify; ">
+          <p>
+            Puesto Laboral:
+            <strong> {{experiencia.puesto}} </strong>
+          </p>
+          <p>
+            Período desde:
+            <strong> {{experiencia.periodo_desde}} </strong>
+            hasta:
+            <strong> {{experiencia.periodo_hasta}} </strong>
+          </p>
+          <p>
+            Descripción:
+            <strong> {{experiencia.descripcion}} </strong>
+          </p>
+        </div>
+        <div *ngIf="experiencia.web != ''" class="card-footer">
+          <a href="http://{{experiencia.web}}" target="_blank" rel="noopener noreferrer"
+            class="btn btn-info text-light" draggable="false">{{experiencia.web}}</a>
+        </div>
       </div>
     </div>
-    <div *ngFor="let experiencia of experienciaList" class="row row-experiencia">
-      <div class="col-lg-2 align-self-center align-items-center" style="padding:1px; ">
-        <a href="http://{{experiencia.web}}" target="_blank" rel="noopener noreferrer" class="link-primary">
-          <img [src]="experiencia.logo" alt="Avatar" class="img-fluid" />         <!-- img-thumbnail -->
-        </a>
-      </div>
-      <div class="col-lg-10">
-        <div class="card">
-          <div class="card-header">            
-              <h4>{{experiencia.empresa}}</h4>            
-          </div>
-          <div class="card-body" style="text-align: justify; " >                
-              <p>                
-                Puesto Laboral: 
-                <strong> {{experiencia.puesto}} </strong>
-              </p>                
-              <p>                
-                Período desde: 
-                <strong> {{experiencia.periodo_desde}} </strong>
-                hasta:
-                <strong> {{experiencia.periodo_hasta}} </strong>
-              </p>                
-              <p>                
-                Descripción: 
-                <strong> {{experiencia.descripcion}} </strong>
-              </p>                
-          </div>
-          <div class="card-footer">
-            <a href="http://{{experiencia.web}}" target="_blank" rel="noopener noreferrer" class="btn btn-info text-light">{{experiencia.web}}</a>
-          </div>
-        </div>          
-      </div>
-    </div>
-   
+  </div>
