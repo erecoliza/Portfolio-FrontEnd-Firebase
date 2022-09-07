@@ -6,9 +6,18 @@
     </div>
     <div *ngFor="let educacion of educacionList" class="row row-experiencia">
       <div class="col-lg-2 align-self-center align-items-center">
-        <a href="http://{{educacion.web}}" target="_blank" rel="noopener noreferrer" class="link-primary">
-          <img [src]="educacion.logo" alt="Avatar" class="img-fluid img-thumbnail" />
-        </a>  
+
+        <div [ngSwitch]="educacion.web">
+          <div *ngSwitchCase="''">
+            <img [src]="educacion.logo" alt="Avatar" class="img-fluid" draggable="false"/> <!-- img-thumbnail -->
+          </div>
+          <div *ngSwitchDefault>
+            <a href="http://{{educacion.web}}" target="_blank" rel="noopener noreferrer" draggable="false" class="link-primary">
+              <img [src]="educacion.logo" alt="Avatar" class="img-fluid" draggable="false"/> <!-- img-thumbnail -->
+            </a>
+          </div>
+        </div>
+        
       </div>
       <div class="col-lg-10 align-self-center align-items-center">
         <div class="card">
@@ -31,8 +40,8 @@
               <strong> {{educacion.descripcion}} </strong>
             </p>                
           </div>
-          <div class="card-footer">
-            <a href="http://{{educacion.web}}" target="_blank" rel="noopener noreferrer" class="btn btn-info text-light ">{{educacion.web}}</a>
+          <div  *ngIf="educacion.web != ''" class="card-footer">
+            <a href="http://{{educacion.web}}" target="_blank" rel="noopener noreferrer" class="btn btn-info text-light" draggable="false">{{educacion.web}}</a>
           </div>
         </div> 
       </div>
