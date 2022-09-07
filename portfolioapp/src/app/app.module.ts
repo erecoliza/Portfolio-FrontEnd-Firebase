@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
+import { AppRoutingModuleTsModule } from './app-routing.module.ts/app-routing.module.ts.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { BannerComponent } from './componentes/banner/banner.component';
@@ -17,7 +18,7 @@ import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
-  declarations: [
+  declarations: [  
     AppComponent,
     PieComponent,
     EncabezadoComponent,
@@ -30,6 +31,7 @@ import { HttpClientModule } from "@angular/common/http";
     ProyectosComponent
   ],
   imports: [
+    AppRoutingModuleTsModule,
     BrowserModule,
     HttpClientModule,
     // Specify ng-circle-progress as an import
