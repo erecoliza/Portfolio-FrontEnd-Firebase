@@ -50,11 +50,16 @@ body {
   } 
   
   .container-fluid {  
-    padding: 0rem;
+    padding: 0rem;    
     border-radius: 0.5rem;  
     border: 1px solid rgb(149, 175, 233);
   }
   
+   #Banner.container-fluid {
+    --bs-gutter-x: 0.0rem;
+   }
+  
+
   .titulo {
     text-align: left; 
     padding-left: 2rem;
@@ -134,8 +139,7 @@ body {
     background-color: rgba(223, 244, 255, 1);
     height: 7rem;
   }
-  
-    
+      
   /* From uiverse.io by @alexroumi */
   #pills-experiencia-tab,
   #pills-educacion-tab,

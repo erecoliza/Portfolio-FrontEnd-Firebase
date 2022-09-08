@@ -2,7 +2,7 @@
   "nombre": "Eduardo A. Recoliza",
   "imagen": "./assets/img_avatar.jpg",
   "posicion": "Desarrollador Web Full Stack Jr",
-  "acercade": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aliquam nam eum, minima natus est enim veniam quidem consectetur tenetur numquam ut rem beatae velit voluptatem consequuntur, earum animi facilis. Aliquid totam est provident tempora dignissimos odio labore molestiae omnis in quidem obcaecati expedita sapiente ipsa rem quas sint, ut maiores. Omnis nisi, dolore, quae, rerum magni error est similique tempora pariatur optio ut mollitia labore! Quo, blanditiis. Quibusdam alias veniam consectetur cumque laborum quod cupiditate porro atque doloremque dolore labore natus nemo soluta velit minus, ratione nihil rerum suscipit,",
+  "acercade": "Me considero una persona responsable, motivado para cumplir metas y capaz de adquirir nuevos conocimientos para llevar a cabo los objetivos propuestos de la mejor manera posible. Disfruto trabajar en proyectos que requieran trabajo en equipo y superar dificultades. Me gusta aprender nuevas tecnologías y estar involucrado en todos los aspectos del proceso de desarrollo. Me encanta aprender constantemente, no sólo en tecnologías sino también en áreas de administración de proyectos. </br>Me propuse lograr objetivos en cada desafío y conseguir mí primer trabajo en la industria. Mí stack actual es: HTML5, CSS3, JavaScript, MySQL, Angular, React, Api-rest | las herramientas que manejo: GIT, Github, Trello y SCRUM.",
   "experiencia": [
     {
       "empresa": "Municipalidad de la Costa",
@@ -14,151 +14,148 @@
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
     },
     {
-        "empresa": "Universidad Atlantida Argentina",
-        "logo": "./assets/experiencia/logo-uaa.svg",
-        "web": "www.atlantida.edu.ar",
-        "puesto": "puesto",
-        "periodo_desde": "99/9999",
-        "periodo_hasta": "99/9999",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-      },
-      {
-        "empresa": "Facultad Latinoamericana de Ciencias Sociales",
-        "logo": "./assets/experiencia/logo-flacso.svg",
-        "web": "www.flacso.org.ar",
-        "puesto": "puesto",
-        "periodo_desde": "99/9999",
-        "periodo_hasta": "99/9999",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-      },
-      {
-        "empresa": "K&Dat Sistemas",
-        "logo": "./assets/experiencia/logo-kydat.svg",
-        "web": "www.kydat.com.ar",
-        "puesto": "puesto",
-        "periodo_desde": "99/9999",
-        "periodo_hasta": "99/9999",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-      },
-      {
-        "empresa": "Columbia S.A. de Seguros",
-        "logo": "./assets/experiencia/logo-columbia.svg",
-        "web": "",
-        "puesto": "puesto",
-        "periodo_desde": "99/9999",
-        "periodo_hasta": "99/9999",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-      }
+      "empresa": "Universidad Atlantida Argentina",
+      "logo": "./assets/experiencia/logo-uaa.svg",
+      "web": "www.atlantida.edu.ar",
+      "puesto": "puesto",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    },
+    {
+      "empresa": "Facultad Latinoamericana de Ciencias Sociales",
+      "logo": "./assets/experiencia/logo-flacso.svg",
+      "web": "www.flacso.org.ar",
+      "puesto": "puesto",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    },
+    {
+      "empresa": "K&Dat Sistemas",
+      "logo": "./assets/experiencia/logo-kydat.svg",
+      "web": "www.kydat.com.ar",
+      "puesto": "puesto",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    },
+    {
+      "empresa": "Columbia S.A. de Seguros",
+      "logo": "./assets/experiencia/logo-columbia.svg",
+      "web": "",
+      "puesto": "puesto",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    }
   ],
   "educacion": [
     {
-      "establecimiento":"Argentina Programa",
-      "web":"argentinaprograma.inti.gob.ar",
-      "logo":"./assets/estudio/logo-argentinaprograma.svg",
-      "carrera":"Desarrollador Web Full Stack Jr con Angular",
-      "periodo_desde":"99/9999",
-      "periodo_hasta":"99/9999",
-      "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-  },
-  {
-    "establecimiento":"Instituto Municipal de Tecnología",
-    "web":"www.imt.lacosta.gob.ar",
-    "logo":"./assets/estudio/logo-imt.svg",
-    "carrera":"Desarrollador Web Full Stack Jr con React",
-    "periodo_desde":"99/9999",
-    "periodo_hasta":"99/9999",
-    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-  },
-  {
-    "establecimiento":"Oracle Alura",
-    "web":"www.aluracursos.com",
-    "logo":"./assets/estudio/logo-oracle.svg",
-    "carrera":"Curso realizado",
-    "periodo_desde":"99/9999",
-    "periodo_hasta":"99/9999",
-    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-  },
-  {
-    "establecimiento":"Universidad Atlantida Argentina",
-    "web":"www.atlantida.edu.ar",
-    "logo":"./assets/estudio/logo-uaa.svg",
-    "carrera":"Curso realizado",
-    "periodo_desde":"99/9999",
-    "periodo_hasta":"99/9999",
-    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-  },
-  {
-    "establecimiento":"Instituto Republica Argentina",
-    "web":"www.irabernal.edu.ar",
-    "logo":"./assets/estudio/logo-ira.svg",
-    "carrera":"Perito Mercantil",
-    "periodo_desde":"99/9999",
-    "periodo_hasta":"99/9999",
-    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-  }
-  ],
-  "habilidades":[
+      "establecimiento": "Argentina Programa",
+      "web": "argentinaprograma.inti.gob.ar",
+      "logo": "./assets/estudio/logo-argentinaprograma.svg",
+      "carrera": "Desarrollador Web Full Stack Jr con Angular",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    },
     {
-    "habilidad": "HTML",
-    "porcentaje": "90",
-    "color":"#483C32"
+      "establecimiento": "Instituto Municipal de Tecnología",
+      "web": "www.imt.lacosta.gob.ar",
+      "logo": "./assets/estudio/logo-imt.svg",
+      "carrera": "Desarrollador Web Full Stack Jr con React",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    },
+    {
+      "establecimiento": "Oracle Alura",
+      "web": "www.aluracursos.com",
+      "logo": "./assets/estudio/logo-oracle.svg",
+      "carrera": "Curso realizado",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    },
+    {
+      "establecimiento": "Universidad Atlantida Argentina",
+      "web": "www.atlantida.edu.ar",
+      "logo": "./assets/estudio/logo-uaa.svg",
+      "carrera": "Curso realizado",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    },
+    {
+      "establecimiento": "Instituto Republica Argentina",
+      "web": "www.irabernal.edu.ar",
+      "logo": "./assets/estudio/logo-ira.svg",
+      "carrera": "Perito Mercantil",
+      "periodo_desde": "99/9999",
+      "periodo_hasta": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
+    }
+  ],
+  "habilidades": [
+    {
+      "habilidad": "HTML",
+      "porcentaje": "90",
+      "color": "#483C32"
     },
     {
       "habilidad": "CSS",
       "porcentaje": "80",
-      "color":"#008000"
+      "color": "#008000"
     },
     {
       "habilidad": "JS",
       "porcentaje": "55",
-      "color":"#ff00ff"
+      "color": "#ff00ff"
     },
     {
       "habilidad": "ANGULAR",
       "porcentaje": "85",
-      "color":"#008BE8"
+      "color": "#008BE8"
     },
     {
       "habilidad": "REACT",
       "porcentaje": "55",
-      "color":"#800000"
+      "color": "#800000"
     },
     {
       "habilidad": "PYTHON",
       "porcentaje": "35",
-      "color":"#ff0000"
+      "color": "#ff0000"
     },
     {
       "habilidad": "PHP",
       "porcentaje": "45",
-      "color":"#000000"
-    },   
+      "color": "#000000"
+    },
     {
       "habilidad": "MYSQL",
       "porcentaje": "80",
-      "color":"#2B547E"
+      "color": "#2B547E"
     },
     {
       "habilidad": "API-REST",
       "porcentaje": "70",
-      "color":"#045F5F"
+      "color": "#045F5F"
     }
   ],
   "proyectos": [
     {
-        "nombre": "Ahorcado App",
-        "web": "www.ahorcado.app.com",
-        "fecha": "99/9999",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-        
+      "nombre": "Ahorcado App",
+      "web": "www.ahorcado.app.com",
+      "fecha": "05/2022",
+      "descripcion": "Realicé el trabajo de Front End, en HTML, CSS3 y JavaScript de la página web, basándome en los diseños provistos por el instituto Oracle Next Education."
     },
     {
-        "nombre": "Peluqueria App",
-        "web": "www.paraiso_de_amor.com",
-        "fecha": "99/9999",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
-        
+      "nombre": "Peluqueria App",
+      "web": "www.paraiso_de_amor.com",
+      "fecha": "99/9999",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde minima velit non culpa voluptatum veniam natus magnam animi autem cumque facere impedit suscipit, ducimus eaque dolor ullam assumenda, id, ipsum odit provident. Iste fugiat delectus eveniet quam et voluptate ut atque incidunt harum similique reprehenderit fugit repellendus, dolores suscipit."
     }
   ]
-
 }
