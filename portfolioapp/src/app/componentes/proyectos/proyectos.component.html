@@ -1,7 +1,7 @@
 <div class="row"> 
-    <h3 class="titulo">Proyectos</h3>
+    <h3 class="titulo">Proyectos <i class="fa-solid fa-circle-plus"></i></h3>
   </div>     
-  <div *ngFor="let proyecto of proyectosList" class="row row-experiencia">      
+  <div *ngFor="let proyecto of proyectosList; index as i " class="col">    
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
@@ -16,11 +16,16 @@
             Descripción: 
             <strong> {{proyecto.descripcion}} </strong>
           </p>                
-        </div>
-        <div class="card-footer">
-          <a ngIf="{{proyecto.web}}!=''"  href="http://{{proyecto.web}}" target="_blank" rel="noopener noreferrer" class="btn btn-info text-light">{{proyecto.web}}</a>
+        </div>      
+        <div *ngIf="proyecto.web != ''" class="card-footer">
+          <a href="http://{{proyecto.web}}" target="_blank" rel="noopener noreferrer"
+            class="btn btn-info text-light" draggable="false">{{proyecto.web}}</a>
         </div>
       </div>                                 
+    </div>
+    <div class="col ">
+      <i class="fa-solid fa-pen px-3 fa-lg" ></i>
+      <i class="fa-solid fa-circle-xmark px-3 fa-lg" ></i>
     </div>
   </div>    
   

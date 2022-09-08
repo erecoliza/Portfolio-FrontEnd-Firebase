@@ -1,18 +1,22 @@
 <!-- EXPERIENCIA -->
 <div class="row">
   <div class="col-lg-12">
-    <h3 class="titulo">Experiencia Laboral</h3>
+    <h3 class="titulo">Experiencia Laboral <i class="fa-solid fa-circle-plus"></i></h3>
   </div>
   <div *ngFor="let experiencia of experienciaList" class="row row-experiencia">
-    <div class="col-lg-2 align-self-center align-items-center" style="padding:1px; ">
+    <div class="col-lg-2 align-self-center align-items-center"
+      style="padding:1px; ">
 
       <div [ngSwitch]="experiencia.web">
         <div *ngSwitchCase="''">
-          <img [src]="experiencia.logo" alt="Avatar" class="img-fluid" draggable="false"/> <!-- img-thumbnail -->
+          <img [src]="experiencia.logo" alt="Avatar" class="img-fluid"
+            draggable="false"/> <!-- img-thumbnail -->
         </div>
         <div *ngSwitchDefault>
-          <a href="http://{{experiencia.web}}" target="_blank" rel="noopener noreferrer" draggable="false" class="link-primary">
-            <img [src]="experiencia.logo" alt="Avatar" class="img-fluid" draggable="false"/> <!-- img-thumbnail -->
+          <a href="http://{{experiencia.web}}" target="_blank" rel="noopener
+            noreferrer" draggable="false" class="link-primary">
+            <img [src]="experiencia.logo" alt="Avatar" class="img-fluid"
+              draggable="false"/> <!-- img-thumbnail -->
           </a>
         </div>
       </div>
@@ -40,9 +44,14 @@
           </p>
         </div>
         <div *ngIf="experiencia.web != ''" class="card-footer">
-          <a href="http://{{experiencia.web}}" target="_blank" rel="noopener noreferrer"
+          <a href="http://{{experiencia.web}}" target="_blank" rel="noopener
+            noreferrer"
             class="btn btn-info text-light" draggable="false">{{experiencia.web}}</a>
         </div>
       </div>
+    </div>
+    <div class="col ">
+      <i class="fa-solid fa-pen px-3 fa-lg"></i>
+      <i class="fa-solid fa-circle-xmark px-3 fa-lg"></i>
     </div>
   </div>

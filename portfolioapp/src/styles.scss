@@ -17,10 +17,34 @@ body {
     color: rgb(12, 99, 128);
   }
   
-  i.fa-brands:hover, i.fa-solid:hover  {
-    color: lightblue;
+  i.fa-solid.fa-circle-plus, i.fa-solid.fa-pen {
+    color: blue;
   }
   
+  i.fa-solid.fa-circle-plus:hover,
+  i.fa-solid.fa-pen:hover {
+    color: lightblue;
+  }
+
+  i.fa-solid.fa-circle-xmark {
+    color: red;
+  }
+  i.fa-solid.fa-circle-xmark:hover {
+    color: lightcoral;
+  }
+
+  // Visibilidad de los Iconos
+  i.fa-solid.fa-circle-plus, 
+  i.fa-solid.fa-pen,
+  i.fa-solid.fa-circle-xmark {
+    display: none;
+    //display: initial;
+  }
+
+  i.fa-brands:hover, i.fa-solid:hover {
+    color: lightblue;
+  }  
+    
   .list-group-item {
     --bs-list-group-bg: transparent;
   } 
