@@ -6,7 +6,6 @@
 </div>
   <div *ngFor="let experiencia of experienciaList" class="row row-experiencia">
     <div class="col-lg-2 align-self-center align-items-center" style="padding:1px; ">
-
       <div [ngSwitch]="experiencia.web">
         <div *ngSwitchCase="''">
           <img [src]="experiencia.logo" alt="Avatar" class="img-fluid"
