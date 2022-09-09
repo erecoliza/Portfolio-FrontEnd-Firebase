@@ -8,14 +8,20 @@
       <ul class="list-group list-group-horizontal justify-content-center">
         <li class="list-group-item border-0">
           <a href="https://wa.me/{{miPortfolio.telefono}}" target=”_blank”>
-            <i class="fa-brands fa-whatsapp fa-2xl" title={{miPortfolio.telefono}}>
-          </i></a>          
+            <span tooltip="<p>Teléfono: </br> {{miPortfolio.telefono}}</p>" placement="top" >  
+              <i class="fa-brands fa-whatsapp fa-2xl"></i>
+            </span>
+          </a>          
         </li>
+                
         <li class="list-group-item border-0">          
-          <a href="mailto:{{miPortfolio.email}}"><i
-              class="fa-solid fa-envelope fa-2xl" title={{miPortfolio.email}}>
-            </i></a>
+          <a href="mailto:{{miPortfolio.email}}">
+            <span tooltip="<p>Correo electónico: {{miPortfolio.email}}</p>" placement="right" >  
+              <i class="fa-solid fa-envelope fa-2xl"></i>
+            </span>    
+          </a>
         </li>
+
       </ul>
     </div>
     <div class="col-lg-10 align-self-center align-items-center">

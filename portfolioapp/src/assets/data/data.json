@@ -1,7 +1,11 @@
 {
   "nombre": "Eduardo A. Recoliza",
-  "telefono":"541141650553",
+  "telefono":"5491141650553",
   "linkedin":"https://www.linkedin.com/in/eduardo-recoliza-a41637a",  
+  "github": "https://github.com/erecoliza",                    
+  "facebook": "https://www.facebook.com/eduardo.recoliza/",
+  "instagram": "https://www.instagram.com/eduardo.recoliza",
+  "twitter":"https://twitter.com/eduardorecoliza",
   "email": "eduardo.recoliza@gmail.com",
   "imagen": "./assets/img_avatar.jpg",
   "posicion": "Desarrollador Web Full Stack Jr",

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
+// Import tooltips
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 import { AppRoutingModuleTsModule } from './app-routing.module.ts/app-routing.module.ts.module';
 import { AppComponent } from './app.component';
@@ -34,6 +36,7 @@ import { HttpClientModule } from "@angular/common/http";
     AppRoutingModuleTsModule,
     BrowserModule,
     HttpClientModule,
+    TooltipModule,
     // Specify ng-circle-progress as an import
     NgCircleProgressModule.forRoot({
       // set defaults here

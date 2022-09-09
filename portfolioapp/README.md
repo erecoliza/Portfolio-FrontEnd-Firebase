@@ -9,6 +9,9 @@ npm install -g @angular/cli@latest
 npm install
 ## circle Progress pie 
 npm  install ng-circle-progress --save
+## tooltip
+npm i ng2-tooltip-directive
+
 ------------------------------------------------------
 ng new `nombreDelProyecto`
 ng serve
