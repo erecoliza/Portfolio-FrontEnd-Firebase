@@ -1,11 +1,11 @@
 {
   "nombre": "Eduardo A. Recoliza",
-  "telefono":"5491141650553",
+  "telefono":"541141650553",
   "linkedin":"https://www.linkedin.com/in/eduardo-recoliza-a41637a",  
   "email": "eduardo.recoliza@gmail.com",
   "imagen": "./assets/img_avatar.jpg",
   "posicion": "Desarrollador Web Full Stack Jr",
-  "acercade": "Me considero una persona responsable, motivado para cumplir metas y capaz de adquirir nuevos conocimientos para llevar a cabo los objetivos propuestos de la mejor manera posible. Disfruto trabajar en proyectos que requieran trabajo en equipo y superar dificultades. Me gusta aprender nuevas tecnologías y estar involucrado en todos los aspectos del proceso de desarrollo. Me encanta aprender constantemente, no sólo en tecnologías sino también en áreas de administración de proyectos. </br>Me propuse lograr objetivos en cada desafío y conseguir mí primer trabajo en la industria. Mí stack actual es: HTML5, CSS3, JavaScript, MySQL, Angular, React, Api-rest | las herramientas que manejo: GIT, Github, Trello y SCRUM.",
+  "acercade": "Me considero una persona responsable, motivado para cumplir metas y capaz de adquirir nuevos conocimientos para llevar a cabo los objetivos propuestos de la mejor manera posible. Disfruto trabajar en proyectos que requieran trabajo en equipo y superar dificultades. Me gusta aprender nuevas tecnologías y estar involucrado en todos los aspectos del proceso de desarrollo. Me encanta aprender constantemente, no sólo en tecnologías sino también en áreas de administración de proyectos. </br>Me propuse lograr objetivos en cada desafío y conseguir mí primer trabajo en la industria. Mí stack actual es: HTML5, CSS3, JavaScript, MySQL, Angular, React, Api-rest | las herramientas que manejo: GIT, Github, Figma, Trello y SCRUM.",
   "experiencia": [
     {
       "empresa": "Municipalidad de la Costa",
