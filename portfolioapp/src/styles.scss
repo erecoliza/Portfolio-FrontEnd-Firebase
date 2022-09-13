@@ -9,6 +9,10 @@ body {
     background-color:teal !important;
   }
   
+  .modal-backdrop {
+    position:unset !important;
+  }
+
   i.fa-brands, i.fa-solid  {
     color: white;
   }
