@@ -3,7 +3,9 @@
   <div class="row">
     <div class="col-lg-2 align-self-center align-items-center">
       <img [src]="miPortfolio.imagen" alt="Avatar" class="avatar" />
-      <h4>{{miPortfolio.nombre}} <i class="fa-solid fa-pen px-3 fa-xs"></i></h4>
+      <h4>{{miPortfolio.nombre}} <i class="fa-solid fa-pen px-3 fa-xs "        
+        ></i></h4>
+      <!--  [ngStyle] ="{'display':({{mySwitch.}}.value==true)?'none':'initial' }"  --> 
       <h5>{{miPortfolio.posicion}} <i class="fa-solid fa-pen px-3 fa-xs"></i></h5>
       <ul class="list-group list-group-horizontal justify-content-center">
         <li class="list-group-item border-0">

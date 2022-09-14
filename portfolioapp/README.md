@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
+## NodeJs
+https://nodejs.org/en/download
+
+## Typescript
+npm install -g typescript
+
+## Instalar server
+npm install http-server
+npm start (Inicia el servidor)
+
 ## Instalaciones realizadas
 npm install -g npm@latest
 npm install -g typescript
@@ -11,6 +21,8 @@ npm install
 npm  install ng-circle-progress --save
 ## tooltip
 npm i ng2-tooltip-directive
+
+------------------------------------------------------
 
 ------------------------------------------------------
 ng new `nombreDelProyecto`

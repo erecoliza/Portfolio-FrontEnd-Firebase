@@ -149,7 +149,8 @@ body {
   #pills-experiencia-tab,
   #pills-educacion-tab,
   #pills-habilidades-tab,
-  #pills-proyectos-tab {
+  #pills-proyectos-tab,
+  #pills-inicio-tab{
     padding: 15px 25px;
     border: unset;
     border-radius: 15px;
@@ -168,7 +169,8 @@ body {
    #pills-experiencia-tab::before,
    #pills-educacion-tab::before,
    #pills-habilidades-tab::before,
-   #pills-proyectos-tab::before  {
+   #pills-proyectos-tab::before,
+   #pills-inicio-tab::before  {
     content: "";
     position: absolute;
     top: 0;
@@ -186,14 +188,16 @@ body {
    #pills-experiencia-tab:hover,
    #pills-educacion-tab:hover,
    #pills-habilidades-tab:hover,
-   #pills-proyectos-tab:hover {
+   #pills-proyectos-tab:hover,
+   #pills-inicio-tab:hover {
     color: #e8e8e8;
    }
    
    #pills-experiencia-tab:hover::before,
    #pills-educacion-tab:hover::before,
    #pills-habilidades-tab:hover::before,
-   #pills-proyectos-tab:hover::before {
+   #pills-proyectos-tab:hover::before,
+   #pills-inicio-tab:hover::before {
     width: 100%;
    }
   

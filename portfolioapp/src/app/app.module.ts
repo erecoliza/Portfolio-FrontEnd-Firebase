@@ -17,10 +17,12 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { HttpClientModule } from "@angular/common/http";
+import { ErrorComponent } from './componentes/error/error.component';
+import { IndexComponent } from './componentes/index/index.component';
 
 
 @NgModule({
-  declarations: [  
+  declarations: [      
     AppComponent,
     PieComponent,
     EncabezadoComponent,
@@ -30,7 +32,9 @@ import { HttpClientModule } from "@angular/common/http";
     ExperienciaComponent,
     EducacionComponent,
     HabilidadesComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    ErrorComponent,
+    IndexComponent
   ],
   imports: [
     AppRoutingModuleTsModule,
