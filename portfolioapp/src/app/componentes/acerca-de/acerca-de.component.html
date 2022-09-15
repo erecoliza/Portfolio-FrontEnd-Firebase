@@ -2,11 +2,15 @@
 <div class="container-fluid text-center" id="AcercaDe">
   <div class="row">
     <div class="col-lg-2 align-self-center align-items-center">
+      <h4>
+        <i class="fa-solid fa-pen px-3 fa-xs" data-bs-toggle="modal" data-bs-target="#AcercaDeDatosModal"></i>
+      </h4>
       <img [src]="miPortfolio.imagen" alt="Avatar" class="avatar" />
-      <h4>{{miPortfolio.nombre}} <i class="fa-solid fa-pen px-3 fa-xs "        
-        ></i></h4>
+      
+      <h4>{{miPortfolio.nombre}} 
+      </h4>
       <!--  [ngStyle] ="{'display':({{mySwitch.}}.value==true)?'none':'initial' }"  --> 
-      <h5>{{miPortfolio.posicion}} <i class="fa-solid fa-pen px-3 fa-xs"></i></h5>
+      <h5>{{miPortfolio.posicion}} </h5>
       <ul class="list-group list-group-horizontal justify-content-center">
         <li class="list-group-item border-0">
           <a href="https://wa.me/{{miPortfolio.telefono}}" target=”_blank”>
@@ -29,7 +33,9 @@
     <div class="col-lg-10 align-self-center align-items-center">
       <div class="row">
         <div class="col-lg-12 align-self-center align-items-center">
-          <h3>Acerca de <i class="fa-solid fa-pen px-3 fa-xs"></i> </h3>
+         <h3>Acerca de           
+            <i class="fa-solid fa-pen px-3 fa-xs" data-bs-toggle="modal" data-bs-target="#AcercaDeModal"></i>
+           </h3>
         </div>
       </div>
       <div class="container-fluid" id="Acercade-Descripción" style="background-color:#B8E5FF;  ">
@@ -40,3 +46,5 @@
     </div>
   </div>
 </div>
+<app-acerca-de-modal></app-acerca-de-modal>
+<app-acerca-de-datos-modal></app-acerca-de-datos-modal>

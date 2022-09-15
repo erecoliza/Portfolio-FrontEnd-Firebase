@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { LoginComponent } from '../login/login.component';
 
 @Component({
-  selector: 'app-encabezado',
-  templateUrl: './encabezado.component.html',
-  styleUrls: ['./encabezado.component.scss']
+  selector: 'app-acerca-de-datos-modal',
+  templateUrl: './acerca-de-datos-modal.component.html',
+  styleUrls: ['./acerca-de-datos-modal.component.scss']
 })
-export class EncabezadoComponent implements OnInit {  
+export class AcercaDeDatosModalComponent implements OnInit {
+
   miPortfolio:any;
   constructor(private datosPorfolio:PortfolioService) { }
 
@@ -16,4 +16,5 @@ export class EncabezadoComponent implements OnInit {
        this.miPortfolio=data;
     });
   }
+
 }

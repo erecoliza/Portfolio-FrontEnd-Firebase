@@ -1,0 +1,67 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="AcercaDeDatosModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Datos Principales </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Ubicación de la foto tipo Avatar</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre y Apellido:</label>
+              <input type="text" class="form-control" id="nombreyapellido" placeholder="" aria-describedby="nombreHelp" value="{{miPortfolio.nombre}}">
+              <div id="nombreHelp" class="form-text">
+                Nombre y Apellido completo
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="posicion" class="form-label">Posición:</label>
+              <input type="text" class="form-control" id="posicion" placeholder="Programador - Diseñador, etc" aria-describedby="posicionHelp" value="{{miPortfolio.posicion}}">
+              <div id="posicionHelp" class="form-text">                
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono:</label>
+              <input type="text" class="form-control" id="telefono" placeholder="+54 9 11 9999 9999" aria-describedby="telefonoHelp" value="{{miPortfolio.telefono}}">
+              <div id="telefonoHelp" class="form-text">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico:</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" aria-describedby="emailHelp" value="{{miPortfolio.email}}">
+              <div id="emailHelp" class="form-text">            
+              </div>
+            </div>          
+            
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript"> 
+  document.getElementById("nombre").setAttribute('value','miPortfolio.nombre');
+</script>

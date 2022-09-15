@@ -1,16 +1,18 @@
 {
   "nombre": "Eduardo A. Recoliza",
-  "telefono":"5491141650553",
+  "imagen": "./assets/img_avatar.jpg",
+  "telefono":"5491141650553",  
+  "email": "eduardo.recoliza@gmail.com",  
+  "posicion": "Desarrollador Web Full Stack Jr",
+  "acercade": "Mis aptitudes son: el buen compromiso a la hora de trabajar (tengo dinamismo en las relaciones interpersonales) y un trato de total amabilidad con las personas. Me considero un a persona responsable, motivado para cumplir metas y capaz de adquirir nuevos conocimientos para llevar a cabo los objetivos propuestos de la mejor manera posible. Disfruto trabajar en proyectos que requieran trabajo en equipo y superar dificultades. Me gusta aprender nuevas tecnologías y estar involucrado en todos los aspectos del proceso de desarrollo. Me encanta aprender constantemente, no sólo en tecnologías sino también en áreas de administración de proyectos. </br>Me propuse lograr objetivos en cada desafío y conseguir mí primer trabajo en la industria. Mí stack actual es: HTML5, CSS3, JavaScript, MySQL, Angular, React, Api-rest | las herramientas que manejo: GIT, Github, Figma, Trello y SCRUM.",
+ 
   "linkedin":"https://www.linkedin.com/in/eduardo-recoliza-a41637a",  
   "github": "https://github.com/erecoliza",                    
   "facebook": "https://www.facebook.com/eduardo.recoliza/",
   "instagram": "https://www.instagram.com/eduardo.recoliza",
   "twitter":"https://twitter.com/eduardorecoliza",
-  "email": "eduardo.recoliza@gmail.com",
-  "imagen": "./assets/img_avatar.jpg",
-  "posicion": "Desarrollador Web Full Stack Jr",
-  "acercade": "Mis aptitudes son: el buen compromiso a la hora de trabajar (tengo dinamismo en las relaciones interpersonales) y un trato de total amabilidad con las personas. Me considero un a persona responsable, motivado para cumplir metas y capaz de adquirir nuevos conocimientos para llevar a cabo los objetivos propuestos de la mejor manera posible. Disfruto trabajar en proyectos que requieran trabajo en equipo y superar dificultades. Me gusta aprender nuevas tecnologías y estar involucrado en todos los aspectos del proceso de desarrollo. Me encanta aprender constantemente, no sólo en tecnologías sino también en áreas de administración de proyectos. </br>Me propuse lograr objetivos en cada desafío y conseguir mí primer trabajo en la industria. Mí stack actual es: HTML5, CSS3, JavaScript, MySQL, Angular, React, Api-rest | las herramientas que manejo: GIT, Github, Figma, Trello y SCRUM.",
-  "experiencia": [
+  
+   "experiencia": [
     {
       "empresa": "Municipalidad de la Costa",
       "logo": "./assets/experiencia/logo-lacosta.svg",

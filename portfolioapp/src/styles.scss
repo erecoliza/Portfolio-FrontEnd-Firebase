@@ -28,10 +28,12 @@ body {
   i.fa-solid.fa-circle-plus:hover,
   i.fa-solid.fa-pen:hover {
     color: lightblue;
+    cursor: pointer; 
   }
 
   i.fa-solid.fa-circle-xmark {
     color: red;
+    cursor: pointer; 
   }
   
   i.fa-solid.fa-circle-xmark:hover {
@@ -42,8 +44,8 @@ body {
   i.fa-solid.fa-circle-plus, 
   i.fa-solid.fa-pen,
   i.fa-solid.fa-circle-xmark {
-    display: none;
-    //display: initial;
+    //display: none;
+    display: initial;
   }
 
   i.fa-brands:hover, i.fa-solid:hover {

@@ -8,8 +8,11 @@ import { TooltipModule } from 'ng2-tooltip-directive';
 import { AppRoutingModuleTsModule } from './app-routing.module.ts/app-routing.module.ts.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
+import { LoginComponent } from './componentes/login/login.component';
 import { BannerComponent } from './componentes/banner/banner.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
+import { AcercaDeModalComponent } from './componentes/acerca-de-modal/acerca-de-modal.component';
+import { AcercaDeDatosModalComponent } from './componentes/acerca-de-datos-modal/acerca-de-datos-modal.component';
 import { GlosarioComponent } from './componentes/glosario/glosario.component';
 import { PieComponent } from './componentes/pie/pie.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
@@ -34,7 +37,10 @@ import { IndexComponent } from './componentes/index/index.component';
     HabilidadesComponent,
     ProyectosComponent,
     ErrorComponent,
-    IndexComponent
+    IndexComponent,
+    AcercaDeModalComponent,
+    AcercaDeDatosModalComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModuleTsModule,
