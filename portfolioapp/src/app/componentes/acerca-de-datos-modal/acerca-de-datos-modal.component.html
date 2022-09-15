@@ -19,40 +19,41 @@
       </div>
       <div class="modal-body">
         <form>
+          
+          <div class="input-group">
+            <span class="input-group-text">Nombre y Apellido:</span>
+            <input type="text" class="form-control" id="nombre" value="{{miPortfolio.nombre}}">            
+          </div>
+          <div id="nombreHelp" class="form-text">
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Posición:</span>
+            <input type="text" class="form-control" id="posicion" value="{{miPortfolio.posicion}}">
+          </div>
+          <div id="nombreHelp" class="form-text">
+            
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Teléfono:</span>
+            <input type="text" class="form-control" id="telefon" value="{{miPortfolio.telefono}}">
+          </div>
+          <div id="nombreHelp" class="form-text">
+            Ej:  +54 9 11 9999 9999
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Teléfono:</span>
+            <input type="email" class="form-control" id="email" value="{{miPortfolio.email}}">
+          </div>
+          <div id="nombreHelp" class="form-text">
+            Ej: name@example.com.ar
+          </div>          
           <div class="mb-3">
             <label for="formFile" class="form-label">Ubicación de la foto tipo Avatar</label>
             <input class="form-control" type="file" id="formFile">
-          </div>
-          
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre y Apellido:</label>
-              <input type="text" class="form-control" id="nombreyapellido" placeholder="" aria-describedby="nombreHelp" value="{{miPortfolio.nombre}}">
-              <div id="nombreHelp" class="form-text">
-                Nombre y Apellido completo
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="posicion" class="form-label">Posición:</label>
-              <input type="text" class="form-control" id="posicion" placeholder="Programador - Diseñador, etc" aria-describedby="posicionHelp" value="{{miPortfolio.posicion}}">
-              <div id="posicionHelp" class="form-text">                
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="telefono" class="form-label">Teléfono:</label>
-              <input type="text" class="form-control" id="telefono" placeholder="+54 9 11 9999 9999" aria-describedby="telefonoHelp" value="{{miPortfolio.telefono}}">
-              <div id="telefonoHelp" class="form-text">
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Correo Electrónico:</label>
-              <input type="email" class="form-control" id="email" placeholder="name@example.com" aria-describedby="emailHelp" value="{{miPortfolio.email}}">
-              <div id="emailHelp" class="form-text">            
-              </div>
-            </div>          
-            
+          </div>  
         </form>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>

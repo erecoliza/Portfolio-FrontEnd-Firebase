@@ -16,5 +16,42 @@
   </head>
   <body>    
     <app-root></app-root>        
+    <script type="text/javascript">
+      function miLogin() {        
+        // Icono Nuevo
+        const iplus = document.getElementsByClassName("fa-circle-plus");
+        for (let i = 0; i < iplus.length; i++) {
+          iplus[i].style.display="initial";
+        }
+        // Icono Editar
+        const ipens = document.getElementsByClassName("fa-pen");
+        for (let i = 0; i < ipens.length; i++) {
+          ipens[i].style.display="initial";
+        }        
+        // Icono Borrar  
+        const idels = document.getElementsByClassName("fa-circle-xmark");
+        for (let i = 0; i < idels.length; i++) {
+          idels[i].style.display="initial";
+        }
+      }
+      function miLogout() {    
+        // Icono Nuevo
+        const iplus = document.getElementsByClassName("fa-circle-plus");
+        for (let i = 0; i < iplus.length; i++) {
+          iplus[i].style.display="none";
+        }
+        // Icono Editar
+        const ipens = document.getElementsByClassName("fa-pen");
+        for (let i = 0; i < ipens.length; i++) {
+          ipens[i].style.display="none";
+        }        
+        // Icono Borrar  
+        const idels = document.getElementsByClassName("fa-circle-xmark");
+        for (let i = 0; i < idels.length; i++) {
+          idels[i].style.display="none";
+        }        
+      }
+    </script>
   </body>
+  
 </html>

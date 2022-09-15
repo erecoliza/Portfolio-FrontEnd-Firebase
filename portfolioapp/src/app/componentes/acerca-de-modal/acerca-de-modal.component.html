@@ -19,26 +19,18 @@
       </div>
       <div class="modal-body">
         <form>
-          <div class="mb-3">            
-            <label for="nombreyapellido" class="form-label"> Mi descripción: </label>            
-            <textarea
-              class="form-control"
-              aria-label="With textarea"
-              id="acercade"
-              aria-describedby="acercaHelp"
-              rows="10"
-            >{{miPortfolio.acercade}}</textarea>
-
-          
-
-            
-            <div id="acercadeHelp" class="form-text">
-              breve reseña de mi persona
-            </div>
+          <div class="input-group">
+            <span class="input-group-text">Acerca de mi:</span>
+            <textarea class="form-control" 
+            aria-label="With textarea"
+            id="acercade"
+            aria-describedby="acercaHelp"
+            rows="10">
+            {{miPortfolio.acercade}}</textarea>            
           </div>
         </form>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
