@@ -22,6 +22,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { HttpClientModule } from "@angular/common/http";
 import { ErrorComponent } from './componentes/error/error.component';
 import { IndexComponent } from './componentes/index/index.component';
+import { EducacionModalComponent } from './componentes/educacion-modal/educacion-modal.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { IndexComponent } from './componentes/index/index.component';
     IndexComponent,
     AcercaDeModalComponent,
     AcercaDeDatosModalComponent,
-    LoginComponent
+    LoginComponent,
+    EducacionModalComponent
   ],
   imports: [
     AppRoutingModuleTsModule,

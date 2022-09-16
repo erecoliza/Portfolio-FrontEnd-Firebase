@@ -1,0 +1,62 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="EducacionModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Educación </h5>        
+      </div>
+      <div class="modal-body">
+        <form>          
+          <div class="input-group">
+            <span class="input-group-text">Establecimiento:</span>
+            <input type="text" class="form-control" id="nombre" value="{{miPortfolio.establecimiento}}">            
+          </div>
+          <div id="nombreHelp" class="form-text">
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Título:</span>
+            <input type="text" class="form-control" id="posicion" value="{{miPortfolio.titulo}}">
+          </div>
+          <div id="nombreHelp" class="form-text">            
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Período:</span>
+            <input type="text" class="form-control" id="telefon" value="{{miPortfolio.periodo_desde}}">
+          </div>
+          <div id="nombreHelp" class="form-text">
+            Ej:  99/9999
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Período hasta:</span>
+            <input type="text" class="form-control" id="telefon" value="{{miPortfolio.periodo_hasta}}">
+          </div>
+          <div id="nombreHelp" class="form-text">
+            Ej:  99/9999
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Descripción:</span>
+            <input type="email" class="form-control" id="email" value="{{miPortfolio.descripcion}}">
+          </div>
+          <div id="nombreHelp" class="form-text">            
+          </div>          
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Logo del Establecimiento</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>  
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>

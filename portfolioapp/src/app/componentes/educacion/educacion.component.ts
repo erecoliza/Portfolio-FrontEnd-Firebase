@@ -8,7 +8,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EducacionComponent implements OnInit {
 
-  educacionList:any;
+  idEducacion: any;
+
+  educacionList: any;
   
   constructor(private datosPorfolio:PortfolioService) { }
 
@@ -17,6 +19,10 @@ export class EducacionComponent implements OnInit {
        this.educacionList = data.educacion;
        console.log(this.educacionList);
     });
+  }
+
+  agregarEducacion(){
+    console.log("llegue");
   }
 
 }
