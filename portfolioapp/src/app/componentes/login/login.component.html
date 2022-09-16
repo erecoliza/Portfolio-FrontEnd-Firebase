@@ -1,39 +1,37 @@
 <!-- Modal -->
 <div class="modal fade " tabindex="-1" id="loginModal"
-aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-      <img src="./assets/img_avatar.jpg" alt="Avatar" class="avatarito" />
-      <button type="button" class="btn-close" data-bs-dismiss="modal"
-        aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Correo
-            Electrónico</label>
-          <input type="email" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="name@example.com" />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" class="form-control"
-            id="exampleInputPassword1" />
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer justify-content-center">
-      <button type="button" class="btn btn-primary" onClick="miLogin()" data-dismiss="modal" >
-        Iniciar Sesión
-      </button>
-      <button type="button" class="btn btn-secondary" onClick="miLogout()" data-dismiss="modal" >
-        Cerrar Sesión
-      </button>
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <img src="./assets/img_avatar.jpg" alt="Avatar" class="avatarito" />
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Correo
+              Electrónico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="name@example.com" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control"
+              id="exampleInputPassword1" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Salir
+        </button>
+        <button type="button" class="btn btn-primary" onClick="miLogin()"
+          data-bs-dismiss="modal">
+          Iniciar Sesión
+        </button>
+      </div>
     </div>
   </div>
 </div>
-</div>
-

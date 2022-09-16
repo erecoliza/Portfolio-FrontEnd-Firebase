@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
 
     <title>Portfolio Well Full Stack</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />  
-    
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+
     <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />       
-    
-     <!-- fontawesome CSS -->
-    <script
-      src="http://kit.fontawesome.com/b56caa63bd.js"
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- fontawesome CSS -->
+    <script src="http://kit.fontawesome.com/b56caa63bd.js"
       crossorigin="anonumous"></script>
   </head>
-  <body>    
-    <app-root></app-root>        
+
+  <body>
+    <app-root></app-root>
     <script type="text/javascript">
-      function miLogin() {        
-        // Icono Nuevo
-        const iplus = document.getElementsByClassName("fa-circle-plus");
-        for (let i = 0; i < iplus.length; i++) {
-          iplus[i].style.display="initial";
-        }
-        // Icono Editar
-        const ipens = document.getElementsByClassName("fa-pen");
-        for (let i = 0; i < ipens.length; i++) {
-          ipens[i].style.display="initial";
-        }        
-        // Icono Borrar  
-        const idels = document.getElementsByClassName("fa-circle-xmark");
-        for (let i = 0; i < idels.length; i++) {
-          idels[i].style.display="initial";
-        }
+    function miLogin() {
+      // Muestro Icono Nuevo
+      const iplus = document.getElementsByClassName("fa-circle-plus");
+      console.log(iplus);
+      for (let i = 0; i < iplus.length; i++) {
+        iplus[i].style.display = "initial";
       }
-      function miLogout() {    
-        // Icono Nuevo
-        const iplus = document.getElementsByClassName("fa-circle-plus");
-        for (let i = 0; i < iplus.length; i++) {
-          iplus[i].style.display="none";
-        }
-        // Icono Editar
-        const ipens = document.getElementsByClassName("fa-pen");
-        for (let i = 0; i < ipens.length; i++) {
-          ipens[i].style.display="none";
-        }        
-        // Icono Borrar  
-        const idels = document.getElementsByClassName("fa-circle-xmark");
-        for (let i = 0; i < idels.length; i++) {
-          idels[i].style.display="none";
-        }        
+      // Muestro Icono Editar
+      const ipens = document.getElementsByClassName("fa-pen");
+      for (let i = 0; i < ipens.length; i++) {
+        ipens[i].style.display = "initial";
       }
-    </script>
+      // Muestro Icono Borrar
+      const idels = document.getElementsByClassName("fa-circle-xmark");
+      for (let i = 0; i < idels.length; i++) {
+        idels[i].style.display = "initial";
+      }
+      // Muestro el Icono LogOut
+      const ilogout = document.getElementsByClassName("fa-right-from-bracket");
+      for (let i = 0; i < ilogout.length; i++) {
+        ilogout[i].style.display = "initial";
+      }
+      // Oculto el Icono Login
+      const ilogin = document.getElementsByClassName("fa-user-lock");
+      for (let i = 0; i < ilogin.length; i++) {
+        ilogin[i].style.display = "none";
+      }
+    }
+
+    function miLogout() {
+      // Oculto Icono Nuevo
+      const iplus = document.getElementsByClassName("fa-circle-plus");
+      for (let i = 0; i < iplus.length; i++) {
+        iplus[i].style.display = "none";
+      }
+      // Oculto Icono Editar
+      const ipens = document.getElementsByClassName("fa-pen");
+      for (let i = 0; i < ipens.length; i++) {
+        ipens[i].style.display = "none";
+      }
+      // Oculto Icono Borrar
+      const idels = document.getElementsByClassName("fa-circle-xmark");
+      for (let i = 0; i < idels.length; i++) {
+        idels[i].style.display = "none";
+      }      
+      // Oculto el Icono LogOut
+      const ilogout = document.getElementsByClassName("fa-right-from-bracket");
+      for (let i = 0; i < ilogout.length; i++) {
+        ilogout[i].style.display = "none";
+      }
+      // Muestro el Icono Login
+      const ilogin = document.getElementsByClassName("fa-user-lock");
+      for (let i = 0; i < ilogin.length; i++) {
+        ilogin[i].style.display = "initial";
+      }
+    }
+  </script>
   </body>
-  
+
 </html>

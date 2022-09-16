@@ -21,7 +21,8 @@ body {
     color: rgb(12, 99, 128);
   }
   
-  i.fa-solid.fa-circle-plus, i.fa-solid.fa-pen {
+  i.fa-solid.fa-circle-plus, 
+  i.fa-solid.fa-pen {
     color: blue;
   }
   
@@ -43,11 +44,12 @@ body {
   // Visibilidad de los Iconos
   i.fa-solid.fa-circle-plus, 
   i.fa-solid.fa-pen,
-  i.fa-solid.fa-circle-xmark {
+  i.fa-solid.fa-circle-xmark,
+  i.fa-solid.fa-right-from-bracket {
     display: none;
     //display: initial;
   }
-
+  
   i.fa-brands:hover, i.fa-solid:hover {
     color: lightblue;
   }  

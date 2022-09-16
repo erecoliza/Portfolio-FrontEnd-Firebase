@@ -1,56 +1,92 @@
 <!-- EDUCACIÓN -->
 <div class="row">
   <div class="col-lg-12 align-self-center align-items-center">
-    <h3 class="titulo">Educación <i class="fa-solid fa-circle-plus"></i></h3>
+    <h3 class="titulo">
+      Educación
+      <i
+        class="fa-solid fa-circle-plus"
+        tooltip="<p> Agregar NUEVA referencia</br><strong>EDUCACION</strong></p>"
+        placement="top"
+      ></i>
+    </h3>
   </div>
 </div>
 <div *ngFor="let educacion of educacionList" class="row row-experiencia">
   <div class="col-lg-2 align-self-center align-items-center">
-
     <div [ngSwitch]="educacion.web">
       <div *ngSwitchCase="''">
-        <img [src]="educacion.logo" alt="Avatar" class="img-fluid"
-          draggable="false"/> <!-- img-thumbnail -->
+        <img
+          [src]="educacion.logo"
+          alt="Avatar"
+          class="img-fluid"
+          draggable="false"
+        />
+        <!-- img-thumbnail -->
       </div>
       <div *ngSwitchDefault>
-        <a href="http://{{educacion.web}}" target="_blank" rel="noopener
-          noreferrer" draggable="false" class="link-primary">
-          <img [src]="educacion.logo" alt="Avatar" class="img-fluid"
-            draggable="false"/> <!-- img-thumbnail -->
+        <a
+          href="http://{{ educacion.web }}"
+          target="_blank"
+          rel="noopener
+          noreferrer"
+          draggable="false"
+          class="link-primary"
+        >
+          <img
+            [src]="educacion.logo"
+            alt="Avatar"
+            class="img-fluid"
+            draggable="false"
+          />
+          <!-- img-thumbnail -->
         </a>
       </div>
     </div>
-
   </div>
   <div class="col-lg-10 align-self-center align-items-center">
     <div class="card">
       <div class="card-header">
-        <h4>{{educacion.establecimiento}}</h4>
+        <h4>{{ educacion.establecimiento }}</h4>
       </div>
-      <div class="card-body" style="text-align: justify; ">
+      <div class="card-body" style="text-align: justify">
         <p>
           Carrera/Título:
-          <strong> {{educacion.carrera}} </strong>
+          <strong> {{ educacion.carrera }} </strong>
         </p>
         <p>
           Período desde:
-          <strong> {{educacion.periodo_desde}} </strong>
+          <strong> {{ educacion.periodo_desde }} </strong>
           hasta:
-          <strong> {{educacion.periodo_hasta}} </strong>
+          <strong> {{ educacion.periodo_hasta }} </strong>
         </p>
         <p>
           Descripción:
-          <strong> {{educacion.descripcion}} </strong>
+          <strong> {{ educacion.descripcion }} </strong>
         </p>
       </div>
       <div *ngIf="educacion.web != ''" class="card-footer">
-        <a href="http://{{educacion.web}}" target="_blank" rel="noopener
-          noreferrer" class="btn btn-info text-light" draggable="false">{{educacion.web}}</a>
+        <a
+          href="http://{{ educacion.web }}"
+          target="_blank"
+          rel="noopener
+          noreferrer"
+          class="btn btn-info text-light"
+          draggable="false"
+          >{{ educacion.web }}</a
+        >
       </div>
-    </div>    
+    </div>
   </div>
-  <div class="col ">
-    <i class="fa-solid fa-pen px-3 fa-lg" ></i>
-    <i class="fa-solid fa-circle-xmark px-3 fa-lg" ></i>
-  </div>  
+  <div class="col">
+    <i
+      class="fa-solid fa-pen px-5 fa-lg"
+      tooltip="<p> Editar y/o Modificar </p>"
+      placement="top"
+    ></i>
+    <i
+      class="fa-solid fa-circle-xmark px-5 fa-lg"
+      tooltip="<p> Eliminar </p>"
+      placement="top"
+    ></i>
+  </div>
 </div>
