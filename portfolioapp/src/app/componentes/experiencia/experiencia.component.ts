@@ -17,4 +17,9 @@ export class ExperienciaComponent implements OnInit {
     });
   }
 
+  agregarEmpresa(){
+    console.log("llegue");
+  }
+
+
 }

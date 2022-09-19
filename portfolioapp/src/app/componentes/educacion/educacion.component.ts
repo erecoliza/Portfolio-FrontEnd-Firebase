@@ -6,9 +6,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.scss']
 })
-export class EducacionComponent implements OnInit {
-
-  idEducacion: any;
+export class EducacionComponent implements OnInit { 
 
   educacionList: any;
   

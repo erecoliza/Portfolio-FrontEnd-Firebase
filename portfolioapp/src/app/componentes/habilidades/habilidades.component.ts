@@ -17,4 +17,9 @@ export class HabilidadesComponent implements OnInit {
        console.log(this.habilidadList);
     });
   }
+
+  agregarHabilidad(){
+    console.log("llegue");
+  }
+
 }

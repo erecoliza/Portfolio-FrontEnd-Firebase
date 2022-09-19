@@ -23,6 +23,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { ErrorComponent } from './componentes/error/error.component';
 import { IndexComponent } from './componentes/index/index.component';
 import { EducacionModalComponent } from './componentes/educacion-modal/educacion-modal.component';
+import { ExperienciaModalComponent } from './componentes/experiencia-modal/experiencia-modal.component';
+import { ProyectoModalComponent } from './componentes/proyecto-modal/proyecto-modal.component';
+import { HabilidadModalComponent } from './componentes/habilidad-modal/habilidad-modal.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { EducacionModalComponent } from './componentes/educacion-modal/educacion
     AcercaDeModalComponent,
     AcercaDeDatosModalComponent,
     LoginComponent,
-    EducacionModalComponent
+    EducacionModalComponent,
+    ExperienciaModalComponent,
+    ProyectoModalComponent,
+    HabilidadModalComponent
   ],
   imports: [
     AppRoutingModuleTsModule,

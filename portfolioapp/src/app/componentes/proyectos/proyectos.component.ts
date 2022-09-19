@@ -17,4 +17,9 @@ export class ProyectosComponent implements OnInit {
     });
   }
 
+  agregarProyecto(){
+    console.log("llegue");
+  }
+
+
 }

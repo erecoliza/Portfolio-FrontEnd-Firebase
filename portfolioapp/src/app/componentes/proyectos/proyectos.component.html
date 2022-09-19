@@ -1,35 +1,35 @@
-<div class="row"> 
-    <h3 class="titulo">Proyectos 
-      <span tooltip="<p> Agregar NUEVA referencia</br><strong>PROYECTOS</strong></p>" placement="top">
+<div class="row">
+  <h3 class="titulo">Proyectos
+    <span tooltip="<p> Agregar NUEVA referencia</br><strong>PROYECTOS</strong></p>" placement="top">
       <i class="fa-solid fa-circle-plus"></i>
-      </span>
-    </h3>
-  </div>     
-  <div *ngFor="let proyecto of proyectosList; index as i " class="col">    
-    <div class="col-lg-12">
-      <div class="card">
-        <div class="card-header">
-          <h4>{{proyecto.nombre}}</h4>
-        </div>
-        <div class="card-body" style="text-align: justify; " >                
-          <p>                
-            Fecha: 
-            <strong> {{proyecto.fecha}} </strong>
-          </p>                
-          <p>                
-            Descripción: 
-            <strong> {{proyecto.descripcion}} </strong>
-          </p>                
-        </div>      
-        <div *ngIf="proyecto.web != ''" class="card-footer">
-          <a href="http://{{proyecto.web}}" target="_blank" rel="noopener noreferrer"
-            class="btn btn-info text-light" draggable="false">{{proyecto.web}}</a>
-        </div>
-      </div>                                 
+    </span>
+  </h3>
+</div>
+<div *ngFor="let proyecto of proyectosList; index as i " class="col">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <h4>{{proyecto.nombre}}
+          <i id="establecimiento" class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>"
+            placement="top" data-bs-toggle="modal" data-bs-target="#ExperienciaModal" (click)="agregarProyecto()">
+          </i>
+          <i class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>" placement="top"></i>
+        </h4>
+      </div>
+      <div class="card-body" style="text-align: justify; ">
+        <p>
+          Fecha:
+          <strong> {{proyecto.fecha}} </strong>
+        </p>
+        <p>
+          Descripción:
+          <strong> {{proyecto.descripcion}} </strong>
+        </p>
+      </div>
+      <div *ngIf="proyecto.web != ''" class="card-footer">
+        <a href="http://{{proyecto.web}}" target="_blank" rel="noopener noreferrer" class="btn btn-info text-light"
+          draggable="false">{{proyecto.web}}</a>
+      </div>
     </div>
-    <div class="col ">
-      <i class="fa-solid fa-pen px-5 fa-lg" ></i>
-      <i class="fa-solid fa-circle-xmark px-5 fa-lg" ></i>
-    </div>
-  </div>    
-  
+  </div>
+</div>

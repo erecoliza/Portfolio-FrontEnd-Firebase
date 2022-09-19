@@ -1,34 +1,29 @@
-
 <!-- https://www.npmjs.com/package/ng-circle-progress -->
 
 <div class="row">
   <div class="col-lg-12 align-self-center align-items-center">
-    <h3 class="titulo">Habilidades 
+    <h3 class="titulo">Habilidades
       <span tooltip="<p> Agregar NUEVA referencia</br><strong>HABILIDADES</strong></p>" placement="top">
-        <i class="fa-solid fa-circle-plus" ></i>
-      </span>  
-      </h3>
+        <i class="fa-solid fa-circle-plus"></i>
+      </span>
+    </h3>
   </div>
 </div>
 
 <div class="row align-self-center align-items-center row-experiencia">
   <div *ngFor="let habilidad of habilidadList; index as i " class="col">
     <figure class="figure">
-      <circle-progress [percent]="habilidad.porcentaje" 
-        [radius]="50" 
-        [outerStrokeWidth]="10" 
-        [innerStrokeWidth]="5"
-        [outerStrokeColor]="habilidad.color" 
-        [innerStrokeColor]="'#EEEEEE'" 
-        [animation]="true" 
-        [responsive]="false" 
-        [showSubtitle]="false"
-        [animationDuration]="300">{{habilidad.habilidad}}</circle-progress>
+      <circle-progress [percent]="habilidad.porcentaje" [radius]="50" [outerStrokeWidth]="10" [innerStrokeWidth]="5"
+        [outerStrokeColor]="habilidad.color" [innerStrokeColor]="'#EEEEEE'" [animation]="true" [responsive]="false"
+        [showSubtitle]="false" [animationDuration]="300">{{habilidad.habilidad}}</circle-progress>
       <figcaption class="figure-caption">{{habilidad.habilidad}}</figcaption>
     </figure>
     <div class="col ">
-      <i class="fa-solid fa-pen px-3 fa-lg"></i>
-      <i class="fa-solid fa-circle-xmark px-3 fa-lg"></i>
+      <i id="establecimiento" class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>" placement="top"
+        data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="agregarHabilidad()">
+      </i>
+      <i class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>" placement="top"></i>
     </div>
   </div>
 </div>
+<app-habilidad-modal></app-habilidad-modal>

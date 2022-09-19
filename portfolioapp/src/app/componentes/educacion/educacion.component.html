@@ -30,16 +30,19 @@
   </div>
   <div class="col-lg-10 align-self-center align-items-center">
     <div class="card">
-      <div class="card-header">
-        <h4>{{ educacion.establecimiento }} / {{ i }} / {{idEducacion}}
-          <i class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>" placement="top" 
+      <div class="card-header" >        
+        <!--<span class="badge bg-secondary">{{ i }}</span>-->
+        <h4 >{{ educacion.establecimiento }} 
+          <i id="establecimiento" class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>" placement="top" 
             data-bs-toggle="modal"
-            data-bs-target="#EducacionModal" 
-            (click)="agregarEducacion()"></i>
+            data-bs-target="#EducacionModal"     
+            (click)="agregarEducacion()">
+          </i>
           <i class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>" placement="top"></i>
         </h4>
       </div>
       <div class="card-body" style="text-align: justify">
+        
         <p>
           Carrera/Título:
           <strong> {{ educacion.carrera }} </strong>
@@ -62,4 +65,4 @@
     </div>
   </div>  
 </div>
-<app-educacion-modal [educacionId] = "idEducacion"></app-educacion-modal>
+<app-educacion-modal></app-educacion-modal>
