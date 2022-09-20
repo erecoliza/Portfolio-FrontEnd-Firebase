@@ -11,7 +11,7 @@
       <div class="card-header">
         <h4>{{proyecto.nombre}}
           <i id="establecimiento" class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>"
-            placement="top" data-bs-toggle="modal" data-bs-target="#ExperienciaModal" (click)="agregarProyecto()">
+            placement="top" data-bs-toggle="modal" data-bs-target="#ProjectoModal" (click)="agregarProyecto($event,proyecto)">
           </i>
           <i class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>" placement="top"></i>
         </h4>
@@ -33,3 +33,5 @@
     </div>
   </div>
 </div>
+<app-proyecto-modal [miProyecto]="proyectoIndividual"></app-proyecto-modal>
+

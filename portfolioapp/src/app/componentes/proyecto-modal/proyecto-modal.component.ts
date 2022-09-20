@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-proyecto-modal',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProyectoModalComponent implements OnInit {
 
-  constructor() { }
+  @Input() miProyecto: any;  
+  
+  miPortfolio: any;
+
+  constructor() {
+   }
 
   ngOnInit(): void {
+    
   }
-
 }

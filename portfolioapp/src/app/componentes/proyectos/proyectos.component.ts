@@ -8,6 +8,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ProyectosComponent implements OnInit {
   proyectosList:any;
+
+  proyectoIndividual: any;
+  
   constructor(private datosPorfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -17,9 +20,15 @@ export class ProyectosComponent implements OnInit {
     });
   }
 
-  agregarProyecto(){
-    console.log("llegue");
-  }
+  agregarProyecto(event:any, item:any){
+    
+    console.log("Event: ",event,"Item:",item);
 
+    this.proyectoIndividual = item;
+
+    console.log("Proyecto Individual ", 
+    this.proyectoIndividual);
+
+  }
 
 }

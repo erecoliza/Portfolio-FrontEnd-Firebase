@@ -1,1 +1,49 @@
-<p>proyecto-modal works!</p>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="ProjectoModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Projecto Web </h5>        
+      </div>
+      <div class="modal-body">
+        <form>          
+          <div class="input-group">
+            <span class="input-group-text">Nombre:</span>
+            <input type="text" class="form-control" id="nombre" value="{{miPortfolio.nombre}}">            
+          </div>
+          <div id="nombreHelp" class="form-text">
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Fecha:</span>
+            <input type="text" class="form-control" id="telefon" value="{{miPortfolio.periodo_desde}}" placeholder="99/9999">            
+          </div>
+          <div id="nombreHelp" class="form-text">          
+          </div>        
+          <div class="input-group">
+            <span class="input-group-text">Descripción:</span>
+            <input type="email" class="form-control" id="email" value="{{miPortfolio.descripcion}}">
+          </div>
+          <div id="nombreHelp" class="form-text">            
+          </div>   
+          <div class="input-group">
+            <span class="input-group-text">WEB:</span>
+            <input type="text" class="form-control" id="posicion" value="{{miPortfolio.web}}">
+          </div>                 
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
