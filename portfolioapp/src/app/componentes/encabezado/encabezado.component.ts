@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-encabezado',
@@ -8,6 +7,7 @@ import { LoginComponent } from '../login/login.component';
   styleUrls: ['./encabezado.component.scss']
 })
 export class EncabezadoComponent implements OnInit {  
+  tokenValor:any;
   miPortfolio:any;
   constructor(private datosPorfolio:PortfolioService) { }
 
@@ -16,4 +16,15 @@ export class EncabezadoComponent implements OnInit {
        this.miPortfolio=data;
     });
   }
+ 
+  miLogout() {
+    localStorage.removeItem('token');    
+  }
+
+  isLogin(){
+    let tokenValor = localStorage.getItem('token'); 
+    return tokenValor == 'eduardo123456';     
+  }
+
+
 }

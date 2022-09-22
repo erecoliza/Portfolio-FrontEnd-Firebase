@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-lg-2 align-self-center align-items-center">
       <h4>
-        <i
+        <i *ngIf="isLogin()"
           class="fa-solid fa-pen px-3 fa-xs"
           tooltip="<p> Editar y/o Modificar </p>"
           placement="top"
@@ -41,7 +41,7 @@
           <h3>
             <span
               >Acerca de
-              <i
+              <i *ngIf="isLogin()"
                 class="fa-solid fa-pen px-3 fa-xs"
                 tooltip="<p> Editar y/o Modificar </p>"
                 placement="top"

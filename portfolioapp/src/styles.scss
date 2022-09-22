@@ -41,15 +41,6 @@ body {
     color: lightcoral;
   }
 
-  // Visibilidad de los Iconos
-  i.fa-solid.fa-circle-plus, 
-  i.fa-solid.fa-pen,
-  i.fa-solid.fa-circle-xmark,
-  i.fa-solid.fa-right-from-bracket {
-    display: none;
-    //display: initial;
-  }
-  
   i.fa-brands:hover, i.fa-solid:hover {
     color: lightblue;
   }  
@@ -68,7 +59,6 @@ body {
     --bs-gutter-x: 0.0rem;
    }
   
-
   .titulo {
     text-align: left; 
     padding-left: 2rem;

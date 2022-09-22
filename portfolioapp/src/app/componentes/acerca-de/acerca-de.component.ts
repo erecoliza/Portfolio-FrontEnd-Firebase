@@ -16,4 +16,9 @@ export class AcercaDeComponent implements OnInit {
     });
   }
 
+  isLogin(){
+    let tokenValor = localStorage.getItem('token'); 
+    return tokenValor == 'eduardo123456';     
+  }
+
 }

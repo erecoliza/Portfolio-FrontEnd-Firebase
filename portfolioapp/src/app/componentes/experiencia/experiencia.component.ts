@@ -20,6 +20,10 @@ export class ExperienciaComponent implements OnInit {
   agregarEmpresa(){
     console.log("llegue");
   }
-
+  
+  isLogin(){
+    let tokenValor = localStorage.getItem('token'); 
+    return tokenValor == 'eduardo123456';     
+  }
 
 }

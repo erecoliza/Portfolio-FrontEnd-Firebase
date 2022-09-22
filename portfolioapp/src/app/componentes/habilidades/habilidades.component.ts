@@ -21,5 +21,10 @@ export class HabilidadesComponent implements OnInit {
   agregarHabilidad(){
     console.log("llegue");
   }
+  
+  isLogin(){
+    let tokenValor = localStorage.getItem('token'); 
+    return tokenValor == 'eduardo123456';     
+  }
 
 }

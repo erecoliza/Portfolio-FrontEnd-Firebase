@@ -3,7 +3,7 @@
   <div class="col-lg-12 align-self-center align-items-center">
     <h3 class="titulo">
       Educación
-      <i class="fa-solid fa-circle-plus" tooltip="<p> Agregar NUEVA referencia</br><strong>EDUCACION</strong></p>"
+      <i *ngIf="isLogin()" class="fa-solid fa-circle-plus" tooltip="<p> Agregar NUEVA referencia</br><strong>EDUCACION</strong></p>"
         placement="top"
         data-bs-toggle="modal"
         data-bs-target="#EducacionModal" 
@@ -12,7 +12,7 @@
     </h3>
   </div>
 </div>
-<div *ngFor="let educacion of educacionList; index as i;" class="row row-experiencia" >
+<div *ngFor="let educacion of educacionList; let i = index;" class="row row-experiencia" >
   <div class="col-lg-2 align-self-center align-items-center">
     <div [ngSwitch]="educacion.web">
       <div *ngSwitchCase="''">
@@ -33,12 +33,12 @@
       <div class="card-header" >        
         <!--<span class="badge bg-secondary">{{ i }}</span>-->
         <h4 >{{ educacion.establecimiento }} 
-          <i id="establecimiento" class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>" placement="top" 
+          <i *ngIf="isLogin()" id="establecimiento" class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>" placement="top" 
             data-bs-toggle="modal"
             data-bs-target="#EducacionModal"     
             (click)="agregarEducacion()">
           </i>
-          <i class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>" placement="top"></i>
+          <i *ngIf="isLogin()" class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>" placement="top"></i>
         </h4>
       </div>
       <div class="card-body" style="text-align: justify">

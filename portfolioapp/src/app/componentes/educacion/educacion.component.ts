@@ -23,4 +23,9 @@ export class EducacionComponent implements OnInit {
     console.log("llegue");
   }
 
+  isLogin(){
+    let tokenValor = localStorage.getItem('token'); 
+    return tokenValor == 'eduardo123456';     
+  }
+
 }
