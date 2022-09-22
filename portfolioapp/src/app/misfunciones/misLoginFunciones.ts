@@ -1,18 +1,12 @@
-
 export function miLogin() {
-    localStorage.setItem('token','eduardo123456');         
-  }
-  
+  localStorage.setItem('token', 'eduardo123456');
+}
+
 export function miLogout() {
-    localStorage.removeItem('token');    
-  }
+  localStorage.removeItem('token');
+}
 
- export function isLogin(){
-    let tokenValor = localStorage.getItem('token'); 
-    return tokenValor == 'eduardo123456';     
-  }
-
-
-
-
-
+export function isLogin() {
+  let tokenValor = localStorage.getItem('token');
+  return tokenValor == 'eduardo123456';
+}
