@@ -19,6 +19,4 @@ export class ExperienciaModalComponent implements OnInit {
        console.log("Numero de Id recibido:" + this.experienciaId);
     });
   }
-
-
 }

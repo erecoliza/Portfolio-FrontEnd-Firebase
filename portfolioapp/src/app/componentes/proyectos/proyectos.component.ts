@@ -9,7 +9,6 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class ProyectosComponent implements OnInit {
 
   proyectosList:any;
-
   proyectoIndividual: any;  
   
   constructor(private datosPorfolio:PortfolioService) { }
@@ -20,19 +19,20 @@ export class ProyectosComponent implements OnInit {
     });
   }
 
-  agregarProyecto(event:any, item:any){
-    console.log("Event: ",event,"Item:",item);
-
-    console.log("Proyecto Individual ", 
-    this.proyectoIndividual);    
-
-    this.proyectoIndividual = item;
-    
-    console.log("Proyecto Individual ", 
-    this.proyectoIndividual);    
-
+  nuevoProyecto() {
+     this.proyectoIndividual = [];    
   }
   
+  editarModificarProyecto(event:any, item:any){
+    console.log("Event: ",event,"Item:",item);
+    this.proyectoIndividual = item;        
+  }
+
+  eliminarProyecto(event:any, item:any){
+    console.log("Event: ",event,"Item:",item);
+    this.proyectoIndividual = item;        
+  }
+
   isLogin(){
     let tokenValor = localStorage.getItem('token'); 
     return tokenValor == 'eduardo123456';     

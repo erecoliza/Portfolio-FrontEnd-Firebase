@@ -11,15 +11,10 @@ export class ProyectoModalComponent implements OnInit {
   @Input() 
   miProyecto: any;  
 
-  miPortfolio: any;
-  
   constructor(private datosPorfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      this.miPortfolio = data.proyectos;
-      //this.miPortfolio = this.miProyecto;       
-   });  
-   
+    
   }
+
 }
