@@ -8,13 +8,13 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ProyectoModalComponent implements OnInit {
 
-  @Input() 
-  miProyecto: any;  
+  @Input()
+  miProyecto: any;
 
-  constructor(private datosPorfolio:PortfolioService) { }
+  constructor(private datosPorfolio: PortfolioService) { }
 
   ngOnInit(): void {
-    
+
   }
 
 }
