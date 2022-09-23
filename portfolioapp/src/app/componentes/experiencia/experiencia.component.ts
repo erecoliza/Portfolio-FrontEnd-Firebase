@@ -7,7 +7,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./experiencia.component.scss']
 })
 export class ExperienciaComponent implements OnInit {
-  experienciaList:any;
+  experienciaList: any;
+  experienciaIndividual: any;
   constructor(private datosPorfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -17,9 +18,19 @@ export class ExperienciaComponent implements OnInit {
     });
   }
 
-  agregarEmpresa(){
-    console.log("llegue");
-  }
+  nuevoExperiencia() {
+    this.experienciaIndividual = [];    
+ }
+ 
+ editarModificarExperiencia(event:any, item:any){
+   console.log("Event: ",event,"Item:",item);
+   this.experienciaIndividual = item;        
+ }
+
+ eliminarExperiencia(event:any, item:any){
+   console.log("Event: ",event,"Item:",item);
+   this.experienciaIndividual = item;        
+ }
   
   isLogin(){
     let tokenValor = localStorage.getItem('token'); 

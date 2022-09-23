@@ -7,6 +7,9 @@
       <span
         tooltip="<p> Agregar NUEVA referencia</br><strong>HABILIDADES</strong></p>"
         placement="top"
+        data-bs-toggle="modal"
+        data-bs-target="#HabilidadModal"
+        (click)="nuevoHabilidad()"
       >
         <i *ngIf="isLogin()" class="fa-solid fa-circle-plus"></i>
       </span>
@@ -41,7 +44,7 @@
         placement="top"
         data-bs-toggle="modal"
         data-bs-target="#HabilidadModal"
-        (click)="agregarHabilidad()"
+        (click)="editarModificarHabilidad($event, habilidad)"
       >
       </i>
       <i
@@ -49,8 +52,14 @@
         class="fa-solid fa-circle-xmark px-5 fa-lg"
         tooltip="<p> Eliminar </p>"
         placement="top"
+        data-bs-toggle="modal"
+        data-bs-target="#HabilidadModal"
+        (click)="eliminarHabilidad($event, habilidad)"
       ></i>
     </div>
   </div>
 </div>
-<app-habilidad-modal></app-habilidad-modal>
+<app-habilidad-modal
+  [miHabilidad]="habilidadIndividual"
+  *ngIf="habilidadIndividual"
+></app-habilidad-modal>

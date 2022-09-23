@@ -7,19 +7,10 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./habilidad-modal.component.scss']
 })
 export class HabilidadModalComponent implements OnInit {
-  @Input() experienciaId: any;  
+  @Input() miHabilidad: any;  
 
-  miPortfolio:any;
   constructor(private datosPorfolio:PortfolioService) { }
 
-  ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-       this.miPortfolio=data;      
-       console.log("Numero de Id recibido:" + this.experienciaId);
-    });
-  }
-
-
- 
+  ngOnInit(): void {  }
 
 }
