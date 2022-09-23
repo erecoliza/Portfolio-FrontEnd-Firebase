@@ -7,18 +7,18 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./acerca-de.component.scss']
 })
 export class AcercaDeComponent implements OnInit {
-  miPortfolio:any;
-  constructor(private datosPorfolio:PortfolioService) { }
+  miPortfolio: any;
+  constructor(private datosPorfolio: PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe(data => {
-       this.miPortfolio=data;
+      this.miPortfolio = data;
     });
   }
 
-  isLogin(){
-    let tokenValor = localStorage.getItem('token'); 
-    return tokenValor == 'eduardo123456';     
+  isLogin() {
+    let tokenValor = localStorage.getItem('token');
+    return tokenValor == 'eduardo123456';
   }
 
 }

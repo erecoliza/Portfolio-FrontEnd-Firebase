@@ -1,28 +1,16 @@
 <!-- Modal -->
-<div
-  class="modal fade"
-  id="AcercaDeDatosModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="AcercaDeDatosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Datos Principales </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
-          
           <div class="input-group">
             <span class="input-group-text">Nombre y Apellido:</span>
-            <input type="text" class="form-control" id="nombre" value="{{miPortfolio.nombre}}">            
+            <input type="text" class="form-control" id="nombre" value="{{miPortfolio.nombre}}">
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
@@ -31,14 +19,14 @@
             <input type="text" class="form-control" id="posicion" value="{{miPortfolio.posicion}}">
           </div>
           <div id="nombreHelp" class="form-text">
-            
+
           </div>
           <div class="input-group">
             <span class="input-group-text">Teléfono:</span>
             <input type="text" class="form-control" id="telefon" value="{{miPortfolio.telefono}}">
           </div>
           <div id="nombreHelp" class="form-text">
-            Ej:  +54 9 11 9999 9999
+            Ej: +54 9 11 9999 9999
           </div>
           <div class="input-group">
             <span class="input-group-text">Teléfono:</span>
@@ -46,11 +34,11 @@
           </div>
           <div id="nombreHelp" class="form-text">
             Ej: name@example.com.ar
-          </div>          
+          </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Ubicación de la foto tipo Avatar</label>
             <input class="form-control" type="file" id="formFile">
-          </div>  
+          </div>
         </form>
       </div>
       <div class="modal-footer justify-content-center">

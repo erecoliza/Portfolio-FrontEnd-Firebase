@@ -1,22 +1,25 @@
 <div class="row">
-  <h3 class="titulo">Proyectos    
-      <i *ngIf="isLogin()" id="proyectoNuevo" class="fa-solid fa-circle-plus px-5 fa-lg" tooltip="<p> Agregar NUEVA referencia<strong>PROYECTOS</strong></p>"
-        placement="top" data-bs-toggle="modal" data-bs-target="#ProjectoModal" (click)="nuevoProyecto()">    
-      </i>
+  <h3 class="titulo">Proyectos
+    <i *ngIf="isLogin()" id="proyectoNuevo" class="fa-solid fa-circle-plus px-5 fa-lg"
+      tooltip="<p> Agregar NUEVA referencia<strong>PROYECTOS</strong></p>" placement="top" data-bs-toggle="modal"
+      data-bs-target="#ProjectoModal" (click)="nuevoProyecto()">
+    </i>
   </h3>
 </div>
 <div *ngFor="let proyecto of proyectosList; index as i " class="col">
   <div class="col-lg-12">
     <div class="card">
-      <div class="card-header">        
+      <div class="card-header">
         <h4><span *ngIf="isLogin()" class="badge bg-secondary">{{ i }} </span>
           {{proyecto.nombre}}
-          <i *ngIf="isLogin()" id="proyectoEdit" class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>"
-            placement="top" data-bs-toggle="modal" data-bs-target="#ProjectoModal" (click)="editarModificarProyecto($event,proyecto)">
+          <i *ngIf="isLogin()" id="proyectoEdit" class="fa-solid fa-pen px-5 fa-lg"
+            tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
+            data-bs-target="#ProjectoModal" (click)="editarModificarProyecto($event,proyecto)">
           </i>
-          <i *ngIf="isLogin()" id="proyectodelete" class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>"
-            placement="top" data-bs-toggle="modal" data-bs-target="#ProjectoModal" (click)="eliminarProyecto($event,proyecto)">
-          </i>          
+          <i *ngIf="isLogin()" id="proyectodelete" class="fa-solid fa-circle-xmark px-5 fa-lg"
+            tooltip="<p> Eliminar </p>" placement="top" data-bs-toggle="modal" data-bs-target="#ProjectoModal"
+            (click)="eliminarProyecto($event,proyecto)">
+          </i>
         </h4>
       </div>
       <div class="card-body" style="text-align: justify; ">
@@ -36,7 +39,7 @@
     </div>
   </div>
 </div>
-<app-proyecto-modal [miProyecto]="proyectoIndividual" *ngIf="proyectoIndividual " ></app-proyecto-modal>
+<app-proyecto-modal [miProyecto]="proyectoIndividual" *ngIf="proyectoIndividual "></app-proyecto-modal>
 
 <!-- 
   In case proyectoIndividual is a variable and not value is better add *ngIf="proyectoIndividual"

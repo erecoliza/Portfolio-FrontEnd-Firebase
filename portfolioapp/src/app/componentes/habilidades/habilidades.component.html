@@ -4,13 +4,8 @@
   <div class="col-lg-12 align-self-center align-items-center">
     <h3 class="titulo">
       Habilidades
-      <span
-        tooltip="<p> Agregar NUEVA referencia</br><strong>HABILIDADES</strong></p>"
-        placement="top"
-        data-bs-toggle="modal"
-        data-bs-target="#HabilidadModal"
-        (click)="nuevoHabilidad()"
-      >
+      <span tooltip="<p> Agregar NUEVA referencia</br><strong>HABILIDADES</strong></p>" placement="top"
+        data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="nuevoHabilidad()">
         <i *ngIf="isLogin()" class="fa-solid fa-circle-plus"></i>
       </span>
     </h3>
@@ -20,47 +15,20 @@
 <div class="row align-self-center align-items-center row-experiencia">
   <div *ngFor="let habilidad of habilidadList; index as i" class="col">
     <figure class="figure">
-      <circle-progress
-        [percent]="habilidad.porcentaje"
-        [radius]="50"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="5"
-        [outerStrokeColor]="habilidad.color"
-        [innerStrokeColor]="'#EEEEEE'"
-        [animation]="true"
-        [responsive]="false"
-        [showSubtitle]="false"
-        [animationDuration]="300"
-        >{{ habilidad.habilidad }}</circle-progress
-      >
+      <circle-progress [percent]="habilidad.porcentaje" [radius]="50" [outerStrokeWidth]="10" [innerStrokeWidth]="5"
+        [outerStrokeColor]="habilidad.color" [innerStrokeColor]="'#EEEEEE'" [animation]="true" [responsive]="false"
+        [showSubtitle]="false" [animationDuration]="300">{{ habilidad.habilidad }}</circle-progress>
       <span *ngIf="isLogin()" class="badge bg-secondary">{{ i }} </span>
       <figcaption class="figure-caption">{{ habilidad.habilidad }}</figcaption>
     </figure>
     <div class="col">
-      <i
-        *ngIf="isLogin()"
-        id="establecimiento"
-        class="fa-solid fa-pen px-3 fa-lg"
-        tooltip="<p> Editar y/o Modificar </p>"
-        placement="top"
-        data-bs-toggle="modal"
-        data-bs-target="#HabilidadModal"
-        (click)="editarModificarHabilidad($event, habilidad)"
-      >
+      <i *ngIf="isLogin()" id="establecimiento" class="fa-solid fa-pen px-3 fa-lg"
+        tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal" data-bs-target="#HabilidadModal"
+        (click)="editarModificarHabilidad($event, habilidad)">
       </i>
-      <i
-        *ngIf="isLogin()"
-        class="fa-solid fa-circle-xmark px-3 fa-lg"
-        tooltip="<p> Eliminar </p>"
-        placement="top"
-        data-bs-toggle="modal"
-        data-bs-target="#HabilidadModal"
-        (click)="eliminarHabilidad($event, habilidad)"
-      ></i>
+      <i *ngIf="isLogin()" class="fa-solid fa-circle-xmark px-3 fa-lg" tooltip="<p> Eliminar </p>" placement="top"
+        data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="eliminarHabilidad($event, habilidad)"></i>
     </div>
   </div>
 </div>
-<app-habilidad-modal
-  [miHabilidad]="habilidadIndividual"
-  *ngIf="habilidadIndividual"
-></app-habilidad-modal>
+<app-habilidad-modal [miHabilidad]="habilidadIndividual" *ngIf="habilidadIndividual"></app-habilidad-modal>

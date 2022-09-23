@@ -1,40 +1,35 @@
 <!-- Modal -->
-<div
-  class="modal fade"
-  id="ProjectoModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="ProjectoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"> Projecto Web </h5>        
+        <h5 class="modal-title" id="exampleModalLabel"> Projecto Web </h5>
       </div>
       <div class="modal-body">
-        <form>          
+        <form>
           <div class="input-group">
             <span class="input-group-text">Nombre:</span>
-            <input type="text" class="form-control" id="nombre" value="{{miProyecto.nombre}}">            
+            <input type="text" class="form-control" id="nombre" value="{{miProyecto.nombre}}">
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
           <div class="input-group">
             <span class="input-group-text">Fecha:</span>
-            <input type="text" class="form-control" id="telefon" value="{{miProyecto.periodo_desde}}" placeholder="99/9999">            
+            <input type="text" class="form-control" id="telefon" value="{{miProyecto.periodo_desde}}"
+              placeholder="99/9999">
           </div>
-          <div id="nombreHelp" class="form-text">          
-          </div>        
+          <div id="nombreHelp" class="form-text">
+          </div>
           <div class="input-group">
             <span class="input-group-text">Descripción:</span>
             <input type="email" class="form-control" id="email" value="{{miProyecto.descripcion}}">
           </div>
-          <div id="nombreHelp" class="form-text">            
-          </div>   
+          <div id="nombreHelp" class="form-text">
+          </div>
           <div class="input-group">
             <span class="input-group-text">WEB:</span>
             <input type="text" class="form-control" id="posicion" value="{{miProyecto.web}}">
-          </div>                 
+          </div>
         </form>
       </div>
       <div class="modal-footer justify-content-center">
@@ -46,4 +41,3 @@
     </div>
   </div>
 </div>
-
