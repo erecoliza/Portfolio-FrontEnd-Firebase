@@ -16,7 +16,7 @@
     </h3>
   </div>
 </div>
-<div *ngFor="let experiencia of experienciaList" class="row row-experiencia">
+<div *ngFor="let experiencia of experienciaList; let i = index" class="row row-experiencia">
   <div
     class="col-lg-2 align-self-center align-items-center"
     style="padding: 1px"
@@ -55,6 +55,7 @@
     <div class="card">
       <div class="card-header">
         <h4>
+          <span *ngIf="isLogin()" class="badge bg-secondary">{{ i }} </span>
           {{ experiencia.empresa }}
           <i
             *ngIf="isLogin()"

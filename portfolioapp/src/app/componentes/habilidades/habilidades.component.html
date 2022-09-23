@@ -33,13 +33,14 @@
         [animationDuration]="300"
         >{{ habilidad.habilidad }}</circle-progress
       >
+      <span *ngIf="isLogin()" class="badge bg-secondary">{{ i }} </span>
       <figcaption class="figure-caption">{{ habilidad.habilidad }}</figcaption>
     </figure>
     <div class="col">
       <i
         *ngIf="isLogin()"
         id="establecimiento"
-        class="fa-solid fa-pen px-5 fa-lg"
+        class="fa-solid fa-pen px-3 fa-lg"
         tooltip="<p> Editar y/o Modificar </p>"
         placement="top"
         data-bs-toggle="modal"
@@ -49,7 +50,7 @@
       </i>
       <i
         *ngIf="isLogin()"
-        class="fa-solid fa-circle-xmark px-5 fa-lg"
+        class="fa-solid fa-circle-xmark px-3 fa-lg"
         tooltip="<p> Eliminar </p>"
         placement="top"
         data-bs-toggle="modal"
