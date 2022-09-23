@@ -3,26 +3,50 @@
   <div class="col-lg-12 align-self-center align-items-center">
     <h3 class="titulo">
       Educación
-      <i *ngIf="isLogin()" class="fa-solid fa-circle-plus" tooltip="<p> Agregar NUEVA referencia</br><strong>EDUCACION</strong></p>"
+      <i
+        *ngIf="isLogin()"
+        id="nuevaEducacion"
+        class="fa-solid fa-circle-plus"
+        tooltip="<p> Agregar NUEVA referencia</br><strong>EDUCACION</strong></p>"
         placement="top"
         data-bs-toggle="modal"
-        data-bs-target="#EducacionModal" 
-        (click)="agregarEducacion()">
+        data-bs-target="#EducacionModal"
+        (click)="nuevoEducacion()"
+      >
       </i>
     </h3>
   </div>
 </div>
-<div *ngFor="let educacion of educacionList; let i = index;" class="row row-experiencia" >
+<div
+  *ngFor="let educacion of educacionList; let i = index"
+  class="row row-experiencia"
+>
   <div class="col-lg-2 align-self-center align-items-center">
     <div [ngSwitch]="educacion.web">
       <div *ngSwitchCase="''">
-        <img [src]="educacion.logo" alt="Avatar" class="img-fluid" draggable="false" />
+        <img
+          [src]="educacion.logo"
+          alt="Avatar"
+          class="img-fluid"
+          draggable="false"
+        />
         <!-- img-thumbnail -->
       </div>
       <div *ngSwitchDefault>
-        <a href="http://{{ educacion.web }}" target="_blank" rel="noopener
-          noreferrer" draggable="false" class="link-primary">
-          <img [src]="educacion.logo" alt="Avatar" class="img-fluid" draggable="false" />
+        <a
+          href="http://{{ educacion.web }}"
+          target="_blank"
+          rel="noopener
+          noreferrer"
+          draggable="false"
+          class="link-primary"
+        >
+          <img
+            [src]="educacion.logo"
+            alt="Avatar"
+            class="img-fluid"
+            draggable="false"
+          />
           <!-- img-thumbnail -->
         </a>
       </div>
@@ -30,19 +54,34 @@
   </div>
   <div class="col-lg-10 align-self-center align-items-center">
     <div class="card">
-      <div class="card-header" >        
+      <div class="card-header">
         <!--<span class="badge bg-secondary">{{ i }}</span>-->
-        <h4 >{{ educacion.establecimiento }} 
-          <i *ngIf="isLogin()" id="establecimiento" class="fa-solid fa-pen px-5 fa-lg" tooltip="<p> Editar y/o Modificar </p>" placement="top" 
+        <h4>
+          {{ educacion.establecimiento }}
+          <i
+            *ngIf="isLogin()"
+            id="modifaEducacion"
+            class="fa-solid fa-pen px-5 fa-lg"
+            tooltip="<p> Editar y/o Modificar </p>"
+            placement="top"
             data-bs-toggle="modal"
-            data-bs-target="#EducacionModal"     
-            (click)="agregarEducacion()">
+            data-bs-target="#EducacionModal"
+            (click)="editarModificarEducacion($event, educacion)"
+          >
           </i>
-          <i *ngIf="isLogin()" class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>" placement="top"></i>
+          <i
+            *ngIf="isLogin()"
+            id="eliminaEducacion"
+            class="fa-solid fa-circle-xmark px-5 fa-lg"
+            tooltip="<p> Eliminar </p>"
+            placement="top"
+            data-bs-toggle="modal"
+            data-bs-target="#EducacionModal"
+            (click)="eliminarEducacion($event, educacion)"
+          ></i>
         </h4>
       </div>
       <div class="card-body" style="text-align: justify">
-        
         <p>
           Carrera/Título:
           <strong> {{ educacion.carrera }} </strong>
@@ -59,10 +98,17 @@
         </p>
       </div>
       <div *ngIf="educacion.web != ''" class="card-footer">
-        <a href="http://{{ educacion.web }}" target="_blank" rel="noopener
-          noreferrer" class="btn btn-info text-light" draggable="false">{{ educacion.web }}</a>
+        <a
+          href="http://{{ educacion.web }}"
+          target="_blank"
+          rel="noopener
+          noreferrer"
+          class="btn btn-info text-light"
+          draggable="false"
+          >{{ educacion.web }}</a
+        >
       </div>
     </div>
-  </div>  
+  </div>
 </div>
-<app-educacion-modal></app-educacion-modal>
+<app-educacion-modal [miEducacion]="educacionIndividual" *ngIf="educacionIndividual "></app-educacion-modal>

@@ -9,6 +9,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class EducacionComponent implements OnInit { 
 
   educacionList: any;
+
+  educacionIndividual:any;
   
   constructor(private datosPorfolio:PortfolioService) { }
 
@@ -18,14 +20,24 @@ export class EducacionComponent implements OnInit {
        console.log(this.educacionList);
     });
   }
+ 
+  nuevoEducacion() {
+    this.educacionIndividual = [];    
+ }
+ 
+ editarModificarEducacion(event:any, item:any){
+   console.log("Event: ",event,"Item:",item);
+   this.educacionIndividual = item;        
+ }
 
-  agregarEducacion(){
-    console.log("llegue");
-  }
+ eliminarEducacion(event:any, item:any){
+   console.log("Event: ",event,"Item:",item);
+   this.educacionIndividual = item;        
+ }
 
-  isLogin(){
-    let tokenValor = localStorage.getItem('token'); 
-    return tokenValor == 'eduardo123456';     
-  }
+ isLogin(){
+   let tokenValor = localStorage.getItem('token'); 
+   return tokenValor == 'eduardo123456';     
+ }
 
 }

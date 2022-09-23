@@ -35,5 +35,9 @@
     </div>
   </div>
 </div>
-<app-proyecto-modal [miProyecto]="proyectoIndividual"></app-proyecto-modal>
+<app-proyecto-modal [miProyecto]="proyectoIndividual" *ngIf="proyectoIndividual " ></app-proyecto-modal>
 
+<!-- 
+  In case proyectoIndividual is a variable and not value is better add *ngIf="proyectoIndividual"
+  if we are calling some api, the delay of the response may cause to pass an empty value
+ -->
