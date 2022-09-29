@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms'
 import { NgCircleProgressModule } from 'ng-circle-progress';
 // Import tooltips
 import { TooltipModule } from 'ng2-tooltip-directive';
-
 import { AppRoutingModuleTsModule } from './app-routing.module.ts/app-routing.module.ts.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';

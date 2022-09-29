@@ -9,26 +9,26 @@
         <form>
           <div class="input-group">
             <span class="input-group-text">Nombre:</span>
-            <input type="text" class="form-control" id="nombre" value="{{miProyecto.nombre}}">
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="miProyecto.nombre" value="{{miProyecto.nombre}}">
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
           <div class="input-group">
             <span class="input-group-text">Fecha:</span>
-            <input type="text" class="form-control" id="telefon" value="{{miProyecto.periodo_desde}}"
+            <input type="text" class="form-control" id="telefon" [(ngModel)]="miProyecto.periodo_desde" value="{{miProyecto.periodo_desde}}"
               placeholder="99/9999">
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
           <div class="input-group">
             <span class="input-group-text">Descripción:</span>
-            <input type="email" class="form-control" id="email" value="{{miProyecto.descripcion}}">
+            <input type="email" class="form-control" id="email" [(ngModel)]="miProyecto.descripcion" value="{{miProyecto.descripcion}}">
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
           <div class="input-group">
             <span class="input-group-text">WEB:</span>
-            <input type="text" class="form-control" id="posicion" value="{{miProyecto.web}}">
+            <input type="text" class="form-control" id="posicion" [(ngModel)]="miProyecto.web" value="{{miProyecto.web}}">
           </div>
         </form>
       </div>

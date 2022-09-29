@@ -10,27 +10,27 @@
         <form>
           <div class="input-group">
             <span class="input-group-text">Nombre y Apellido:</span>
-            <input type="text" class="form-control" id="nombre" value="{{miPortfolio.nombre}}">
-          </div>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="miPortfolio.nombre" value="{{miPortfolio.nombre}}">
+          </div>                    
           <div id="nombreHelp" class="form-text">
           </div>
           <div class="input-group">
             <span class="input-group-text">Posición:</span>
-            <input type="text" class="form-control" id="posicion" value="{{miPortfolio.posicion}}">
+            <input type="text" class="form-control" id="posicion" [(ngModel)]="miPortfolio.posicion" value="{{miPortfolio.posicion}}">
           </div>
           <div id="nombreHelp" class="form-text">
 
           </div>
           <div class="input-group">
             <span class="input-group-text">Teléfono:</span>
-            <input type="text" class="form-control" id="telefon" value="{{miPortfolio.telefono}}">
+            <input type="text" class="form-control" id="telefono" [(ngModel)]="miPortfolio.telefono" value="{{miPortfolio.telefono}}">
           </div>
           <div id="nombreHelp" class="form-text">
             Ej: +54 9 11 9999 9999
           </div>
           <div class="input-group">
             <span class="input-group-text">Teléfono:</span>
-            <input type="email" class="form-control" id="email" value="{{miPortfolio.email}}">
+            <input type="email" class="form-control" id="email" [(ngModel)]="miPortfolio.email" value="{{miPortfolio.email}}">
           </div>
           <div id="nombreHelp" class="form-text">
             Ej: name@example.com.ar
@@ -45,7 +45,7 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
-        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar Cambios</button>
       </div>
     </div>
   </div>
