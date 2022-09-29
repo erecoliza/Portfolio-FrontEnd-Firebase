@@ -32,7 +32,7 @@ import { HabilidadModalComponent } from './componentes/habilidad-modal/habilidad
 @NgModule({
   declarations: [      
     AppComponent,    
-    PieComponent,
+    PieComponent,    
     EncabezadoComponent,
     BannerComponent,
     AcercaDeComponent,
@@ -54,6 +54,7 @@ import { HabilidadModalComponent } from './componentes/habilidad-modal/habilidad
   imports: [
     AppRoutingModuleTsModule,
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     TooltipModule,
     // Specify ng-circle-progress as an import
