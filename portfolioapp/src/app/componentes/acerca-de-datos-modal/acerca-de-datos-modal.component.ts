@@ -9,6 +9,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class AcercaDeDatosModalComponent implements OnInit {
 
   miPortfolio: any;
+  
   constructor(private datosPorfolio: PortfolioService) { }
 
   ngOnInit(): void {

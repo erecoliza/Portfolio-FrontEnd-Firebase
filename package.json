@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "ng2-tooltip-directive": "^2.10.3"
+  }
+}

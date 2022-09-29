@@ -7,8 +7,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./experiencia.component.scss']
 })
 export class ExperienciaComponent implements OnInit {
-  experienciaList: any;
-  experienciaIndividual: any;
+  experienciaList: any[]=[];
+  experienciaIndividual: any[]=[];
+  
   constructor(private datosPorfolio:PortfolioService) { }
 
   ngOnInit(): void {

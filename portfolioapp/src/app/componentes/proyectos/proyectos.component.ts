@@ -8,8 +8,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ProyectosComponent implements OnInit {
 
-  proyectosList:any;
-  proyectoIndividual: any;  
+  proyectosList:any[]=[];
+  proyectoIndividual: any[]=[];  
   
   constructor(private datosPorfolio:PortfolioService) { }
 

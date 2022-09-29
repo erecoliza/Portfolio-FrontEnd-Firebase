@@ -7,7 +7,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./acerca-de-modal.component.scss']
 })
 export class AcercaDeModalComponent implements OnInit {
-  miPortfolio:any;
+  miPortfolio: any;
   constructor(private datosPorfolio:PortfolioService) { }
 
   ngOnInit(): void {

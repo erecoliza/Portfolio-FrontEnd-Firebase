@@ -8,7 +8,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ExperienciaModalComponent implements OnInit {
 
-  @Input() miExperiencia: any;  
+  @Input() miExperiencia: any;
 
   constructor(private datosPorfolio:PortfolioService) { }
 

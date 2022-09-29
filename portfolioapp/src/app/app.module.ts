@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
 // Import tooltips
@@ -30,7 +31,7 @@ import { HabilidadModalComponent } from './componentes/habilidad-modal/habilidad
 
 @NgModule({
   declarations: [      
-    AppComponent,
+    AppComponent,    
     PieComponent,
     EncabezadoComponent,
     BannerComponent,
