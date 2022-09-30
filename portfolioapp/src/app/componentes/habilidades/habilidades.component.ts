@@ -8,8 +8,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./habilidades.component.scss'],
 })
 export class HabilidadesComponent implements OnInit {
-  habilidadList: any[]=[];
-  habilidadIndividual: any[]=[];
+  habilidadList: any;
+  habilidadIndividual: any;
 
   constructor(private datosPorfolio: PortfolioService) {}
 

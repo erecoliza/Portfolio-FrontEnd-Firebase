@@ -7,8 +7,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./encabezado.component.scss']
 })
 export class EncabezadoComponent implements OnInit {  
-  tokenValor:any;
-  miPortfolio:any;
+  tokenValor: any;
+  miPortfolio: any;
   constructor(private datosPorfolio:PortfolioService) { }
 
   ngOnInit(): void {

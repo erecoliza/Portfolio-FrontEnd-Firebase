@@ -8,9 +8,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EducacionComponent implements OnInit { 
 
-  educacionList: any[] = [];
+  educacionList: any;
 
-  educacionIndividual:any[]=[];
+  educacionIndividual: any;
   
   constructor(private datosPorfolio:PortfolioService) { }
 
