@@ -21,6 +21,8 @@ npm install
 npm  install ng-circle-progress --save
 ## tooltip
 npm i ng2-tooltip-directive
+## SweetAlert 2
+npm i sweetalert2
 
 ------------------------------------------------------
 

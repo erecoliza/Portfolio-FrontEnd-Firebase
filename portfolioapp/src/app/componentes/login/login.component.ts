@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import Swal   from 'sweetalert2';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   tokenValor: any;
   form: FormGroup;
-
+  
   constructor(private formBuilder: FormBuilder) { 
     this.form= this.formBuilder.group({
       password:['',[Validators.required,Validators.minLength(6)]],
@@ -37,7 +39,11 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token','eduardo123456');     
       console.log("token",this.tokenValor )    
     }else{
-      alert("Email o Password erroneas");  
+      Swal.fire(
+        'Error!',
+        'Email o Password erroneas!',
+        'error'
+      );          
       this.form.markAllAsTouched();
     }
   }  
