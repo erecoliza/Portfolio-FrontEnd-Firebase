@@ -8,7 +8,7 @@
         <img src="./assets/img_avatar.jpg" alt="Avatar" class="avatarito" />
       </div>
       <div class="modal-body">        
-        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <form [formGroup]="form" (ngSubmit)="onLogin($event)">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Correo
               Electrónico</label>
@@ -39,6 +39,15 @@
               El Password debe ser de 6 o mas caracteres
             </p>            
           </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Salir
+            </button>
+            <button type="submit" class="btn btn-primary"
+              data-bs-dismiss="modal">
+              Iniciar Sesión
+            </button>
+          </div>
         </form>
         <!--
         <div>
@@ -47,16 +56,7 @@
           </p>
         </div>
       -->
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Salir
-        </button>
-        <button type="button" class="btn btn-primary" (click)="miLogin()"
-          data-bs-dismiss="modal">
-          Iniciar Sesión
-        </button>
-      </div>
+      </div>      
     </div>
   </div>
 </div>

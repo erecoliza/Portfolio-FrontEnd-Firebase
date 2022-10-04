@@ -29,16 +29,19 @@ export class LoginComponent implements OnInit {
     return this.form.get('email');
   }
 
-  public onEnviar($event: any) {
-    localStorage.setItem('token','eduardo123456');     
-    console.log("token",this.tokenValor )
-  }
+  public onLogin(event: Event) {
+    // Detenemos la propagacion o ejecucion del comportamiento submint en el formulario
+    event.preventDefault();
+    if (this.form.valid){
+      // alert("todo salio bien");  
+      localStorage.setItem('token','eduardo123456');     
+      console.log("token",this.tokenValor )    
+    }else{
+      alert("Email o Password erroneas");  
+      this.form.markAllAsTouched();
+    }
+  }  
 
-  public miLogin() {
-    localStorage.setItem('token','eduardo123456'); 
-    
-    console.log("token",this.tokenValor )
-  }
   public miLogout() {
     localStorage.removeItem('token');    
   }
