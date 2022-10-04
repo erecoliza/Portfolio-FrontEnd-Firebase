@@ -7,21 +7,46 @@
         <h5 class="modal-title" id="exampleModalLabel">Login</h5>
         <img src="./assets/img_avatar.jpg" alt="Avatar" class="avatarito" />
       </div>
-      <div class="modal-body">
-        <form>
+      <div class="modal-body">        
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Correo
               Electrónico</label>
             <input type="email" class="form-control" id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              formControlName="email"
               placeholder="name@example.com" />
+          </div>
+          <div *ngIf="Mail?.errors && Mail?.touched">
+            <p *ngIf="Mail?.hasError('required')" class="error">
+              El email es requerido
+            </p>
+            <p *ngIf="Mail?.hasError('email')" class="error">
+              El formato del email debe ser válido
+            </p>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
             <input type="password" class="form-control"
+              formControlName="password"
               id="exampleInputPassword1" />
           </div>
+          <div *ngIf="Password?.errors && Password?.touched">
+            <p *ngIf="Password?.hasError('required')" class="error">
+              El Password es requerido
+            </p>            
+            <p *ngIf="Password?.errors?.['minlength']" class="error">
+              El Password debe ser de 6 o mas caracteres
+            </p>            
+          </div>
         </form>
+        <!--
+        <div>
+          <p>
+            debbuger {{form.value.email}} - {{form.value.password}}
+          </p>
+        </div>
+      -->
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">

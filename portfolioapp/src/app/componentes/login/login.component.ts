@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +10,28 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   tokenValor: any;
+  form: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { 
+    this.form= this.formBuilder.group({
+      password:['',[Validators.required,Validators.minLength(6)]],
+      email:['',[Validators.required,Validators.email]],
+    })
+  }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  get Password() {    
+    return this.form.get('password');
+  }
+
+  get Mail() {
+    return this.form.get('email');
+  }
+
+  public onEnviar($event: any) {
+    localStorage.setItem('token','eduardo123456');     
+    console.log("token",this.tokenValor )
   }
 
   public miLogin() {

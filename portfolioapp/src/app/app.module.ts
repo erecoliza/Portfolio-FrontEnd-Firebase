@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
 // Import tooltips
@@ -26,6 +25,7 @@ import { EducacionModalComponent } from './componentes/educacion-modal/educacion
 import { ExperienciaModalComponent } from './componentes/experiencia-modal/experiencia-modal.component';
 import { ProyectoModalComponent } from './componentes/proyecto-modal/proyecto-modal.component';
 import { HabilidadModalComponent } from './componentes/habilidad-modal/habilidad-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -54,6 +54,7 @@ import { HabilidadModalComponent } from './componentes/habilidad-modal/habilidad
     AppRoutingModuleTsModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,    
     HttpClientModule,
     TooltipModule,
     // Specify ng-circle-progress as an import
