@@ -7,11 +7,18 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PortfolioapiService {
-  URL = 'http://localhost:8080/personas'
+  
+  URL = 'localhost:8080/ver/personas'
   constructor(private http: HttpClient) { }
 
-  //public getpersona(): Observable<persona>{
-  //  return this.http.get<persona>(this.URL + "traer/perfil");
-  //}
+  obtenerDatos():Observable<any>{
+
+     return this.http.get(this.URL);    
+    
+  }
+
+  /*public getpersona(): Observable<any>{
+    return this.http.get(this.URL + "ver/personas");
+  }*/
 
 }
