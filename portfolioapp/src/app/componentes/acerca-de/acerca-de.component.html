@@ -6,21 +6,21 @@
         <i *ngIf="isLogin()" class="fa-solid fa-pen px-3 fa-xs" tooltip="<p> Editar y/o Modificar </p>" placement="top"
           data-bs-toggle="modal" data-bs-target="#AcercaDeDatosModal"></i>
       </h4>
-      <img [src]="miPortfolio.imagen" alt="Avatar" class="avatar" />
-      <h4>{{ miPortfolio.nombre }}</h4>
-      <h5>{{ miPortfolio.posicion }}</h5>
+      <img [src]="persona.imagen" alt="Avatar" class="avatar" />
+      <h4>{{ persona.apellido_nombre }}</h4>
+      <h5>{{ persona.posicion }}</h5>
       <ul class="list-group list-group-horizontal justify-content-center">
         <li class="list-group-item border-0">
-          <a href="https://wa.me/{{ miPortfolio.telefono }}" target="”_blank”">
-            <i class="fa-brands fa-whatsapp fa-2xl" tooltip="<p>Teléfono: </br> {{ miPortfolio.telefono }}</p>"
+          <a href="https://wa.me/{{ persona.telefono }}" target="”_blank”">
+            <i class="fa-brands fa-whatsapp fa-2xl" tooltip="<p>Teléfono: </br> {{ persona.telefono }}</p>"
               placement="top"></i>
-          </a>
+          </a>          
         </li>
         <li class="list-group-item border-0">
-          <a href="mailto:{{ miPortfolio.email }}">
-            <i class="fa-solid fa-envelope fa-2xl" tooltip="<p>Correo electónico: {{ miPortfolio.email }}</p>"
+          <a href="mailto:{{ persona.email }}">
+            <i class="fa-solid fa-envelope fa-2xl" tooltip="<p>Correo electónico: {{ persona.email }}</p>"
               placement="right"></i>
-          </a>
+          </a>          
         </li>
       </ul>
     </div>
@@ -37,8 +37,8 @@
       </div>
       <div class="container-fluid" id="Acercade-Descripción" style="background-color: #b8e5ff">
         <p>
-          {{ miPortfolio.acercade }}
-        </p>
+          {{ persona.acercade }}
+        </p>       
       </div>
     </div>
   </div>
