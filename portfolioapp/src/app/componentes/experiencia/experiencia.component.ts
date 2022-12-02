@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { experiencia } from 'src/app/model/experiencia.model';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,18 +9,23 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./experiencia.component.scss']
 })
 export class ExperienciaComponent implements OnInit {
-  experienciaList: any;
-  experienciaIndividual: any;
+  experienciaList: experiencia[] = [];
   
-  constructor(private datosPorfolio:PortfolioService) { }
+  experienciaIndividual = [];
+  
+  //constructor(private sExperiencia:ExperienciaService, private tokenService: TokenService) { }
+  // isLogged = false;
+
+  constructor(private sExperiencia:ExperienciaService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-       this.experienciaList = data.experiencia;
-       console.log(this.experienciaList);
-    });
+    this.cargarExperiencia();
+
   }
 
+  cargarExperiencia() {
+    this.sExperiencia.lista().subscribe(data => {this.experienciaList = data;});
+  }
   nuevoExperiencia() {
     this.experienciaIndividual = [];    
  }
