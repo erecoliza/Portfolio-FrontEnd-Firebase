@@ -12,7 +12,7 @@ export class ExperienciaService {
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<experiencia[]> {
-    return this.httpClient.get<experiencia[]>(this.URL+`ver/experiencias`);    
+    return this.httpClient.get<experiencia[]>(this.URL+`/ver/experiencias`);    
   }
 
   public detail(id: number): Observable<experiencia> {
