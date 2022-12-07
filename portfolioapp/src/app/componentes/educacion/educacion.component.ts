@@ -1,26 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { educacion } from 'src/app/model/educacion.model';
+import { EducacionService } from 'src/app/servicios/educacion.service';
+
 
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.scss']
 })
-export class EducacionComponent implements OnInit { 
-
-  educacionList: any;
-
-  educacionIndividual: any;
+export class EducacionComponent implements OnInit {
+  educacionList: educacion[] = [];
   
-  constructor(private datosPorfolio:PortfolioService) { }
+  educacionIndividual = [];  
+
+  //constructor(private sEducacion:EducacionService, private tokenService: TokenService) { }
+  // isLogged = false;
+  
+  constructor(private sEducacion:EducacionService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-       this.educacionList = data.educacion;
-       console.log(this.educacionList);
-    });
+    this.cargarEducacion();
+
   }
- 
+
+  cargarEducacion() {
+    this.sEducacion.lista().subscribe(data => {this.educacionList = data;});
+  }
   nuevoEducacion() {
     this.educacionIndividual = [];    
  }
@@ -34,10 +39,10 @@ export class EducacionComponent implements OnInit {
    console.log("Event: ",event,"Item:",item);
    this.educacionIndividual = item;        
  }
-
- isLogin(){
-   let tokenValor = localStorage.getItem('token'); 
-   return tokenValor == 'eduardo123456';     
- }
+  
+  isLogin(){
+    let tokenValor = localStorage.getItem('token'); 
+    return tokenValor == 'eduardo123456';     
+  }
 
 }

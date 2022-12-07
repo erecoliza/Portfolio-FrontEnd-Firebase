@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { experiencia } from 'src/app/model/experiencia.model';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
-//import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-experiencia',
