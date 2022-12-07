@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/servicios/persona.service';
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
+import * as Notiflix from 'notiflix';
 
 @Component({
   selector: 'app-acerca-de',
@@ -14,7 +16,7 @@ export class AcercaDeComponent implements OnInit {
   constructor(public personaService: PersonaService){}
 
   ngOnInit(): void {
-
+    Notiflix.Loading.standard("Cargando Datos..")
     this.personaService.getPersona().subscribe(data => {
       this.persona = data
       console.log("componente")
@@ -22,6 +24,7 @@ export class AcercaDeComponent implements OnInit {
     });
     console.log("componente-2")
     console.log(this.persona);
+    Notiflix.Loading.remove();
   }
 
   isLogin() {

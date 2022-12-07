@@ -23,6 +23,7 @@
     "jquery": "^3.6.1",
     "ng-circle-progress": "^1.6.0",
     "ng2-tooltip-directive": "^2.10.3",
+    "notiflix": "^3.2.5",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.4.37",
     "tslib": "^2.3.0",
