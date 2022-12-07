@@ -11,7 +11,7 @@
     <div class="card">
       <div class="card-header">
         <h4><span *ngIf="isLogin()" class="badge bg-secondary">{{ i }} </span>
-          {{proyecto.nombre}}
+          {{proyecto.proyecto}}
           <i *ngIf="isLogin()" id="proyectoEdit" class="fa-solid fa-pen px-5 fa-lg"
             tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
             data-bs-target="#ProjectoModal" (click)="editarModificarProyecto($event,proyecto)">
