@@ -1,7 +1,7 @@
 export class educacion {
     id?: number;    
     establecimiento: string;
-    web: string;;
+    web: string;
     logo: string;
     carrera: string;
     periodo_desde: string;

@@ -12,9 +12,6 @@ export class ExperienciaComponent implements OnInit {
   
   experienciaIndividual = [];
   
-  //constructor(private sExperiencia:ExperienciaService, private tokenService: TokenService) { }
-  // isLogged = false;
-
   constructor(private sExperiencia:ExperienciaService) { }
 
   ngOnInit(): void {

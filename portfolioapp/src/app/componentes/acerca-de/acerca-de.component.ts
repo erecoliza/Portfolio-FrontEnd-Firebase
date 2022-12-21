@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/servicios/persona.service';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
-import * as Notiflix from 'notiflix';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -10,26 +9,26 @@ import * as Notiflix from 'notiflix';
   styleUrls: ['./acerca-de.component.scss']
 })
 export class AcercaDeComponent implements OnInit {
+  isLogged = false;
 
   persona: persona = new persona("","","","","","");
 
-  constructor(public personaService: PersonaService){}
+  constructor(public personaService: PersonaService, private tokenService: TokenService){}
 
   ngOnInit(): void {
-    Notiflix.Loading.standard("Cargando Datos..")
+
+    if(this.tokenService.getToken()) {
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+
     this.personaService.getPersona().subscribe(data => {
       this.persona = data
       console.log("componente")
       console.log(this.persona);
-    });
-    console.log("componente-2")
-    console.log(this.persona);
-    Notiflix.Loading.remove();
+    });     
   }
 
-  isLogin() {
-    let tokenValor = localStorage.getItem('token');
-    return tokenValor == 'eduardo123456';
-  }
-
+  
 }

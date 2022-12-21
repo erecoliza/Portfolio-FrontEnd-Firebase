@@ -5,7 +5,7 @@ import { ErrorComponent } from '../componentes/error/error.component';
 import { IndexComponent } from '../componentes/index/index.component';
 
 const routes: Routes = [
- {path: 'index', component:IndexComponent}, 
+ {path: 'index', component:IndexComponent},  
  {path: '', redirectTo: '/index', pathMatch: 'full'}, 
  {path: '**', component:ErrorComponent} 
 ];

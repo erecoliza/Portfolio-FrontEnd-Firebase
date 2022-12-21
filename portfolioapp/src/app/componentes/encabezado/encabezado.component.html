@@ -32,12 +32,12 @@
       </li>
       <li class="list-group-item border-0">
         <!-- Button trigger modal LOGIN-->
-         <i *ngIf="!isLogin()" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
+         <i *ngIf="!isLogged" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
           class="fa-solid fa-user-lock fa-2xl"
           >
         </i> 
         <!-- Button LOGOUT-->
-        <i *ngIf="isLogin()" type="button" class="fa-solid fa-right-from-bracket fa-2xl"
+        <i *ngIf="isLogged" type="button" class="fa-solid fa-right-from-bracket fa-2xl"
           (click)="miLogout()">
         </i>
       </li>

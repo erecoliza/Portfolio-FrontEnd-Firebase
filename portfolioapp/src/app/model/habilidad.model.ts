@@ -9,7 +9,5 @@ export class habilidad {
         this.porcentaje = porcentaje;
         this. color = color;
         
-    }
-
-  
+    }  
 }

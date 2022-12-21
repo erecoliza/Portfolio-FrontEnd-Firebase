@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-lg-2 align-self-center align-items-center">
       <h4>
-        <i *ngIf="isLogin()" class="fa-solid fa-pen px-3 fa-xs" tooltip="<p> Editar y/o Modificar </p>" placement="top"
+        <i *ngIf="isLogged" class="fa-solid fa-pen px-3 fa-xs" tooltip="<p> Editar y/o Modificar </p>" placement="top"
           data-bs-toggle="modal" data-bs-target="#AcercaDeDatosModal"></i>
       </h4>
       <img [src]="persona.imagen" alt="Avatar" class="avatar" />
@@ -29,7 +29,7 @@
         <div class="col-lg-12 align-self-center align-items-center">
           <h3>
             <span>Acerca de
-              <i *ngIf="isLogin()" class="fa-solid fa-pen px-3 fa-xs" tooltip="<p> Editar y/o Modificar </p>"
+              <i *ngIf="isLogged" class="fa-solid fa-pen px-3 fa-xs" tooltip="<p> Editar y/o Modificar </p>"
                 placement="top" data-bs-toggle="modal" data-bs-target="#AcercaDeModal"></i>
             </span>
           </h3>
