@@ -3,7 +3,7 @@
   <div class="col-lg-12 align-self-center align-items-center">
     <h3 class="titulo">
       Educación
-      <i *ngIf="isLogin()" id="nuevaEducacion" class="fa-solid fa-circle-plus"
+      <i *ngIf="isLogged" id="nuevaEducacion" class="fa-solid fa-circle-plus"
         tooltip="<p> Agregar NUEVA referencia</br><strong>EDUCACION</strong></p>" placement="top" data-bs-toggle="modal"
         data-bs-target="#EducacionModal" (click)="nuevoEducacion()">
       </i>
@@ -31,13 +31,13 @@
       <div class="card-header">
 
         <h4>
-          <span *ngIf="isLogin()" class="badge bg-secondary">{{ i }} </span>
+          <span *ngIf="isLogged" class="badge bg-secondary">{{ i }} </span>
           {{ educacion.establecimiento }}
-          <i *ngIf="isLogin()" id="modifaEducacion" class="fa-solid fa-pen px-5 fa-lg"
+          <i *ngIf="isLogged" id="modifaEducacion" class="fa-solid fa-pen px-5 fa-lg"
             tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
             data-bs-target="#EducacionModal" (click)="editarModificarEducacion($event, educacion)">
           </i>
-          <i *ngIf="isLogin()" id="eliminaEducacion" class="fa-solid fa-circle-xmark px-5 fa-lg"
+          <i *ngIf="isLogged" id="eliminaEducacion" class="fa-solid fa-circle-xmark px-5 fa-lg"
             tooltip="<p> Eliminar </p>" placement="top" data-bs-toggle="modal" data-bs-target="#EducacionModal"
             (click)="eliminarEducacion($event, educacion)"></i>
         </h4>

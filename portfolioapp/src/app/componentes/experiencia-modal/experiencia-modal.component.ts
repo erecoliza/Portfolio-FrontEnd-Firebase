@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-experiencia-modal',
@@ -9,8 +8,6 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class ExperienciaModalComponent implements OnInit {
 
   @Input() miExperiencia: any;
-
-  constructor(private datosPorfolio:PortfolioService) { }
 
   ngOnInit(): void { }
   

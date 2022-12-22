@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-proyecto-modal',
@@ -10,8 +9,6 @@ export class ProyectoModalComponent implements OnInit {
 
   @Input()
   miProyecto: any;
-
-  constructor(private datosPorfolio: PortfolioService) { }
 
   ngOnInit(): void {
 

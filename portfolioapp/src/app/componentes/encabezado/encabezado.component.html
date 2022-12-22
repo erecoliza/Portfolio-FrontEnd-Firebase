@@ -4,44 +4,48 @@
       <img src="./assets/logo.png" alt="" width="70%" />
     </a>
     <ul class="list-group list-group-horizontal">
-
-      <li class="list-group-item border-0">
-        <a href="{{miPortfolio.linkedin}}" target="_blank">
+    <ul *ngFor="let red of redList; let i = index" [ngSwitch]="red.red"   class="list-group list-group-horizontal">
+      <li *ngSwitchCase="'linkedin'" class="list-group-item border-0">
+        <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-linkedin fa-2xl"></i>
         </a>
       </li>
-      <li class="list-group-item border-0">
-        <a href="{{miPortfolio.github}}" target="_blank">
+      <li *ngSwitchCase="'github'" class="list-group-item border-0">
+        <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-github fa-2xl"></i>
         </a>
       </li>
-      <li class="list-group-item border-0">
-        <a href="{{miPortfolio.facebook}}" target="_blank">
+      <li *ngSwitchCase="'facebook'" class="list-group-item border-0">
+        <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-facebook fa-2xl"></i>
         </a>
       </li>
-      <li class="list-group-item border-0">
-        <a href="{{miPortfolio.instagram}}" target="_blank">
+      <li *ngSwitchCase="'instagram'" class="list-group-item border-0">
+        <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-instagram fa-2xl"></i>
         </a>
       </li>
-      <li class="list-group-item border-0">
-        <a href="{{miPortfolio.twitter}}" target="_blank">
+      <li *ngSwitchCase="'twitter'" class="list-group-item border-0">
+        <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-twitter fa-2xl"></i>
         </a>
       </li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
       <li class="list-group-item border-0">
         <!-- Button trigger modal LOGIN-->
-         <i *ngIf="!isLogged" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
-          class="fa-solid fa-user-lock fa-2xl"
-          >
-        </i> 
+        <i *ngIf="!isLogged" type="button" data-bs-toggle="modal"
+          data-bs-target="#loginModal"
+          class="fa-solid fa-user-lock fa-2xl">
+        </i>
         <!-- Button LOGOUT-->
-        <i *ngIf="isLogged" type="button" class="fa-solid fa-right-from-bracket fa-2xl"
+        <i *ngIf="isLogged" type="button" class="fa-solid fa-right-from-bracket
+          fa-2xl"
           (click)="miLogout()">
         </i>
       </li>
     </ul>
+  </ul>
   </div>
 </nav>
 <app-login></app-login>

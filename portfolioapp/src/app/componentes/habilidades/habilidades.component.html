@@ -6,7 +6,7 @@
       Habilidades
       <span tooltip="<p> Agregar NUEVA referencia</br><strong>HABILIDADES</strong></p>" placement="top"
         data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="nuevoHabilidad()">
-        <i *ngIf="isLogin()" class="fa-solid fa-circle-plus"></i>
+        <i *ngIf="isLogged" class="fa-solid fa-circle-plus"></i>
       </span>
     </h3>
   </div>
@@ -18,15 +18,15 @@
       <circle-progress [percent]="habilidad.porcentaje" [radius]="50" [outerStrokeWidth]="10" [innerStrokeWidth]="5"
         [outerStrokeColor]="habilidad.color" [innerStrokeColor]="'#EEEEEE'" [animation]="true" [responsive]="false"
         [showSubtitle]="false" [animationDuration]="300">{{ habilidad.habilidad }}</circle-progress>
-      <span *ngIf="isLogin()" class="badge bg-secondary">{{ i }} </span>
+      <span *ngIf="isLogged" class="badge bg-secondary">{{ i }} </span>
       <figcaption class="figure-caption">{{ habilidad.habilidad }}</figcaption>
     </figure>
     <div class="col">
-      <i *ngIf="isLogin()" id="establecimiento" class="fa-solid fa-pen px-3 fa-lg"
+      <i *ngIf="isLogged" id="establecimiento" class="fa-solid fa-pen px-3 fa-lg"
         tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal" data-bs-target="#HabilidadModal"
         (click)="editarModificarHabilidad($event, habilidad)">
       </i>
-      <i *ngIf="isLogin()" class="fa-solid fa-circle-xmark px-3 fa-lg" tooltip="<p> Eliminar </p>" placement="top"
+      <i *ngIf="isLogged" class="fa-solid fa-circle-xmark px-3 fa-lg" tooltip="<p> Eliminar </p>" placement="top"
         data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="eliminarHabilidad($event, habilidad)"></i>
     </div>
   </div>

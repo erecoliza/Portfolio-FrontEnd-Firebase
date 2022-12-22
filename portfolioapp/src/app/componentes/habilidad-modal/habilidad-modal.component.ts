@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-habilidad-modal',
@@ -8,8 +7,6 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class HabilidadModalComponent implements OnInit {
   @Input() miHabilidad: any;  
-
-  constructor(private datosPorfolio:PortfolioService) { }
 
   ngOnInit(): void {  }
 

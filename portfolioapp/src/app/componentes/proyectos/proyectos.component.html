@@ -1,6 +1,6 @@
 <div class="row">
   <h3 class="titulo">Proyectos
-    <i *ngIf="isLogin()" id="proyectoNuevo" class="fa-solid fa-circle-plus px-5 fa-lg"
+    <i *ngIf="isLogged" id="proyectoNuevo" class="fa-solid fa-circle-plus px-5 fa-lg"
       tooltip="<p> Agregar NUEVA referencia<strong>PROYECTOS</strong></p>" placement="top" data-bs-toggle="modal"
       data-bs-target="#ProjectoModal" (click)="nuevoProyecto()">
     </i>
@@ -10,13 +10,13 @@
   <div class="col-lg-12">
     <div class="card">
       <div class="card-header">
-        <h4><span *ngIf="isLogin()" class="badge bg-secondary">{{ i }} </span>
+        <h4><span *ngIf="isLogged" class="badge bg-secondary">{{ i }} </span>
           {{proyecto.proyecto}}
-          <i *ngIf="isLogin()" id="proyectoEdit" class="fa-solid fa-pen px-5 fa-lg"
+          <i *ngIf="isLogged" id="proyectoEdit" class="fa-solid fa-pen px-5 fa-lg"
             tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
             data-bs-target="#ProjectoModal" (click)="editarModificarProyecto($event,proyecto)">
           </i>
-          <i *ngIf="isLogin()" id="proyectodelete" class="fa-solid fa-circle-xmark px-5 fa-lg"
+          <i *ngIf="isLogged" id="proyectodelete" class="fa-solid fa-circle-xmark px-5 fa-lg"
             tooltip="<p> Eliminar </p>" placement="top" data-bs-toggle="modal" data-bs-target="#ProjectoModal"
             (click)="eliminarProyecto($event,proyecto)">
           </i>

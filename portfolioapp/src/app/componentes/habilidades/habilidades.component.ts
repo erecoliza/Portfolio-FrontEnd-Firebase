@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { habilidad } from 'src/app/model/Habilidad.model';
 import { HabilidadService } from 'src/app/servicios/habilidad.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -9,16 +10,21 @@ import { HabilidadService } from 'src/app/servicios/habilidad.service';
   styleUrls: ['./habilidades.component.scss']
 })
 export class HabilidadesComponent implements OnInit {
+  isLogged = false;
+
   habilidadList: habilidad[] = [];
   
   habilidadIndividual = [];
   
-  //constructor(private sExperiencia:HabilidadService, private tokenService: TokenService) { }
-  // isLogged = false;
-
-  constructor(private sHabilidad:HabilidadService) { }
+  constructor(private sHabilidad:HabilidadService, private tokenService: TokenService ) { }
 
   ngOnInit(): void {
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+
     this.cargarHabilidad();
 
   }

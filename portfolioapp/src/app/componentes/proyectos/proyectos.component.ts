@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { proyecto } from 'src/app/model/proyecto.model';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -9,7 +9,7 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
   styleUrls: ['./proyectos.component.scss']
 })
 export class ProyectosComponent implements OnInit {
-
+  isLogged = false;
   proyectosList: proyecto[] = [];
   
   proyectoIndividual = [];
@@ -17,9 +17,15 @@ export class ProyectosComponent implements OnInit {
   //constructor(private sExperiencia:HabilidadService, private tokenService: TokenService) { }
   // isLogged = false;
   
-  constructor(private sProyecto:ProyectoService) { }
+  constructor(private sProyecto:ProyectoService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+
     this.cargarProyecto();
 
   }
