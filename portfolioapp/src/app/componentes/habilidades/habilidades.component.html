@@ -5,7 +5,7 @@
     <h3 class="titulo">
       Habilidades
       <span tooltip="<p> Agregar NUEVA referencia</br><strong>HABILIDADES</strong></p>" placement="top"
-        data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="nuevoHabilidad()">
+        data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="nuevoHabilidad('new')">
         <i *ngIf="isLogged" class="fa-solid fa-circle-plus"></i>
       </span>
     </h3>
@@ -24,11 +24,11 @@
     <div class="col">
       <i *ngIf="isLogged" id="establecimiento" class="fa-solid fa-pen px-3 fa-lg"
         tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal" data-bs-target="#HabilidadModal"
-        (click)="editarModificarHabilidad($event, habilidad)">
+        (click)="editarModificarHabilidad($event, habilidad,'update')">
       </i>
       <i *ngIf="isLogged" class="fa-solid fa-circle-xmark px-3 fa-lg" tooltip="<p> Eliminar </p>" placement="top"
-        data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="eliminarHabilidad($event, habilidad)"></i>
+        data-bs-toggle="modal" data-bs-target="#HabilidadModal" (click)="eliminarHabilidad($event, habilidad, 'delete')"></i>
     </div>
   </div>
 </div>
-<app-habilidad-modal [miHabilidad]="habilidadIndividual" *ngIf="habilidadIndividual"></app-habilidad-modal>
+<app-habilidad-modal [miHabilidad]="habilidadIndividual" [miAccionType]="acciontype" *ngIf="habilidadIndividual"></app-habilidad-modal>

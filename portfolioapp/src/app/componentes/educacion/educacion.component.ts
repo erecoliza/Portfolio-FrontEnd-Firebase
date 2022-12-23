@@ -10,11 +10,12 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class EducacionComponent implements OnInit {
   isLogged = false;
+  acciontype = "";
 
   educacionList: educacion[] = [];
-  
-  educacionIndividual = [];  
 
+  educacionIndividual: educacion = new educacion("","","","","","","" );
+  
   constructor(private sEducacion:EducacionService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
@@ -29,25 +30,25 @@ export class EducacionComponent implements OnInit {
 
   cargarEducacion() {
     this.sEducacion.lista().subscribe(data => {this.educacionList = data;});
+    console.log(this.educacionList);
   }
   
-  nuevoEducacion() {
-    this.educacionIndividual = [];    
+  nuevoEducacion(accion:string) {
+
+    this.educacionIndividual = new educacion("","","","","","","" );
+    this.acciontype = accion;
  }
  
- editarModificarEducacion(event:any, item:any){
-   console.log("Event: ",event,"Item:",item);
+ editarModificarEducacion(event:any, item:any, accion:string){
+   console.log("Event: ",event,"Item:",item, "accion:", accion);
    this.educacionIndividual = item;        
+   this.acciontype = accion;
  }
 
- eliminarEducacion(event:any, item:any){
-   console.log("Event: ",event,"Item:",item);
+ eliminarEducacion(event:any, item:any, accion:string){
+   console.log("Event: ",event,"Item:",item, "accion:", accion);
    this.educacionIndividual = item;        
- }
-  
-  isLogin(){
-    let tokenValor = localStorage.getItem('token'); 
-    return tokenValor == 'eduardo123456';     
-  }
+   this.acciontype = accion;
+ } 
 
 }

@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ExperienciaModalComponent implements OnInit {
 
   @Input() miExperiencia: any;
+  @Input() miAccionType: any; 
 
   ngOnInit(): void { }
   

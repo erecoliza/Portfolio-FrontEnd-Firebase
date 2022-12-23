@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HabilidadModalComponent implements OnInit {
   @Input() miHabilidad: any;  
+  @Input() miAccionType: any;
 
   ngOnInit(): void {  }
 

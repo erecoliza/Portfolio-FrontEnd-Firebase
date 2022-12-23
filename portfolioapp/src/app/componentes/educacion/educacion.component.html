@@ -5,7 +5,7 @@
       Educación
       <i *ngIf="isLogged" id="nuevaEducacion" class="fa-solid fa-circle-plus"
         tooltip="<p> Agregar NUEVA referencia</br><strong>EDUCACION</strong></p>" placement="top" data-bs-toggle="modal"
-        data-bs-target="#EducacionModal" (click)="nuevoEducacion()">
+        data-bs-target="#EducacionModal" (click)="nuevoEducacion('new')">
       </i>
     </h3>
   </div>
@@ -35,11 +35,11 @@
           {{ educacion.establecimiento }}
           <i *ngIf="isLogged" id="modifaEducacion" class="fa-solid fa-pen px-5 fa-lg"
             tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
-            data-bs-target="#EducacionModal" (click)="editarModificarEducacion($event, educacion)">
+            data-bs-target="#EducacionModal" (click)="editarModificarEducacion($event, educacion, 'update')">
           </i>
           <i *ngIf="isLogged" id="eliminaEducacion" class="fa-solid fa-circle-xmark px-5 fa-lg"
             tooltip="<p> Eliminar </p>" placement="top" data-bs-toggle="modal" data-bs-target="#EducacionModal"
-            (click)="eliminarEducacion($event, educacion)"></i>
+            (click)="eliminarEducacion($event, educacion, 'delete')"></i>
         </h4>
       </div>
       <div class="card-body" style="text-align: justify">
@@ -65,4 +65,4 @@
     </div>
   </div>
 </div>
-<app-educacion-modal [miEducacion]="educacionIndividual" *ngIf="educacionIndividual "></app-educacion-modal>
+<app-educacion-modal [miEducacion]="educacionIndividual" [miAccionType]="acciontype" *ngIf="educacionIndividual"></app-educacion-modal>

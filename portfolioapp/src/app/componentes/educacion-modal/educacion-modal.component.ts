@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class EducacionModalComponent implements OnInit {
   
   @Input() miEducacion: any; 
+  
+  @Input() miAccionType: any; 
 
   ngOnInit(): void {
    

@@ -9,20 +9,26 @@
         <form>
           <div class="input-group">
             <span class="input-group-text">Habilidad:</span>
-            <input type="text" class="form-control" id="nombre" [(ngModel)]="miHabilidad.habilidad" value="{{miHabilidad.habilidad}}">
+            <input type="text" class="form-control" id="nombre" 
+            [(ngModel)]="miHabilidad.habilidad" [ngModelOptions]="{standalone:true}" 
+            value="{{miHabilidad.habilidad}}">
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
           <div class="input-group">
             <span class="input-group-text">Porcentaje:</span>
-            <input type="text" class="form-control" id="posicion" [(ngModel)]="miHabilidad.porcentaje" value="{{miHabilidad.porcentaje}}" placeholder="99">
+            <input type="text" class="form-control" id="porcentaje" 
+            [(ngModel)]="miHabilidad.porcentaje" [ngModelOptions]="{standalone:true}"  
+            value="{{miHabilidad.porcentaje}}" placeholder="99">
             <span class="input-group-text">%</span>
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
           <div class="input-group">
             <span class="input-group-text">Color:</span>
-            <input type="color" class="form-control" id="telefon" [(ngModel)]="miHabilidad.color" value="{{miHabilidad.color}}" value="#563d7c">
+            <input type="color" class="form-control" id="color" 
+            [(ngModel)]="miHabilidad.color" [ngModelOptions]="{standalone:true}" 
+            value="{{miHabilidad.color}}">
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
@@ -32,7 +38,17 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
-        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        <div [ngSwitch]="miAccionType">
+          <div *ngSwitchCase="'new'">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+          <div *ngSwitchCase="'update'">
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+          </div>
+          <div *ngSwitchCase="'delete'">
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

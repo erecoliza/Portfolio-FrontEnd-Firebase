@@ -8,12 +8,15 @@ import { TokenService } from 'src/app/servicios/token.service';
   templateUrl: './experiencia.component.html',
   styleUrls: ['./experiencia.component.scss']
 })
+
 export class ExperienciaComponent implements OnInit {
   isLogged = false;
+  acciontype = "";
   
   experienciaList: experiencia[] = [];
   
-  experienciaIndividual = [];
+  experienciaIndividual: experiencia = new experiencia("","","","","","","")
+  
   
   constructor(private sExperiencia:ExperienciaService, private tokenService: TokenService) { }
 
@@ -31,23 +34,23 @@ export class ExperienciaComponent implements OnInit {
   cargarExperiencia() {
     this.sExperiencia.lista().subscribe(data => {this.experienciaList = data;});
   }
-  nuevoExperiencia() {
-    this.experienciaIndividual = [];    
+
+  nuevoExperiencia(accion:string) {
+    this.experienciaIndividual = new experiencia("","","","","","","" );    
+    this.acciontype = accion;
  }
  
- editarModificarExperiencia(event:any, item:any){
+ editarModificarExperiencia(event:any, item:any, accion:string) {
    console.log("Event: ",event,"Item:",item);
+   this.acciontype = accion;   
    this.experienciaIndividual = item;        
  }
 
- eliminarExperiencia(event:any, item:any){
+ eliminarExperiencia(event:any, item:any, accion:string){
    console.log("Event: ",event,"Item:",item);
+   this.acciontype = accion;
    this.experienciaIndividual = item;        
  }
-  
-  isLogin(){
-    let tokenValor = localStorage.getItem('token'); 
-    return tokenValor == 'eduardo123456';     
-  }
+   
 
 }

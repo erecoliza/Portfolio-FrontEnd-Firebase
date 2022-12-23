@@ -2,7 +2,7 @@
   <h3 class="titulo">Proyectos
     <i *ngIf="isLogged" id="proyectoNuevo" class="fa-solid fa-circle-plus px-5 fa-lg"
       tooltip="<p> Agregar NUEVA referencia<strong>PROYECTOS</strong></p>" placement="top" data-bs-toggle="modal"
-      data-bs-target="#ProjectoModal" (click)="nuevoProyecto()">
+      data-bs-target="#ProjectoModal" (click)="nuevoProyecto('new')">
     </i>
   </h3>
 </div>
@@ -14,11 +14,11 @@
           {{proyecto.proyecto}}
           <i *ngIf="isLogged" id="proyectoEdit" class="fa-solid fa-pen px-5 fa-lg"
             tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
-            data-bs-target="#ProjectoModal" (click)="editarModificarProyecto($event,proyecto)">
+            data-bs-target="#ProjectoModal" (click)="editarModificarProyecto($event,proyecto,'update')">
           </i>
           <i *ngIf="isLogged" id="proyectodelete" class="fa-solid fa-circle-xmark px-5 fa-lg"
             tooltip="<p> Eliminar </p>" placement="top" data-bs-toggle="modal" data-bs-target="#ProjectoModal"
-            (click)="eliminarProyecto($event,proyecto)">
+            (click)="eliminarProyecto($event,proyecto,'delete')">
           </i>
         </h4>
       </div>
@@ -39,7 +39,7 @@
     </div>
   </div>
 </div>
-<app-proyecto-modal [miProyecto]="proyectoIndividual" *ngIf="proyectoIndividual "></app-proyecto-modal>
+<app-proyecto-modal [miProyecto]="proyectoIndividual" [miAccionType]="acciontype" *ngIf="proyectoIndividual "></app-proyecto-modal>
 
 <!-- 
   In case proyectoIndividual is a variable and not value is better add *ngIf="proyectoIndividual"

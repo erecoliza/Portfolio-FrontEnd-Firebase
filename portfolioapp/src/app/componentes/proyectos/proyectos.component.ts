@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { proyecto } from 'src/app/model/proyecto.model';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
 import { TokenService } from 'src/app/servicios/token.service';
@@ -10,14 +11,13 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class ProyectosComponent implements OnInit {
   isLogged = false;
+  acciontype = "";
+
   proyectosList: proyecto[] = [];
   
-  proyectoIndividual = [];
-  
-  //constructor(private sExperiencia:HabilidadService, private tokenService: TokenService) { }
-  // isLogged = false;
-  
-  constructor(private sProyecto:ProyectoService, private tokenService: TokenService) { }
+  proyectoIndividual: proyecto = new proyecto("","","",""); 
+    
+  constructor(private sProyecto:ProyectoService, private tokenService: TokenService, private router: Router) { }
 
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
@@ -25,32 +25,29 @@ export class ProyectosComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-
     this.cargarProyecto();
-
+        
   }
 
   cargarProyecto() {
     this.sProyecto.lista().subscribe(data => {this.proyectosList = data;});
   }
   
-  nuevoProyecto() {
-    this.proyectoIndividual = [];    
+  nuevoProyecto(accion:string) {
+    this.acciontype = accion;
+    this.proyectoIndividual = new proyecto("","","",""); 
  }
  
- editarModificarProyecto(event:any, item:any){
+ editarModificarProyecto(event:any, item:any, accion:string) {
    console.log("Event: ",event,"Item:",item);
+   this.acciontype = accion;
    this.proyectoIndividual = item;        
  }
 
- eliminarProyecto(event:any, item:any){
+ eliminarProyecto(event:any, item:any, accion:string) {
    console.log("Event: ",event,"Item:",item);
-   this.proyectoIndividual = item;        
+   this.acciontype = accion;
+   this.proyectoIndividual = item;         
  }
   
-  isLogin(){
-    let tokenValor = localStorage.getItem('token'); 
-    return tokenValor == 'eduardo123456';     
-  }
-
 }

@@ -11,10 +11,11 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class HabilidadesComponent implements OnInit {
   isLogged = false;
+  acciontype = "";
 
   habilidadList: habilidad[] = [];
   
-  habilidadIndividual = [];
+  habilidadIndividual: habilidad = new habilidad("",0,""); 
   
   constructor(private sHabilidad:HabilidadService, private tokenService: TokenService ) { }
 
@@ -33,23 +34,21 @@ export class HabilidadesComponent implements OnInit {
     this.sHabilidad.lista().subscribe(data => {this.habilidadList = data;});
   }
   
-  nuevoHabilidad() {
-    this.habilidadIndividual = [];    
+  nuevoHabilidad(accion:string) {
+    this.habilidadIndividual = new habilidad("",0,""); 
+    this.acciontype = accion;
  }
  
- editarModificarHabilidad(event:any, item:any){
+ editarModificarHabilidad(event:any, item:any, accion:string){
    console.log("Event: ",event,"Item:",item);
+   this.acciontype = accion;
    this.habilidadIndividual = item;        
  }
 
- eliminarHabilidad(event:any, item:any){
+ eliminarHabilidad(event:any, item:any, accion:string){
    console.log("Event: ",event,"Item:",item);
+   this.acciontype = accion;
    this.habilidadIndividual = item;        
  }
-  
-  isLogin(){
-    let tokenValor = localStorage.getItem('token'); 
-    return tokenValor == 'eduardo123456';     
-  }
-
+    
 }

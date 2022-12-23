@@ -4,7 +4,7 @@
     <h3 class="titulo">
       Experiencia Laboral
       <span tooltip="<p> Agregar NUEVA referencia</br><strong>EXPERIENCIA LABORAL</strong></p>" placement="top"
-        id="nuevoExperiencia" data-bs-toggle="modal" data-bs-target="#ExperienciaModal" (click)="nuevoExperiencia()">
+        id="nuevoExperiencia" data-bs-toggle="modal" data-bs-target="#ExperienciaModal" (click)="nuevoExperiencia('new')">
         <i *ngIf="isLogged" class="fa-solid fa-circle-plus"></i></span>
     </h3>
   </div>
@@ -33,11 +33,11 @@
           {{ experiencia.empresa }}
           <i *ngIf="isLogged" id="establecimiento" class="fa-solid fa-pen px-5 fa-lg"
             tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
-            data-bs-target="#ExperienciaModal" (click)="editarModificarExperiencia($event, experiencia)">
+            data-bs-target="#ExperienciaModal" (click)="editarModificarExperiencia($event, experiencia, 'update')">
           </i>
           <i *ngIf="isLogged" class="fa-solid fa-circle-xmark px-5 fa-lg" tooltip="<p> Eliminar </p>" placement="top"
             data-bs-toggle="modal" data-bs-target="#ExperienciaModal"
-            (click)="eliminarExperiencia($event, experiencia)"></i>
+            (click)="eliminarExperiencia($event, experiencia, 'delete')"></i>
         </h4>
       </div>
       <div class="card-body" style="text-align: justify">
@@ -63,4 +63,4 @@
     </div>
   </div>
 </div>
-<app-experiencia-modal [miExperiencia]="experienciaIndividual" *ngIf="experienciaIndividual "></app-experiencia-modal>
+<app-experiencia-modal [miExperiencia]="experienciaIndividual" [miAccionType]="acciontype" *ngIf="experienciaIndividual "></app-experiencia-modal>
