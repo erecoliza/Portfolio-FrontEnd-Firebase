@@ -13,7 +13,7 @@
           <div class="input-group">
             <span class="input-group-text">Nombre y Apellido:</span>
             <input type="text" class="form-control"
-              id="nombre"
+              id="apellidonombre"
               [(ngModel)]="persona.apellidonombre"
               [ngModelOptions]="{standalone:true}"
               value="{{persona.apellidonombre}}">
@@ -38,7 +38,7 @@
               [ngModelOptions]="{standalone:true}"
               value="{{persona.telefono}}">
           </div>
-          <div id="nombreHelp" class="form-text">
+          <div id="telefonoHelp" class="form-text">
             Ej: +54 9 11 9999 9999
           </div>
           <div class="input-group">
@@ -49,7 +49,7 @@
               [ngModelOptions]="{standalone:true}"
               value="{{persona.email}}">
           </div>
-          <div id="nombreHelp" class="form-text">
+          <div id="emailHelp" class="form-text">
             Ej: name@example.com.ar
           </div>
           <div class="input-group">

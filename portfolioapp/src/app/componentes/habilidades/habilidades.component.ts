@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { habilidad } from 'src/app/model/Habilidad.model';
+import { habilidad } from 'src/app/model/habilidad.model';
 import { HabilidadService } from 'src/app/servicios/habilidad.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
