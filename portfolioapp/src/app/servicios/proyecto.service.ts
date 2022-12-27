@@ -20,7 +20,7 @@ export class ProyectoService {
   }
 
   public save(proyecto: proyecto): Observable<any>{
-    return this.httpClient.post<any>(this.URL+`new`, proyecto);
+    return this.httpClient.post<any>(this.URL+`/new`, proyecto);
   }
 
   public update(id: number, proyecto: proyecto): Observable<any>{

@@ -4,8 +4,7 @@
   id="AcercaDeModal"
   tabindex="-1"
   aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+  aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -14,29 +13,40 @@
           type="button"
           class="btn-close"
           data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
+          aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form (ngSubmit)="onUpdate(persona.id)" novalidate #f="ngForm">
           <div class="input-group">
             <span class="input-group-text">Acerca de mi:</span>
-            <textarea class="form-control" 
-            aria-label="With textarea"
-            id="acercade"
-            [(ngModel)]="persona.acercade"
-            aria-describedby="acercaHelp"
-            rows="10">
-            {{persona.acercade}}</textarea>            
+            <textarea class="form-control"
+              aria-label="With textarea"
+              id="acercade"
+              [(ngModel)]="persona.acercade"
+              [ngModelOptions]="{standalone:true}"
+              aria-describedby="acercaHelp"
+              rows="10">
+              {{persona.acercade}}</textarea>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Cerrar
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Actualizar
+            </button>
           </div>
         </form>
       </div>
+      <!--
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
         <button type="submit" class="btn btn-primary">Guardar Cambios</button>
       </div>
+      -->
     </div>
   </div>
 </div>

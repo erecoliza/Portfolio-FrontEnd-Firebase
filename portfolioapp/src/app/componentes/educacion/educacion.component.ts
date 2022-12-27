@@ -29,8 +29,7 @@ export class EducacionComponent implements OnInit {
   }
 
   cargarEducacion() {
-    this.sEducacion.lista().subscribe(data => {this.educacionList = data;});
-    console.log(this.educacionList);
+    this.sEducacion.lista().subscribe(data => {this.educacionList = data;});    
   }
   
   nuevoEducacion(accion:string) {

@@ -1,51 +1,74 @@
 <!-- Modal -->
-<div class="modal fade" id="AcercaDeDatosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="AcercaDeDatosModal" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Datos Principales </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form (ngSubmit)="onUpdate(persona.id)" novalidate #f="ngForm">
           <div class="input-group">
             <span class="input-group-text">Nombre y Apellido:</span>
-            <input type="text" class="form-control" id="nombre"  value="{{persona.apellidonombre}}">
-          </div>                    
+            <input type="text" class="form-control"
+              id="nombre"
+              [(ngModel)]="persona.apellidonombre"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.apellidonombre}}">
+          </div>
           <div id="nombreHelp" class="form-text">
           </div>
           <div class="input-group">
             <span class="input-group-text">Posición:</span>
-            <input type="text" class="form-control" id="posicion"  value="{{persona.posicion}}">
+            <input type="text" class="form-control"
+              id="posicion"
+              [(ngModel)]="persona.posicion"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.posicion}}">
           </div>
           <div id="nombreHelp" class="form-text">
-
           </div>
           <div class="input-group">
             <span class="input-group-text">Teléfono:</span>
-            <input type="text" class="form-control" id="telefono" value="{{persona.telefono}}">
+            <input type="text" class="form-control"
+              id="telefono"
+              [(ngModel)]="persona.telefono"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.telefono}}">
           </div>
           <div id="nombreHelp" class="form-text">
             Ej: +54 9 11 9999 9999
           </div>
           <div class="input-group">
-            <span class="input-group-text">Teléfono:</span>
-            <input type="email" class="form-control" id="email" value="{{persona.email}}">
+            <span class="input-group-text">Correo Electrónico:</span>
+            <input type="email" class="form-control"
+              id="email"
+              [(ngModel)]="persona.email"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.email}}">
           </div>
           <div id="nombreHelp" class="form-text">
             Ej: name@example.com.ar
           </div>
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Ubicación de la foto tipo Avatar</label>
-            <input class="form-control" type="file" id="formFile">
+          <div class="input-group">
+            <span class="input-group-text">Imagen (Avatar):</span>
+            <input type="text" class="form-control"
+              id="imagen"
+              [(ngModel)]="persona.imagen"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.imagen}}">
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Cerrar
+            </button>
+            <button type="submit" class="btn btn-primary"
+              data-bs-dismiss="modal">Actualizar</button>
           </div>
         </form>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Cerrar
-        </button>
-        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar Cambios</button>
       </div>
     </div>
   </div>

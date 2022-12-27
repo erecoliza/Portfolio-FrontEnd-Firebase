@@ -9,9 +9,14 @@ import { persona } from '../model/persona.model';
 export class PersonaService {
   URL = "http://localhost:8080/persona"
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   public getPersona(): Observable<persona> {
-    return this.http.get<persona>(this.URL+"/detail/1")    
+    return this.httpClient.get<persona>(this.URL+"/detail/1")    
   }
+
+  public update(id: number, proyecto: persona): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `/update/${id}`, proyecto);
+  }
+  
 }

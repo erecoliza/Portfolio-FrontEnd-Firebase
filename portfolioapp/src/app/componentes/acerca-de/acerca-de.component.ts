@@ -24,9 +24,7 @@ export class AcercaDeComponent implements OnInit {
     }
 
     this.personaService.getPersona().subscribe(data => {
-      this.persona = data
-      console.log("componente")
-      console.log(this.persona);
+      this.persona = data      
     });     
   }
 

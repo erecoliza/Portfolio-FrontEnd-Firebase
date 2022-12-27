@@ -6,60 +6,173 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"> Projecto Web </h5>
       </div>
-      <div class="modal-body">
-        <form>
-          <div class="input-group">
-            <span class="input-group-text">Nombre:</span>
-            <input type="text" class="form-control" id="proyecto"
-              [(ngModel)]="miProyecto.proyecto"
-              [ngModelOptions]="{standalone:true}"
-              value="{{miProyecto.proyecto}}">
-          </div>
-          <div id="nombreHelp" class="form-text">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">Fecha:</span>
-            <input type="text" class="form-control" id="periodo_desde"
-              [(ngModel)]="miProyecto.periodo_desde"
-              [ngModelOptions]="{standalone:true}"
-              value="{{miProyecto.periodo_desde}}"
-              placeholder="99/9999">
-          </div>
-          <div id="nombreHelp" class="form-text">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">Descripción:</span>
-            <input type="email" class="form-control" id="descripcion"
-              [(ngModel)]="miProyecto.descripcion"
-              [ngModelOptions]="{standalone:true}"
-              value="{{miProyecto.descripcion}}">
-          </div>
-          <div id="nombreHelp" class="form-text">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">WEB:</span>
-            <input type="text" class="form-control" id="posicion"
-              [(ngModel)]="miProyecto.web" value="{{miProyecto.web}}">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Cerrar
-        </button>
-        <div [ngSwitch]="miAccionType">
-          <div *ngSwitchCase="'new'">
-            <button type="submit" class="btn btn-primary">Guardar</button>
-          </div>
-          <div *ngSwitchCase="'update'">
-            <button type="submit" class="btn btn-primary">Actualizar</button>
-          </div>
-          <div *ngSwitchCase="'delete'">
-            <button type="submit" class="btn btn-danger"
-              (click)="delete(miProyecto.id)" data-bs-dismiss="modal">Eliminar</button>
+
+      <div [ngSwitch]="miAccionType">
+        <div class="modal-body" *ngSwitchCase="'new'">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Nombre:</span>
+              <input type="text" class="form-control" id="proyecto"
+                [(ngModel)]="miProyecto.proyecto"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.proyecto}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Fecha:</span>
+              <input type="text" class="form-control" id="fecha"
+                [(ngModel)]="miProyecto.fecha"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.fecha}}"
+                placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="email" class="form-control" id="descripcion"
+                [(ngModel)]="miProyecto.descripcion"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web"
+                [(ngModel)]="miProyecto.web"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.web}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-body" *ngSwitchCase="'update'">
+          <form (ngSubmit)="onUpdate(miProyecto.id)" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Nombre:</span>
+              <input type="text" class="form-control"
+                id="proyecto"
+                [(ngModel)]="miProyecto.proyecto"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.proyecto}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Fecha:</span>
+              <input type="text" class="form-control" id="fecha"
+                [(ngModel)]="miProyecto.fecha"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.fecha}}"
+                placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="email" class="form-control" id="descripcion"
+                [(ngModel)]="miProyecto.descripcion"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web"
+                [(ngModel)]="miProyecto.web"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.web}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Actualizar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-body" *ngSwitchCase="'delete'">
+          <form (ngSubmit)="delete(miProyecto.id)" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Nombre:</span>
+              <input type="text" class="form-control" id="proyecto"
+                [(ngModel)]="miProyecto.proyecto"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.proyecto}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Fecha:</span>
+              <input type="text" class="form-control" id="fecha"
+                [(ngModel)]="miProyecto.fecha"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.fecha}}"
+                placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="email" class="form-control" id="descripcion"
+                [(ngModel)]="miProyecto.descripcion"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miProyecto.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web"
+                [(ngModel)]="miProyecto.web" value="{{miProyecto.web}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Eliminar
+              </button>
+            </div>
+          </form>
+        </div>
+        <!--
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary"
+            data-bs-dismiss="modal">
+            Cerrar
+          </button>
+          <div [ngSwitch]="miAccionType">
+            <div *ngSwitchCase="'new'">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+            <div *ngSwitchCase="'update'">
+              <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div>
+            <div *ngSwitchCase="'delete'">
+              <button type="submit" class="btn btn-danger"
+                (click)="delete(miProyecto.id)" data-bs-dismiss="modal">Eliminar</button>
+            </div>
           </div>
         </div>
+        -->
       </div>
     </div>
   </div>
-</div>
