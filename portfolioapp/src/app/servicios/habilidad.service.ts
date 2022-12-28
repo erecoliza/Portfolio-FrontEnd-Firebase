@@ -7,7 +7,8 @@ import { habilidad } from '../model/habilidad.model';
   providedIn: 'root'
 })
 export class HabilidadService {
-  URL = "http://localhost:8080/habilidad"
+  URL = "https://erecoliza-portfolio.onrender.com/habilidad";
+  //URL = "http://localhost:8080/habilidad"
 
   constructor(private httpClient: HttpClient) { }
 

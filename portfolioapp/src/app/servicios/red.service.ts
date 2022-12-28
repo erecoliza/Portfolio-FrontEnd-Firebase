@@ -7,7 +7,8 @@ import { red } from '../model/red.model';
   providedIn: 'root'
 })
 export class RedService {
-  URL = "http://localhost:8080/red"
+  URL = "https://erecoliza-portfolio.onrender.com/red";
+  //URL = "http://localhost:8080/red"
 
   constructor(private httpClient: HttpClient) { }
 

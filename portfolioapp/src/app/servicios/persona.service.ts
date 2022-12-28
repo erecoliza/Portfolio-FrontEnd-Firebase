@@ -7,7 +7,10 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = "http://localhost:8080/persona"
+  
+  URL = "https://erecoliza-portfolio.onrender.com/persona";
+  
+  //URL = "http://localhost:8080/persona"
 
   constructor(private httpClient: HttpClient) { }
 

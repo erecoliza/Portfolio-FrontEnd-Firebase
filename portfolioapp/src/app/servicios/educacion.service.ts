@@ -7,7 +7,10 @@ import { educacion } from '../model/educacion.model';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = "http://localhost:8080/educacion"
+  
+  URL = "https://erecoliza-portfolio.onrender.com/educacion";
+
+  //URL = "http://localhost:8080/educacion"
 
   constructor(private httpClient: HttpClient) { }
 

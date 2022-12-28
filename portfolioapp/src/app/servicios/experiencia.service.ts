@@ -7,7 +7,8 @@ import { experiencia } from '../model/experiencia.model';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  URL = "http://localhost:8080/experiencia"
+  URL = "https://erecoliza-portfolio.onrender.com/experiencia";
+  //URL = "http://localhost:8080/experiencia"
 
   constructor(private httpClient: HttpClient) { }
 
