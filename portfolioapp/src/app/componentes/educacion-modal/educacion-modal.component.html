@@ -44,7 +44,6 @@
           </div>
           <div id="nombreHelp" class="form-text">
           </div>
-
           <div class="input-group">
             <span class="input-group-text">Descripción:</span>
             <input type="email" class="form-control" id="descripcioneducacion"
@@ -61,10 +60,13 @@
               true}"
               value="{{miEducacion.web}}">
           </div>
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Logo del Establecimiento</label>
-            <input class="form-control" type="file" id="logoeducacion">
-          </div>
+          <div class="input-group">
+            <span class="input-group-text">Logo:</span>
+            <input type="text" class="form-control" id="logo"
+              [(ngModel)]="miEducacion.logo" [ngModelOptions]="{standalone:
+              true}"
+              value="{{miEducacion.logo}}">
+          </div>          
         </form>
       </div>
       <div class="modal-footer justify-content-center">

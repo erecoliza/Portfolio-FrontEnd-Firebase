@@ -1,6 +1,6 @@
 <!-- ACERCA DE -->
 <div class="container-fluid text-center" id="AcercaDe">
-  <div class="row">
+  <div *ngIf="persona.apellidonombre" class="row" >
     <div class="col-lg-2 align-self-center align-items-center">
       <h4>
         <i *ngIf="isLogged" class="fa-solid fa-pen px-3 fa-xs" tooltip="<p> Editar y/o Modificar </p>" placement="top"

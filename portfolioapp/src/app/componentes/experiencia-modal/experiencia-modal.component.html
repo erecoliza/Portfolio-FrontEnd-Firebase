@@ -55,10 +55,12 @@
             [(ngModel)]="miExperiencia.web" [ngModelOptions]="{standalone:true}" 
             value="{{miExperiencia.web}}">
           </div>       
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Logo de la Empresa</label>
-            <input class="form-control" type="file" id="formFile">
-          </div>  
+          <div class="input-group">
+            <span class="input-group-text">Logo:</span>
+            <input type="text" class="form-control" id="logo" 
+            [(ngModel)]="miExperiencia.logo" [ngModelOptions]="{standalone:true}" 
+            value="{{miExperiencia.logo}}">
+          </div>                 
         </form>
       </div>
       <div class="modal-footer justify-content-center">
