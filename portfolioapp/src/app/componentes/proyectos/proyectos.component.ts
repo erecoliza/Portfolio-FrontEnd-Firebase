@@ -7,8 +7,9 @@ import { TokenService } from 'src/app/servicios/token.service';
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
-  styleUrls: ['./proyectos.component.scss']
+  styleUrls: ['./proyectos.component.scss']   
 })
+
 export class ProyectosComponent implements OnInit {
   isLogged = false;
   acciontype = "";
@@ -17,7 +18,7 @@ export class ProyectosComponent implements OnInit {
   
   proyectoIndividual: proyecto = new proyecto("","","",""); 
     
-  constructor(private sProyecto:ProyectoService, private tokenService: TokenService, private router: Router) { }
+  constructor(private sProyecto:ProyectoService, private tokenService: TokenService, private router: Router ) { }
 
   ngOnInit(): void {
     if (this.tokenService.getToken()) {

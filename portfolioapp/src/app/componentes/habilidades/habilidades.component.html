@@ -18,7 +18,7 @@
       <circle-progress [percent]="habilidad.porcentaje" [radius]="50" [outerStrokeWidth]="10" [innerStrokeWidth]="5"
         [outerStrokeColor]="habilidad.color" [innerStrokeColor]="'#EEEEEE'" [animation]="true" [responsive]="false"
         [showSubtitle]="false" [animationDuration]="300">{{ habilidad.habilidad }}</circle-progress>
-      <span *ngIf="isLogged" class="badge bg-secondary">{{ i }} </span>
+      <!--<span *ngIf="isLogged" class="badge bg-secondary">{{ i }} </span>-->        
       <figcaption class="figure-caption">{{ habilidad.habilidad }}</figcaption>
     </figure>
     <div class="col">
