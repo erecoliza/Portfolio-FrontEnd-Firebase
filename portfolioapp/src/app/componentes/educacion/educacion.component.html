@@ -14,13 +14,13 @@
   <div class="col-lg-2 align-self-center align-items-center">
     <div [ngSwitch]="educacion.web">
       <div *ngSwitchCase="''">
-        <img [src]="educacion.logo" alt="Avatar" class="img-fluid" draggable="false" />
+        <img *ngIf="educacion.logo != ''" [src]="educacion.logo" alt="Avatar" class="img-fluid" draggable="false" />
         <!-- img-thumbnail -->
       </div>
       <div *ngSwitchDefault>
         <a href="http://{{ educacion.web }}" target="_blank" rel="noopener
           noreferrer" draggable="false" class="link-primary">
-          <img [src]="educacion.logo" alt="Avatar" class="img-fluid" draggable="false" />
+          <img *ngIf="educacion.logo != ''" [src]="educacion.logo" alt="Avatar" class="img-fluid" draggable="false" />
           <!-- img-thumbnail -->
         </a>
       </div>

@@ -60,6 +60,16 @@
               [ngModelOptions]="{standalone:true}"
               value="{{persona.imagen}}">
           </div>
+          <div *ngIf="false" class="input-group">
+            <span class="input-group-text">Acerca De:</span>
+            <input type="text" class="form-control"
+              id="acercade"
+              [(ngModel)]="persona.acercade"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.acercade}}">
+          </div>
+
+
           <div class="modal-footer justify-content-center">
             <button type="button" class="btn btn-secondary"
               data-bs-dismiss="modal">

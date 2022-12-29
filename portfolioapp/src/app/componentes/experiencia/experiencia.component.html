@@ -13,13 +13,13 @@
   <div class="col-lg-2 align-self-center align-items-center" style="padding: 1px">
     <div [ngSwitch]="experiencia.web">
       <div *ngSwitchCase="''">
-        <img [src]="experiencia.logo" alt="Avatar" class="img-fluid" draggable="false" />
+        <img *ngIf="experiencia.logo != ''" [src]="experiencia.logo" alt="Avatar" class="img-fluid" draggable="false" />
         <!-- img-thumbnail -->
       </div>
       <div *ngSwitchDefault>
         <a href="http://{{ experiencia.web }}" target="_blank" rel="noopener
             noreferrer" draggable="false" class="link-primary">
-          <img [src]="experiencia.logo" alt="Avatar" class="img-fluid" draggable="false" />
+          <img *ngIf="experiencia.logo != ''" [src]="experiencia.logo" alt="Avatar" class="img-fluid" draggable="false" />
           <!-- img-thumbnail -->
         </a>
       </div>

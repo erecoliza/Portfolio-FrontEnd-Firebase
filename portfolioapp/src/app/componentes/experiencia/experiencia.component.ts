@@ -17,7 +17,6 @@ export class ExperienciaComponent implements OnInit {
   
   experienciaIndividual: experiencia = new experiencia("","","","","","","")
   
-  
   constructor(private sExperiencia:ExperienciaService, private tokenService: TokenService) { }
 
   ngOnInit(): void {

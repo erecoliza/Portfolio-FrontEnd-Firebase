@@ -19,19 +19,19 @@ export class EducacionService {
   }
 
   public detail(id: number): Observable<educacion> {
-    return this.httpClient.get<educacion>(this.URL+`update/educacion/${id}`);
+    return this.httpClient.get<educacion>(this.URL+`/detail/${id}`);
   }
 
   public save(educacion: educacion): Observable<any>{
-    return this.httpClient.post<any>(this.URL+`new/educacion`, educacion);
+    return this.httpClient.post<any>(this.URL+`/new`, educacion);
   }
 
   public update(id: number, educacion: educacion): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/educacion/${id}`, educacion);
+    return this.httpClient.put<any>(this.URL + `/update/${id}`, educacion);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `delete/educacion/${id}`);
+    return this.httpClient.delete<any>(this.URL + `/delete/${id}`);
   }
 
 }

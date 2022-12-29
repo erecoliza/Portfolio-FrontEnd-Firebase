@@ -4,79 +4,218 @@
   id="ExperienciaModal"
   tabindex="-1"
   aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+  aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"> Experiencia Laboral </h5>        
+        <h5 class="modal-title" id="exampleModalLabel"> Experiencia Laboral
+        </h5>
       </div>
-      <div class="modal-body">
-        <form>          
-          <div class="input-group">
-            <span class="input-group-text">Empresa:</span>
-            <input type="text" class="form-control" 
-            id="nombre" [(ngModel)]="miExperiencia.empresa" [ngModelOptions]="{standalone:true}"
-            value="{{miExperiencia.empresa}}">            
-          </div>
-          <div id="nombreHelp" class="form-text">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">Puesto:</span>
-            <input type="text" class="form-control" id="puesto" 
-            [(ngModel)]="miExperiencia.posicion" [ngModelOptions]="{standalone:true}"
-              value="{{miExperiencia.puesto}}">
-          </div>
-          <div id="nombreHelp" class="form-text">            
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">Período desde:</span>
-            <input type="text" class="form-control" id="periodo_desde" 
-            [(ngModel)]="miExperiencia.periodo_desde" [ngModelOptions]="{standalone:true}" 
-            value="{{miExperiencia.periodo_desde}}" placeholder="99/9999">
-            <span class="input-group-text">Período hasta:</span>
-            <input type="text" class="form-control" id="periodo_hasta" 
-            [(ngModel)]="miExperiencia.periodo_hasta" [ngModelOptions]="{standalone:true}"
-            value="{{miExperiencia.periodo_hasta}}" placeholder="99/9999">          
-          </div>
-          <div id="nombreHelp" class="form-text">          
-          </div>        
-          <div class="input-group">
-            <span class="input-group-text">Descripción:</span>
-            <input type="text" class="form-control" id="descripcion"  
-            [(ngModel)]="miExperiencia.email" [ngModelOptions]="{standalone:true}"
-            value="{{miExperiencia.descripcion}}">
-          </div>
-          <div id="nombreHelp" class="form-text">            
-          </div>   
-          <div class="input-group">
-            <span class="input-group-text">WEB:</span>
-            <input type="text" class="form-control" id="web-experiencia" 
-            [(ngModel)]="miExperiencia.web" [ngModelOptions]="{standalone:true}" 
-            value="{{miExperiencia.web}}">
-          </div>       
-          <div class="input-group">
-            <span class="input-group-text">Logo:</span>
-            <input type="text" class="form-control" id="logo-experiencia" 
-            [(ngModel)]="miExperiencia.logo" [ngModelOptions]="{standalone:true}" 
-            value="{{miExperiencia.logo}}">
-          </div>                 
-        </form>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Cerrar
-        </button>
-        <div [ngSwitch]="miAccionType">
-          <div *ngSwitchCase="'new'">
-            <button type="submit" class="btn btn-primary">Guardar</button>
-          </div>
-          <div *ngSwitchCase="'update'">
-            <button type="submit" class="btn btn-primary">Actualizar</button>
-          </div>
-          <div *ngSwitchCase="'delete'">
-            <button type="submit" class="btn btn-danger">Eliminar</button>
-          </div>
+
+      <div [ngSwitch]="miAccionType">
+        <div class="modal-body" *ngSwitchCase="'new'">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Empresa:</span>
+              <input type="text" class="form-control"
+                id="nombre" [(ngModel)]="miExperiencia.empresa"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.empresa}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Puesto:</span>
+              <input type="text" class="form-control" id="puesto"
+                [(ngModel)]="miExperiencia.posicion"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.puesto}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Período desde:</span>
+              <input type="text" class="form-control" id="periodo_desde"
+                [(ngModel)]="miExperiencia.periodo_desde"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.periodo_desde}}" placeholder="99/9999">
+              <span class="input-group-text">Período hasta:</span>
+              <input type="text" class="form-control" id="periodo_hasta"
+                [(ngModel)]="miExperiencia.periodo_hasta"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.periodo_hasta}}" placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="text" class="form-control" id="descripcion"
+                [(ngModel)]="miExperiencia.email"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web-experiencia"
+                [(ngModel)]="miExperiencia.web"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.web}}">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Logo:</span>
+              <input type="text" class="form-control" id="logo-experiencia"
+                [(ngModel)]="miExperiencia.logo"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.logo}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-body" *ngSwitchCase="'update'">
+          <form (ngSubmit)="onUpdate(miExperiencia.id)" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Empresa:</span>
+              <input type="text" class="form-control"
+                id="nombre" [(ngModel)]="miExperiencia.empresa"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.empresa}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Puesto:</span>
+              <input type="text" class="form-control" id="puesto"
+                [(ngModel)]="miExperiencia.posicion"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.puesto}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Período desde:</span>
+              <input type="text" class="form-control" id="periodo_desde"
+                [(ngModel)]="miExperiencia.periodo_desde"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.periodo_desde}}" placeholder="99/9999">
+              <span class="input-group-text">Período hasta:</span>
+              <input type="text" class="form-control" id="periodo_hasta"
+                [(ngModel)]="miExperiencia.periodo_hasta"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.periodo_hasta}}" placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="text" class="form-control" id="descripcion"
+                [(ngModel)]="miExperiencia.email"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web-experiencia"
+                [(ngModel)]="miExperiencia.web"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.web}}">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Logo:</span>
+              <input type="text" class="form-control" id="logo-experiencia"
+                [(ngModel)]="miExperiencia.logo"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.logo}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Actualizar
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-body" *ngSwitchCase="'delete'">
+          <form (ngSubmit)="delete(miExperiencia.id)" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Empresa:</span>
+              <input type="text" class="form-control"
+                id="nombre" [(ngModel)]="miExperiencia.empresa"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.empresa}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Puesto:</span>
+              <input type="text" class="form-control" id="puesto"
+                [(ngModel)]="miExperiencia.posicion"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.puesto}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Período desde:</span>
+              <input type="text" class="form-control" id="periodo_desde"
+                [(ngModel)]="miExperiencia.periodo_desde"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.periodo_desde}}" placeholder="99/9999">
+              <span class="input-group-text">Período hasta:</span>
+              <input type="text" class="form-control" id="periodo_hasta"
+                [(ngModel)]="miExperiencia.periodo_hasta"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.periodo_hasta}}" placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="text" class="form-control" id="descripcion"
+                [(ngModel)]="miExperiencia.email"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web-experiencia"
+                [(ngModel)]="miExperiencia.web"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.web}}">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Logo:</span>
+              <input type="text" class="form-control" id="logo-experiencia"
+                [(ngModel)]="miExperiencia.logo"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miExperiencia.logo}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-danger">
+                Eliminar
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

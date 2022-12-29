@@ -16,7 +16,7 @@ export class ProyectoModalComponent implements OnInit {
   constructor(private sProyecto:ProyectoService, private router:Router) { }
 
   ngOnInit(): void {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => { return false; };
+    //this.router.routeReuseStrategy.shouldReuseRoute = () => { return false; };
   }
 
   onCreate(): void {

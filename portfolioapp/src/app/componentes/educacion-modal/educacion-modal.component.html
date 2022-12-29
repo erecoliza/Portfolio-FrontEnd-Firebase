@@ -10,79 +10,221 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"> Educación </h5>
       </div>
-      <div class="modal-body">
-        <form>
-          <div class="input-group">
-            <span class="input-group-text">Establecimiento:</span>
-            <input type="text" class="form-control"
-              id="establecimientoeducacion"
-              [(ngModel)]="miEducacion.establecimiento"
-              [ngModelOptions]="{standalone: true}"
-              value="{{miEducacion.establecimiento}}">
-          </div>
-          <div id="nombreHelp" class="form-text">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">Título:</span>
-            <input type="text" class="form-control" id="carreraeducacion"
-              [(ngModel)]="miEducacion.carrera" [ngModelOptions]="{standalone:true}" 
-              value="{{miEducacion.carrera}}">
-          </div>
-          <div id="nombreHelp" class="form-text">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">Período desde:</span>
-            <input type="text" class="form-control" id="periodo_desdeeducacion"
-              [(ngModel)]="miEducacion.periodo_desde"
-              [ngModelOptions]="{standalone: true}"
-              value="{{miEducacion.periodo_desde}}" placeholder="99/9999">
-            <span class="input-group-text">Período hasta:</span>
-            <input type="text" class="form-control" id="periodo_hastaeducacion"
-              [(ngModel)]="miEducacion.periodo_hasta"
-              [ngModelOptions]="{standalone: true}"
-              value="{{miEducacion.periodo_hasta}}" placeholder="99/9999">
-          </div>
-          <div id="nombreHelp" class="form-text">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">Descripción:</span>
-            <input type="email" class="form-control" id="descripcioneducacion"
-              [(ngModel)]="miEducacion.descripcion"
-              [ngModelOptions]="{standalone: true}"
-              value="{{miEducacion.descripcion}}">
-          </div>
-          <div id="nombreHelp" class="form-text">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">WEB:</span>
-            <input type="text" class="form-control" id="web-educacion"
-              [(ngModel)]="miEducacion.web" [ngModelOptions]="{standalone:
-              true}"
-              value="{{miEducacion.web}}">
-          </div>
-          <div class="input-group">
-            <span class="input-group-text">Logo:</span>
-            <input type="text" class="form-control" id="logo-educacion"
-              [(ngModel)]="miEducacion.logo" [ngModelOptions]="{standalone:
-              true}"
-              value="{{miEducacion.logo}}">
-          </div>          
-        </form>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Cerrar
-        </button>
-        <div [ngSwitch]="miAccionType">
-          <div *ngSwitchCase="'new'">
-            <button type="submit" class="btn btn-primary">Guardar</button>
-          </div>
-          <div *ngSwitchCase="'update'">
-            <button type="submit" class="btn btn-primary">Actualizar</button>
-          </div>
-          <div *ngSwitchCase="'delete'">
-            <button type="submit" class="btn btn-danger">Eliminar</button>
-          </div>
+      <div [ngSwitch]="miAccionType">
+        <div class="modal-body" *ngSwitchCase="'new'">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Establecimiento:</span>
+              <input type="text" class="form-control"
+                id="establecimientoeducacion"
+                [(ngModel)]="miEducacion.establecimiento"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.establecimiento}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Título:</span>
+              <input type="text" class="form-control" id="carreraeducacion"
+                [(ngModel)]="miEducacion.carrera"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miEducacion.carrera}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Período desde:</span>
+              <input type="text" class="form-control"
+                id="periodo_desdeeducacion"
+                [(ngModel)]="miEducacion.periodo_desde"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.periodo_desde}}" placeholder="99/9999">
+              <span class="input-group-text">Período hasta:</span>
+              <input type="text" class="form-control"
+                id="periodo_hastaeducacion"
+                [(ngModel)]="miEducacion.periodo_hasta"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.periodo_hasta}}" placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="email" class="form-control" id="descripcioneducacion"
+                [(ngModel)]="miEducacion.descripcion"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web-educacion"
+                [(ngModel)]="miEducacion.web" [ngModelOptions]="{standalone:
+                true}"
+                value="{{miEducacion.web}}">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Logo:</span>
+              <input type="text" class="form-control" id="logo-educacion"
+                [(ngModel)]="miEducacion.logo" [ngModelOptions]="{standalone:
+                true}"
+                value="{{miEducacion.logo}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-body" *ngSwitchCase="'update'">
+          <form (ngSubmit)="onUpdate(miEducacion.id)" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Establecimiento:</span>
+              <input type="text" class="form-control"
+                id="establecimientoeducacion"
+                [(ngModel)]="miEducacion.establecimiento"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.establecimiento}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Título:</span>
+              <input type="text" class="form-control" id="carreraeducacion"
+                [(ngModel)]="miEducacion.carrera"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miEducacion.carrera}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Período desde:</span>
+              <input type="text" class="form-control"
+                id="periodo_desdeeducacion"
+                [(ngModel)]="miEducacion.periodo_desde"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.periodo_desde}}" placeholder="99/9999">
+              <span class="input-group-text">Período hasta:</span>
+              <input type="text" class="form-control"
+                id="periodo_hastaeducacion"
+                [(ngModel)]="miEducacion.periodo_hasta"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.periodo_hasta}}" placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="email" class="form-control" id="descripcioneducacion"
+                [(ngModel)]="miEducacion.descripcion"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web-educacion"
+                [(ngModel)]="miEducacion.web" [ngModelOptions]="{standalone:
+                true}"
+                value="{{miEducacion.web}}">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Logo:</span>
+              <input type="text" class="form-control" id="logo-educacion"
+                [(ngModel)]="miEducacion.logo" [ngModelOptions]="{standalone:
+                true}"
+                value="{{miEducacion.logo}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Actualizar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-body" *ngSwitchCase="'delete'">
+          <form (ngSubmit)="delete(miEducacion.id)" novalidate #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-text">Establecimiento:</span>
+              <input type="text" class="form-control"
+                id="establecimientoeducacion"
+                [(ngModel)]="miEducacion.establecimiento"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.establecimiento}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Título:</span>
+              <input type="text" class="form-control" id="carreraeducacion"
+                [(ngModel)]="miEducacion.carrera"
+                [ngModelOptions]="{standalone:true}"
+                value="{{miEducacion.carrera}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Período desde:</span>
+              <input type="text" class="form-control"
+                id="periodo_desdeeducacion"
+                [(ngModel)]="miEducacion.periodo_desde"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.periodo_desde}}" placeholder="99/9999">
+              <span class="input-group-text">Período hasta:</span>
+              <input type="text" class="form-control"
+                id="periodo_hastaeducacion"
+                [(ngModel)]="miEducacion.periodo_hasta"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.periodo_hasta}}" placeholder="99/9999">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Descripción:</span>
+              <input type="email" class="form-control" id="descripcioneducacion"
+                [(ngModel)]="miEducacion.descripcion"
+                [ngModelOptions]="{standalone: true}"
+                value="{{miEducacion.descripcion}}">
+            </div>
+            <div id="nombreHelp" class="form-text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">WEB:</span>
+              <input type="text" class="form-control" id="web-educacion"
+                [(ngModel)]="miEducacion.web" [ngModelOptions]="{standalone:
+                true}"
+                value="{{miEducacion.web}}">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Logo:</span>
+              <input type="text" class="form-control" id="logo-educacion"
+                [(ngModel)]="miEducacion.logo" [ngModelOptions]="{standalone:
+                true}"
+                value="{{miEducacion.logo}}">
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-danger">
+                Eliminar
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
