@@ -28,8 +28,7 @@ export class ProyectoService {
     return this.httpClient.put<any>(this.URL + `/update/${id}`, proyecto);
   }
 
-  public delete(id: number): Observable<any>{
-    console.log("tratando de borrar", id);
+  public delete(id: number): Observable<any>{    
     return this.httpClient.delete<any>(this.URL + `/delete/${id}`);
   }
 
