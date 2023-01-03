@@ -195,3 +195,13 @@ body {
     width: 100%;
    }
   
+   @media all and (max-width: 840px) {
+    a.menu{
+        padding-top:55%;
+    }
+}
+   @media all and (max-width: 520px) {
+    #Banner{
+        padding-top:55%;
+    }
+}
