@@ -3,9 +3,8 @@
     <a class="navbar-brand" routerLink="/index">
       <img src="./assets/logo.png" alt="" width="70%" />
     </a>
-    <ul class="list-group list-group-horizontal">
-    <ul *ngFor="let red of redList; let i = index" [ngSwitch]="red.red"   class="list-group list-group-horizontal">
-
+    <ul class="nav navbar-nav navbar-right border-5">     
+      <ul *ngFor="let red of redList; let i = index" [ngSwitch]="red.red"   class="list-group list-group-horizontal">      
       <li *ngSwitchCase="'linkedin'" class="list-group-item border-0">
         <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-linkedin fa-2xl"></i>
@@ -50,8 +49,7 @@
       tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
       data-bs-target="#RedModal" (click)="editarModificarRed($event, red, 'update')">
       </i>
-      </li>
-      
+      </li>    
     </ul>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item border-0">
@@ -67,7 +65,8 @@
         </i>
       </li>
     </ul>
-  </ul>
+    </ul>
+    <!--</ul>-->
   </div>
 </nav>
 <app-login></app-login>

@@ -17,18 +17,18 @@ export class RedService {
   }
 
   public detail(id: number): Observable<red> {
-    return this.httpClient.get<red>(this.URL+`update/red/${id}`);
+    return this.httpClient.get<red>(this.URL+`/detail/${id}`);
   }
 
   public save(red: red): Observable<any>{
-    return this.httpClient.post<any>(this.URL+`new/red`, red);
+    return this.httpClient.post<any>(this.URL+`/new`, red);
   }
 
-  public update(id: number, educacion: red): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/red/${id}`, red);
+  public update(id: number, red: red): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `/update/${id}`, red);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `delete/red/${id}`);
+    return this.httpClient.delete<any>(this.URL + `/delete/${id}`);
   }
 }
