@@ -10,7 +10,9 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./encabezado.component.scss'],
 })
 export class EncabezadoComponent implements OnInit {
-  isLogged = false;
+  isLogged = false;  
+  acciontype = "";
+
 
   redList: red[] = [];
   redIndividual = [];  
@@ -37,6 +39,12 @@ export class EncabezadoComponent implements OnInit {
     this.sRed.lista().subscribe((data) => {
       this.redList = data;
     });
+  }
+
+  editarModificarRed(event:any, item:any, accion:string){
+    console.log("Event: ",event,"Item:",item, "accion:", accion);
+    this.redIndividual = item;        
+    this.acciontype = accion;
   }
 
   miLogout(): void {

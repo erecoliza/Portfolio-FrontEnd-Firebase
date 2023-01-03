@@ -26,6 +26,7 @@ import { ExperienciaModalComponent } from './componentes/experiencia-modal/exper
 import { ProyectoModalComponent } from './componentes/proyecto-modal/proyecto-modal.component';
 import { HabilidadModalComponent } from './componentes/habilidad-modal/habilidad-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EncabezadoModalComponent } from './componentes/encabezado-modal/encabezado-modal.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EducacionModalComponent,
     ExperienciaModalComponent,
     ProyectoModalComponent,
-    HabilidadModalComponent
+    HabilidadModalComponent,
+    EncabezadoModalComponent
   ],
   imports: [
     AppRoutingModuleTsModule,

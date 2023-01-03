@@ -17,70 +17,70 @@
       </div>
       <div class="modal-body">
         <form (ngSubmit)="onUpdate(persona.id)" novalidate #f="ngForm">
-           <div *ngIf="false">
-            <div class="input-group">
-              <span class="input-group-text">Nombre y Apellido:</span>
-              <input type="text" class="form-control"
-                id="apellidonombre"
-                [(ngModel)]="persona.apellidonombre"
-                [ngModelOptions]="{standalone:true}"
-                value="{{persona.apellidonombre}}">
-            </div>
-            <div id="nombreHelp" class="form-text">
-            </div>
-            <div class="input-group">
-              <span class="input-group-text">Posición:</span>
-              <input type="text" class="form-control"
-                id="posicion"
-                [(ngModel)]="persona.posicion"
-                [ngModelOptions]="{standalone:true}"
-                value="{{persona.posicion}}">
-            </div>
-            <div id="nombreHelp" class="form-text">
-            </div>
-            <div class="input-group">
-              <span class="input-group-text">Teléfono:</span>
-              <input type="text" class="form-control"
-                id="telefono"
-                [(ngModel)]="persona.telefono"
-                [ngModelOptions]="{standalone:true}"
-                value="{{persona.telefono}}">
-            </div>
-            <div id="telefonoHelp" class="form-text">
-              Ej: +54 9 11 9999 9999
-            </div>
-            <div class="input-group">
-              <span class="input-group-text">Correo Electrónico:</span>
-              <input type="email" class="form-control"
-                id="email"
-                [(ngModel)]="persona.email"
-                [ngModelOptions]="{standalone:true}"
-                value="{{persona.email}}">
-            </div>
-            <div id="emailHelp" class="form-text">
-              Ej: name@example.com.ar
-            </div>
-            <div class="input-group">
-              <span class="input-group-text">Imagen (Avatar):</span>
-              <input type="text" class="form-control"
-                id="imagen"
-                [(ngModel)]="persona.imagen"
-                [ngModelOptions]="{standalone:true}"
-                value="{{persona.imagen}}">
-            </div>
-           </div>
+          <div *ngIf="false" class="input-group">
+            <span class="input-group-text">Nombre y Apellido:</span>
+            <input type="text" class="form-control"
+              id="apellidonombre"
+              [(ngModel)]="persona.apellidonombre"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.apellidonombre}}">
+          </div>
+          <div id="nombreHelp" class="form-text">
+          </div>
+          <div *ngIf="false" class="input-group">
+            <span class="input-group-text">Posición:</span>
+            <input type="text" class="form-control"
+              id="posicion"
+              [(ngModel)]="persona.posicion"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.posicion}}">
+          </div>
+          <div id="nombreHelp" class="form-text">
+          </div>
+          <div *ngIf="false" class="input-group">
+            <span class="input-group-text">Teléfono:</span>
+            <input type="text" class="form-control"
+              id="telefono"
+              [(ngModel)]="persona.telefono"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.telefono}}">
+          </div>
+          <div id="telefonoHelp" class="form-text">
+            Ej: +54 9 11 9999 9999
+          </div>
+          <div *ngIf="false" class="input-group">
+            <span class="input-group-text">Correo Electrónico:</span>
+            <input type="email" class="form-control"
+              id="email"
+              [(ngModel)]="persona.email"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.email}}">
+          </div>
+          <div *ngIf="false" id="emailHelp" class="form-text">
+            Ej: name@example.com.ar
+          </div>
+          <div *ngIf="false" class="input-group">
+            <span class="input-group-text">Imagen (Avatar):</span>
+            <input type="text" class="form-control"
+              id="imagen"
+              [(ngModel)]="persona.imagen"
+              [ngModelOptions]="{standalone:true}"
+              value="{{persona.imagen}}">
+          </div>
           <div class="input-group">
             <span class="input-group-text">Acerca de mi:</span>
             <textarea class="form-control"
-              aria-label="With textarea"
               id="acercade"
               [(ngModel)]="persona.acercade"
-              [ngModelOptions]="{standalone:true}"              
-              aria-describedby="acercaHelp"
+              [ngModelOptions]="{standalone:true}"
               rows="10"
               value="{{persona.acercade}}">
               {{persona.acercade}}</textarea>
           </div>
+          <!--
+          aria-label="With textarea"
+          aria-describedby="acercaHelp"
+          -->
           <div class="modal-footer justify-content-center">
             <button type="button" class="btn btn-secondary"
               data-bs-dismiss="modal">
@@ -91,7 +91,7 @@
             </button>
           </div>
         </form>
-      </div>      
+      </div>
     </div>
   </div>
 </div>

@@ -6,35 +6,34 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 @Component({
   selector: 'app-acerca-de-datos-modal',
   templateUrl: './acerca-de-datos-modal.component.html',
-  styleUrls: ['./acerca-de-datos-modal.component.scss']
+  styleUrls: ['./acerca-de-datos-modal.component.scss'],
 })
 export class AcercaDeDatosModalComponent implements OnInit {
-  persona: persona = new persona("","","","","","");
+  persona: persona = new persona('', '', '', '', '', '');
 
-  constructor(public personaService: PersonaService, private router: Router){}
+  constructor(public personaService: PersonaService, private router: Router) {}
 
   ngOnInit(): void {
-
-    this.personaService.getPersona().subscribe(data => {
-      this.persona = data    
-    
+    this.personaService.getPersona().subscribe((data) => {
+      this.persona = data;
     });
   }
 
-  onUpdate(id?:number): void {    
-    if(id!=undefined) {
-    this.personaService.update( id, this.persona).subscribe(
-      data => {
-        alert("Dato 'Datos Generales' Actualizado");
-        window.location.reload();        
-        this.router.navigate(['/index']); 
-      }, err => {
-        alert("Error al actualizar 'Datos Generales' ");
-        window.location.reload();
-        this.router.navigate(['/index']);        
-      }
-      );     
+  onUpdate(id?: number): void {
+    if (id != undefined) {
+      console.log('persona', this.persona);
+      this.personaService.update(id, this.persona).subscribe(
+        (data) => {
+          alert("'Datos Generales' Actualizado");
+          window.location.reload();
+          this.router.navigate(['/index']);
+        },
+        (err) => {
+          alert("Error al actualizar 'Datos Generales' ");
+          window.location.reload();
+          this.router.navigate(['/index']);
+        }
+      );
     }
   }
-
 }

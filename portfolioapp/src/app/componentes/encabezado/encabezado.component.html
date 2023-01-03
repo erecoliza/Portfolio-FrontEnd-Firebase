@@ -5,31 +5,53 @@
     </a>
     <ul class="list-group list-group-horizontal">
     <ul *ngFor="let red of redList; let i = index" [ngSwitch]="red.red"   class="list-group list-group-horizontal">
+
       <li *ngSwitchCase="'linkedin'" class="list-group-item border-0">
         <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-linkedin fa-2xl"></i>
-        </a>
+        </a>  
+        <i *ngIf="isLogged" id="modifiRed" class="fa-solid fa-pen px-5 fa-lg"
+      tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
+      data-bs-target="#RedModal" (click)="editarModificarRed($event, red, 'update')">
+      </i>    
       </li>
       <li *ngSwitchCase="'github'" class="list-group-item border-0">
         <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-github fa-2xl"></i>
         </a>
+        <i *ngIf="isLogged" id="modifiRed" class="fa-solid fa-pen px-5 fa-lg"
+      tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
+      data-bs-target="#RedModal" (click)="editarModificarRed($event, red, 'update')">
+      </i>
       </li>
       <li *ngSwitchCase="'facebook'" class="list-group-item border-0">
         <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-facebook fa-2xl"></i>
         </a>
+        <i *ngIf="isLogged" id="modifiRed" class="fa-solid fa-pen px-5 fa-lg"
+      tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
+      data-bs-target="#RedModal" (click)="editarModificarRed($event, red, 'update')">
+      </i>
       </li>
       <li *ngSwitchCase="'instagram'" class="list-group-item border-0">
         <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-instagram fa-2xl"></i>
         </a>
+        <i *ngIf="isLogged" id="modifiRed" class="fa-solid fa-pen px-5 fa-lg"
+      tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
+      data-bs-target="#RedModal" (click)="editarModificarRed($event, red, 'update')">
+      </i>
       </li>
       <li *ngSwitchCase="'twitter'" class="list-group-item border-0">
         <a href="{{red.link}}" target="_blank">
           <i class="fa-brands fa-twitter fa-2xl"></i>
         </a>
+        <i *ngIf="isLogged" id="modifiRed" class="fa-solid fa-pen px-5 fa-lg"
+      tooltip="<p> Editar y/o Modificar </p>" placement="top" data-bs-toggle="modal"
+      data-bs-target="#RedModal" (click)="editarModificarRed($event, red, 'update')">
+      </i>
       </li>
+      
     </ul>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item border-0">
@@ -49,3 +71,4 @@
   </div>
 </nav>
 <app-login></app-login>
+<app-encabezado-modal [miRed]="redIndividual" [miAccionType]="acciontype" *ngIf="redIndividual"></app-encabezado-modal>
